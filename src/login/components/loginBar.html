@@ -1,0 +1,57 @@
+
+    <div class="loginBar-content" id='app'>
+      <div class="loginBar-mb" id='loginBar'>
+        <div class="logo left">
+          <img src="./../../src/login/img/logo.jpg" alt="">
+        </div>
+        <div class="text left">
+          <p class="login-p" id="login-p">| 登录</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+
+<script>
+	$('.loginContent').delegate("#registerTap","click", function(){
+    	$("#login-p").html("| 注册");
+    });
+    $('.loginContent').delegate("#signTap","click", function(){
+    	$("#login-p").html("| 登录");
+    });
+</script>
+
+<style scoped>
+  .loginBar-content{
+    position: relative;
+    width: 100%;
+    background: #FFFFFF;
+    border-bottom: 1px solid #EFEFEF;
+  }
+  .loginBar-mb{
+    position: relative;
+    width: 1200px;
+    margin: auto;
+  }
+  .logo {
+    position: relative;
+    width: 62px;
+    height: 36.3px;
+    margin-top: 16px;
+  }
+  .logo>img{
+    width: 62px;
+    height: 36.3px;
+  }
+  .text{
+    position: relative;
+    margin-left: 5px;
+  }
+  .login-p{
+    position: relative;
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #2E2E30;
+    letter-spacing: 0;
+    line-height: 69px;
+  }
+</style>
