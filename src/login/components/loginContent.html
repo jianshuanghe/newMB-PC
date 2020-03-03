@@ -4,12 +4,13 @@
     <img src="./../../src/login/img/login-mb.jpg" alt="">
   </div>
   <div class="loginCont-mb right">
-  	<div class="title">
+  	<div class="title" id='loginCont-title' style="display: block">
   		<p class="login-t-p">你好,  欢迎进入陌拜</p>
   	</div>
   	<div class="login-cont">
   		<div class="register" id='register' style="display: none"></div>
   		<div class="signIn" id='signIn' style="display: block"></div>
+  		<div class="forgetPassWord" id='forgetPassWord' style="display: none"></div>
   	</div>
   </div>
   <div class="clear"></div>
@@ -21,16 +22,30 @@
          * register 注册
          * signIn 登录
          */
-        $("#register").load("../../src/login/components/loginCont/register.html");
+        // $("#register").load("../../src/login/components/loginCont/register.html");
         $("#signIn").load("../../src/login/components/loginCont/signIn.html");
+     	$("#forgetPassWord").load("../../src/login/components/loginCont/forgetPassWord.html");
     });
     $('.loginContent').delegate("#registerTap","click", function(){
+    	$('#loginCont-title').show();
     	$('#register').show();
     	$('#signIn').hide();
+    	$('#forgetPassWord').hide();
+    	$("#register").load("../../src/login/components/loginCont/register.html"); // 重新加载
     });
     $('.loginContent').delegate("#signTap","click", function(){
+    	$('#loginCont-title').show();
     	$('#register').hide();
     	$('#signIn').show();
+    	$('#forgetPassWord').hide();
+        $("#signIn").load("../../src/login/components/loginCont/signIn.html"); // 重新加载
+    });
+    $('.loginContent').delegate("#forget-passWord","click", function(){
+    	$('#loginCont-title').hide();
+    	$('#register').hide();
+    	$('#signIn').hide();
+    	$('#forgetPassWord').show();
+        // $("#signIn").load("../../src/login/components/loginCont/signIn.html"); // 重新加载
     });
     
 

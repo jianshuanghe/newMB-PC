@@ -298,3 +298,19 @@ p{
 .weui-dialog__btn_primary {
   color: #02C2A2 !important;
 }
+button {
+    width: 200px;
+    height: 50px;
+    background-color: red;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.mb-login-errorTips{
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #FD1D1D;
+  margin: 10px;
+}

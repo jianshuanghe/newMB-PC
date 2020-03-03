@@ -16,7 +16,9 @@
             </div>
             <div class="loginContent" id='loginContent'>
             </div>
-      </div>
+      	</div>
+      	<div class="userClauseContent" id="userClauseContent" style="display: none"></div>
+      	<div class="userClauseContent" id="userPrivacyContent" style="display: none"></div>
     </div>
     <!-- <div class="footer" id='footer'></div> -->
 </body>
@@ -34,10 +36,18 @@
          */
         $("#loginBar").load("./components/loginBar.html");
         $("#loginContent").load("./components/loginContent.html");
-
+        $("#userClauseContent").load("./components/userAgreement/userClause.html");
+        $("#userPrivacyContent").load("./components/userAgreement/userPrivacy.html");
     });
-    $('body').delegate("#loginBtnCode","click", function(){
-    	alert('这是一个代码示例！')
+    $('body').delegate("#userClause","click", function(){
+    	$("#userClauseContent").show();
+    });
+    $('body').delegate("#userPrivacy","click", function(){
+    	$("#userPrivacyContent").show();
+    });
+    $('body').delegate(".uc-login-close","click", function(){
+    	$("#userClauseContent").hide();
+    	$("#userPrivacyContent").hide();
     });
 
 </script>

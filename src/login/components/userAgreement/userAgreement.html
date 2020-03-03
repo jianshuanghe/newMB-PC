@@ -1,0 +1,69 @@
+
+    <div class="userAgreement-content">
+      <div class="userAgreement">
+        <div class="agreement-mb">
+          <input class="checkbox-mb left" type="checkbox"></input>
+          <p class="userAgree-p left" id="userAgreement">我同意陌拜的 <span class="color-p" id="userClause">用户协议</span> 和 <span class="color-p" id="userPrivacy">隐私条款</span></p>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+
+<script>
+   
+</script>
+
+<style scoped>
+  .userAgreement-content{
+    position: relative;
+    width: 280px;
+  }
+  .userAgreement{
+    position: relative;
+    width: 100%;
+  }
+  .agreement-mb{
+    position: relative;
+    width: 100%;
+  }
+  .userAgree-p{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #9B9B9B;
+    line-height: 12px;
+    margin: 10px 0;
+    width: 80%;
+    margin-left: 5px;
+  }
+  .color-p{
+    color: #02C2A2;
+  }
+  .checkbox-mb{
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin: 8px 0;
+  }
+  /*input[type=checkbox]{
+      appearance:none;
+      -moz-appearance:none;
+      -webkit-appearance:none;
+      cursor: pointer;
+      margin:0;
+  }*/
+ 
+  input[type=checkbox]{
+    position: relative;
+    width: 16px;
+    height: 16px;
+     background:url("http://localhost:8081/src/login/img/checkBoxEd.jpg")；
+     background-size:100% 100%;
+  }
+  input[type=checkbox]:checked{
+    position: relative;
+    width: 16px;
+    height: 16px;
+     background:url("../../src/login/img/checkBoxEd.jpg")；
+     background-size:100% 100%;
+  }
+</style>

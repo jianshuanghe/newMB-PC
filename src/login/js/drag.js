@@ -1,7 +1,7 @@
 /* 
  * drag 1.0
- * create by tony@jentian.com
- * date 2015-08-18
+ * create by 
+ * date 2020-3-2
  * 拖动滑块
  */
 (function($){
@@ -23,7 +23,8 @@
         //鼠标按下时候的x轴的位置
         handler.mousedown(function(e){
             isMove = true;
-            x = e.pageX - parseInt(handler.css('left'), 0);
+            // console.log(e.pageX, parseInt(handler.css('left'), 10), '--------------------px----------------')
+            x = e.pageX - parseInt(handler.css('left'), 10);
         });
         
         //鼠标指针在上下文移动时，移动距离大于0小于最大间距，滑块x轴位置等于鼠标移动距离
@@ -57,5 +58,8 @@
         }
     };
 })(jQuery);
+
+
+
 
 
