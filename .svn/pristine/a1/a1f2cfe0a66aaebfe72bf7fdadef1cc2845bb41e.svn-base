@@ -1,0 +1,135 @@
+  <div class="putIn-content">
+    <div class="putIn-cont">
+      <!-- 采购倒计时 -->
+      <div class="purchaseTime">
+          <div class="pt-title left">
+            <div class="pt-title-p">采购办公室打印机一二一二三四五六限制二十</div>
+            <div class="pt-title-time-p"> 1小时前 发布</div>
+          </div>
+          <div class="pt-titme left">
+            <div class="pt-titme-cont"> 
+              距离报价结束还剩：
+              <span class="pt-titme-day"> 2天</span>
+              <span class="pt-titme-h"> <p class="pt-color">12</p></span> <span class="pt-ic">:</span>
+              <span class="pt-titme-h"> <p class="pt-color">03</p></span> <span class="pt-ic">:</span>
+              <span class="pt-titme-h"> <p class="pt-color">59</p></span>  
+            </div>
+            <div class="pt-baoJia-num">
+              已报价: <span class="pt-bj-num"> 12 </span> 条
+              <div class="pt-bj-btn"> 立即报价</div>
+            </div>   
+          </div>
+          <div class="clear"></div>
+          <div class="mb-line-x"></div>
+          <div class="pt-qrcode"> 
+              <img class="pt-qrcode-img"></img>
+          </div>  
+      </div>  
+    </div>
+  </div>
+
+
+
+  <script type="text/javascript">
+    
+      
+  </script>
+
+
+
+  <style type="text/css">
+    .purchaseTime{
+      position: relative;
+      width: 660px;
+      padding: 20px 0;
+    }
+    .pt-title{
+      position: relative;
+      width: 400px;
+    }
+    .pt-title-p{
+      font-family: PingFangSC-Semibold;
+      font-size: 18px;
+      color: #2E2E30;
+      line-height: 34px;
+    }
+    .pt-title-time-p{
+      font-family: PingFangSC-Regular;
+      font-size: 14px;
+      color: #9B9B9B;
+      letter-spacing: 0;
+      line-height: 54px;
+      margin-bottom: 10px;
+    }
+    .pt-titme{
+      position: relative;
+      width: 260px;
+    }
+    .pt-titme-cont{
+      position: relative;
+      font-family: PingFangSC-Regular;
+      font-size: 14px;
+      color: #2E2E30;
+      letter-spacing: 0;
+      text-align: right;
+      line-height: 34px;
+    }
+    .pt-titme-day{
+      color: #FF3A2E;
+    }
+    .pt-titme-h{
+      color: #FF3A2E;
+      background: #FF3A2E;
+      border-radius: 2px;
+      border-radius: 2px;
+      padding: 4px;
+      line-height: 34px
+    }
+    .pt-ic{
+      color: #FF3A2E;
+    }
+    .pt-color{
+     /* background: #FF3A2E;
+      border-radius: 2px;
+      border-radius: 2px;*/
+      color: #FFFFFF;
+      display: inline-block;
+    }
+    .pt-baoJia-num{
+      position: relative;
+      width: 100%;
+      font-family: PingFangSC-Regular;
+      font-size: 14px;
+      color: #9B9B9B;
+      letter-spacing: 0;
+      line-height: 34px;
+      text-align: right;
+    }
+    .pt-bj-num{
+      position: relative;
+      color: #FAB100;
+    }
+    .pt-bj-btn{
+      position: relative;
+      background: #FAB100;
+      border-radius: 4px;
+      border-radius: 4px;
+      width: 96px;
+      font-family: PingFangSC-Regular;
+      font-size: 16px;
+      color: #FFFFFF;
+      letter-spacing: 0;
+      text-align: center;
+      line-height: 34px;
+      display: inline-block;
+      float: right; 
+      margin-left: 37px; 
+    }
+    .pt-qrcode{
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      top: -10px;
+      right: 0px;
+    }
+  </style>

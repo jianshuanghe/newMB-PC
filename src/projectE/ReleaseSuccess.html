@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../../css/reset.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        .Releaserecomm-title {
+            width: 100%;
+            height: 70px;
+            margin-top: 34px;
+            background: #2E2E30;
+            font-size: 24px;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 70px;
+        }
+        .ReleaseSuccess-box{
+            width: 1040px;
+            min-height: 200px;
+            margin: 0 auto;
+        }
+        .ReleaseSuccess-Congra{
+            width: 100%;
+            height: 160px;
+            border-bottom: 1px solid #EFEFEF;
+            text-align: center;
+        }
+        .ReleaseSuccess-Congra>img{
+            width: 40px;
+            height: 40px;
+            margin: 40px auto auto auto;
+        }
+        .ReleaseSuccess-Congra>p{
+            font-size: 20px;
+            color: #02C2A2;
+            padding-top: 20px;
+        }
+        .ReleaseSuccess-con{
+            width: 620px;
+            min-height: 200px;
+            margin: 20px auto 95px auto;
+            padding: 1px;
+        }
+        .ReleaseSuccess-con-title{
+            width: 100%;
+            height: 16px;
+            border-left: 3px solid #02C2A2;
+            line-height: 16px;
+            padding-left: 5px;
+            font-size: 16px;
+            color: #2E2E30;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+        .ReleaseSuccess-con-img{
+            width: 100%;
+            min-height: 300px;
+        }
+        .ReleaseSuccess-con-imgone{
+            width: 180px;
+            height: 100%;
+            float: left;
+        }
+        .ReleaseSuccess-con-imgone>img{
+            width: 180px;
+            height: 254px;
+            margin-top: 20px;
+        }
+        .ReleaseSuccess-con-imgone>div{
+            width: 68px;
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            background: #2E2E30;
+            border-radius: 2px;
+            margin: 20px auto auto auto; 
+            font-size: 12px;
+            color: #FFFFFF;
+        }
+        .ReleaseSuccess-con-imgtwo{
+            width: 180px;
+            height: 100%;
+            float: left;
+            margin-left: 60px;
+        }
+        .ReleaseSuccess-con-imgtwo>div:nth-of-type(1){
+            width: 180px;
+            height: 255px;
+            border: 1px solid #EFEFEF;
+            border-radius: 4px;
+            position: relative;
+            margin-top: 20px;
+        }
+        .ReleaseSuccess-con-imgtwo>div:nth-of-type(1)>img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100px;
+            height: 100px;
+        }
+        .ReleaseSuccess-con-imgtwo>div:nth-of-type(2){
+            width: 68px;
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            background: #2E2E30;
+            border-radius: 2px;
+            margin: 22px auto auto auto; 
+            font-size: 12px;
+            color: #FFFFFF;
+        }
+        .ReleaseSuccess-con-form{
+            width: 100%;
+            min-height: 136px;
+            margin-top: 20px;
+        }
+        .introduce-Survey-con{
+            width: 100%;
+            /* min-height: 36px; */
+            border: 1px solid #EFEFEF;
+        }
+        .introduce-Survey-tr{
+            width: 100%;
+            min-height: 36px;
+        }
+        .introduce-Survey-tds1{
+            width:99px;
+            height: 36px;
+            padding-left:9px;
+            font-size:12px;
+            color: #5D5D5D;
+            background: #F9F9F9;
+        }
+        .introduce-Survey-td2{
+            min-height: 36px;
+            padding-left:9px;
+            font-size:12px;
+            color: #5D5D5D;
+            padding:5px 5px;
+            line-height: 20px;
+        }
+        
+        .ReleaseSuccess-con-Button{
+            width: 100%;
+            height: 38px;
+            margin-top: 40px;
+        }
+        .ReleaseSuccess-con-Button>div:nth-of-type(1){
+            width: 190px;
+            height: 38px;
+            border: 1px solid #02C2A2;
+            border-radius: 4px;
+            text-align: center;
+            line-height: 38px;
+            font-size: 16px;
+            color: #02C2A2;
+            float: left;
+        }
+        .ReleaseSuccess-con-Button>div:nth-of-type(2){
+            width: 190px;
+            height: 38px;
+            border: 1px solid #02C2A2;
+            border-radius: 4px;
+            text-align: center;
+            line-height: 38px;
+            font-size: 16px;
+            color: #02C2A2;
+            float: left;
+            margin-left: 40px;
+        }
+        .Location{
+            position: relative;
+        }
+        .crowded{
+            padding-right: 100px;
+        }
+        .copy{
+            padding: 4px 6px 4px 6px;
+            border: 1px solid #02C2A2;
+            border-radius: 2px;
+            font-size: 12px;
+            color: #02C2A2;
+            margin-left: 10px;
+            position: absolute;
+            right:58px;
+            top: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header" id="header"></div>
+    <div class="Releaserecomm-title">发布成功(4/4)</div>
+    <div class="ReleaseSuccess-box">
+        <div class="ReleaseSuccess-Congra">
+            <img src="../../images/img/success.png">
+            <p>恭喜您,发布成功!</p>
+        </div>
+        <div class="ReleaseSuccess-con">
+            <div class="ReleaseSuccess-con-title">您的说明书海报已生成</div>
+            <div class="ReleaseSuccess-con-img">
+                <div class="ReleaseSuccess-con-imgone">
+                    <img src="../../images/img/hua.png">
+                    <div>下载图片</div>
+                </div>
+                <div class="ReleaseSuccess-con-imgtwo">
+                    <div><img src="../../images/img/hua.png" alt=""></div>
+                    <div class="download-img2">下载图片</div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <div class="ReleaseSuccess-con-title">基本信息</div>
+            <div class="ReleaseSuccess-con-form Location">
+                <table class="introduce-Survey-con" border=”1”>
+                    <input type="button" value="复制链接" id="copy" class="copy">
+                    <tr class="introduce-Survey-tr">
+                        <td class="introduce-Survey-tds1" >说明书链接</td>
+                        <td class="introduce-Survey-td2 crowded"><span class="link">http://127.0.0.1:8099/rest-rp/instruc/info/7d247b1b-d003-43c1-a982-f71cd9539b8a</span></td>
+                    </tr>
+                    <tr class="introduce-Survey-tr">
+                        <td class="introduce-Survey-tds1" >说明书简介</td>
+                        <td class="introduce-Survey-td2">化妆品制造;化妆品及卫生用品批发;化妆品及卫生用品零售;肥皂及合成洗涤剂制造;口腔清洁用品制造;香料、香精制造;食品科学技术研究服务;化工产品批发（危险化学品除外）;商品批发贸易（许可审批类商</td>
+                    </tr>
+                    <tr class="introduce-Survey-tr">
+                        <td class="introduce-Survey-tds1" >所属品类</td>
+                        <td class="introduce-Survey-td2">1516156655156</td>
+                    </tr>
+                    <tr class="introduce-Survey-tr">
+                        <td class="introduce-Survey-tds1" >关键词</td>
+                        <td class="introduce-Survey-td2">化工</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="ReleaseSuccess-con-Button">
+                <div class="look-book">查看我的说明书</div>
+                <div class="Continue-book">继续创建</div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<script src="../../js/COPY/jquery_copy/js/jquery.zclip.min.js"></script>
+<!-- <script src="../../js/COPY/jquery_copy/js/ZeroClipboard.swf"></script> -->
+<script type="module">
+    import { downloadImage } from '../../../js/img.js';
+    $(function () {
+        /*公共部分
+         * header 头部
+         * header 底部
+         */
+        $("#header").load("./../../src/common/pages/header/header.html");
+    });
+    $(".look-book").mouseover(function(){
+        $(this).css({'background':'#02C2A2','color':'#FFFFFF'})
+    })
+    $(".look-book").mouseout(function(){
+        $(this).css({'background':'#FFFFFF','color':'#02C2A2'})
+    })
+    $(".Continue-book").mouseover(function(){
+        $(this).css({'background':'#02C2A2','color':'#FFFFFF'})
+    })
+    $(".Continue-book").mouseout(function(){
+        $(this).css({'background':'#FFFFFF','color':'#02C2A2'})
+    })
+    
+    // $(".copy").click(function(){
+    //     console.log($(this).prev().text())
+    // });
+    $("#copy").zclip({
+        path:'../../js/COPY/jquery_copy/js/ZeroClipboard.swf',
+        copy: function () {//复制内容 
+            return $(".link").text();
+        },
+        afterCopy: function () {//复制成功 
+            console.log("复制成功");
+            $("#copy").val('复制成功');
+        }
+    });
+    
+    var img='../../images/img/hua.png'
+    $(".download-img2").click(function(){
+        downloadImage(img,'测试');
+    })
+</script>

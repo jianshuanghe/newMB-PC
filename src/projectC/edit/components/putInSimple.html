@@ -1,0 +1,424 @@
+  <div class="putIn-content">
+    <div class="putIn-cont">
+      <!-- 采购信息 -->
+      <div class="pi-mb-items">
+        <div class="pii-title"><div class="line-mb-pi"></div> <span class="pii-title-p">采购信息</span> </div>
+        <div class="pii-mb-input">
+          <div class="pii-input-text left">
+            <span class="must-mb-style">*</span>
+            <span class="pii-input-p">联系人</span> 
+          </div>
+          <div class="pii-input-box left">
+            <input class="mbui-input" type="text" placeholder="请输入手机号"  value=""/>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <!-- 详细发布 -->
+        <div class="pii-mb-putInDetile">
+          <div class="showPutDetile" id="showPutDetile">
+            <span class="showPutDetile-text">展开详细信息 </span> <img class="img" id="putShowIcon" src="http://style.iambuyer.com/mbc/publish/createBusiness/downSJ.png"></img>
+          </div>
+          <div class="putInDetileBox" id="putInDetileBox" style="display: none"></div>
+        </div>
+        <div class="pii-mb-textarea">
+          <div class="pii-input-text left">
+            <!-- <span class="must-mb-style">*</span> -->
+            <span class="pii-input-p">备注说明</span> 
+          </div>
+          <div class="pii-input-box left">
+            <textarea class="mbui-textarea" type="text" placeholder="请输入手机号"  value=""/>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="pii-mb-imgUp">
+          <div class="pii-input-text left">
+          </div>
+          <div class="pii-input-box left">
+            <div class="imgUp-mb">
+              <div class="imgUp">
+                <input class="imagesUp" type="file" />
+                +
+              </div>
+              <p class="imgUp-p">注：最多可添加5张哦～</p>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="mb-line-x"></div>
+      <div class="pii-mb-checkBox">
+        <input class="checkbox-mb left" type="checkbox"></input>
+        <p class="default-p left">设为默认采购模版，下次发布采购时可直接使用该模版发布采购哦</p>
+        <div class="clear"></div>
+      </div>
+      <!-- 联系信息 -->
+      <div class="pi-mb-items">
+        <div class="pii-title"><div class="line-mb-pi"></div> <span class="pii-title-p">联系信息</span> </div>
+        <div class="pii-mb-input">
+          <div class="pii-input-text left">
+            <span class="must-mb-style">*</span>
+            <span class="pii-input-p">联系人</span> 
+          </div>
+          <div class="pii-input-box left">
+            <input class="mbui-input" type="text" placeholder="请输入联系人名称"  value=""/>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="pii-mb-input">
+          <div class="pii-input-text left">
+            <span class="must-mb-style">*</span>
+            <span class="pii-input-p">联系电话</span> 
+          </div>
+          <div class="pii-input-box left">
+            <input class="mbui-input" type="number" placeholder="请输入手机号"  value=""/>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="pii-mb-input">
+          <div class="pii-input-text left">
+            <span class="must-mb-style">*</span>
+            <span class="pii-input-p">验证码</span> 
+          </div>
+          <div class="pii-input-box left">
+            <input class="mbui-input" type="text" placeholder="请输入验证吗"  value=""/>
+            <button type="button" name="button" class="verCodeBtn">获取验证码</button>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="pii-mb-input">
+          <div class="pii-input-text left">
+            <!-- <span class="must-mb-style">*</span> -->
+            <span class="pii-input-p">公司名称</span> 
+          </div>
+          <div class="pii-input-box left">
+            <input class="mbui-input" type="text" placeholder="请输入"  value=""/>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="pii-remarks">注：未注册用户提交后默认注册成为陌拜采购商。</div>
+        <div class="pii-btn" id="pii-putInSubmint">立即发布</div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(function(){
+        /*发布采购模块
+         * putInDetile 详细发布
+         */
+        $("#putInDetileBox").load("../../../projectC/edit/components/putInDetile.html");
+    });
+    $("button[name='button']").click(function(event) {
+        //这里写发送验证码的代码
+        var time = 60;
+        settime($(this));
+        function settime(obj){
+          if (time==0) {
+              $(obj).attr('disabled', false);
+              $(obj).html("获取验证码");
+              time = 60;
+              return;
+          } else{
+              $(obj).attr('disabled', true);
+              $(obj).html(time+"S重新获取");
+              time--;
+          }
+          setTimeout(function() {
+              settime(obj)
+          },1000)
+      };
+    });
+    $.fn.toggle = function( fn ) {
+      var args = arguments,
+        guid = fn.guid || jQuery.guid++,
+        i = 0,
+        toggler = function( event ) {
+            var lastToggle = ( jQuery._data( this, "lastToggle" + fn.guid ) || 0 ) % i;
+            jQuery._data( this, "lastToggle" + fn.guid, lastToggle + 1 );
+            event.preventDefault();
+            return args[ lastToggle ].apply( this, arguments ) || false;
+        };
+      toggler.guid = guid;
+      while ( i < args.length ) {
+          args[ i++ ].guid = guid;
+      }
+      return this.click( toggler );
+    };
+    $("div[id='showPutDetile']").toggle(function(event) {
+      $('.showPutDetile-text').text("收起详细信息");
+      $("#putShowIcon").attr("src", "http://style.iambuyer.com/mbc/publish/createBusiness/upSJ.png");
+      $("#putInDetileBox").show();
+    },function(){
+      $('.showPutDetile-text').text("展开详细信息");
+      $("#putShowIcon").attr("src", "http://style.iambuyer.com/mbc/publish/createBusiness/downSJ.png");
+      $("#putInDetileBox").hide();
+    })
+    
+  </script>
+  <style type="text/css">
+    .putIn-content{
+      position: relative;
+      width: 100%;
+    }
+    .putIn-cont{
+      position: relative;
+      width: 100%;
+    }
+    .pi-mb-items{
+      position: relative;
+      width: 100%;
+    }
+    .pii-title{
+      position: relative;
+      width: 100%;
+      font-family: PingFangSC-Semibold;
+      font-size: 16px;
+      color: #2E2E30;
+      line-height: 16px;
+      margin: 16px 0;
+      font-weight: bold;
+    }
+    .line-mb-pi{
+      background: #FAB100;
+      position: absolute;
+      width: 3px;
+      height: 16px;
+      margin-right: 5px; 
+    }
+    .pii-title-p{
+      margin-left: 10px;
+    }
+    .pii-mb-input{
+      position: relative;
+      width: 100%;
+      margin: 10px 0 20px 0;
+    }
+    .pii-input-text{
+      position: relative;
+      width: 82px;
+      font-family: PingFangSC-Regular;
+      padding-left: 5px;
+      font-size: 14px;
+      color: #2E2E30;
+      line-height: 38px;
+    }
+    .must-mb-style{
+      position: absolute;
+      width: 10px;
+      left: 3px;
+      top: 0;
+      color: #FF4D6A;
+    }
+    .pii-input-p{
+      margin-left: 10px;
+      width: 85% !important;
+    }
+    .pii-input-box{
+      position: relative;
+      width: 578px;
+    }
+    input[type=text],
+    input[type=number],
+    textarea[type=text]{
+      background: #FFFFFF;
+      border: 1px solid #EFEFEF;
+      border-radius: 4px;
+      border-radius: 4px;
+      outline:none;
+    }
+    input[type=text]:focus, select:focus,
+    input[type=number]:focus, select:focus,
+    textarea[type=text]:focus, select:focus{
+      border: 1px solid #FAB100;
+      border-radius: 4px;
+      border-radius: 4px;
+      outline:none;
+    }
+    
+    .pii-mb-textarea{
+      position: relative;
+      width: 100%;
+      margin: 10px 0 20px 0;
+    }
+
+    .mbui-textarea{
+      position: relative;
+      width: 100%;
+      -web-kit-appearance:none;
+      -moz-appearance: none;
+      font-size: 14px;
+      height:102px;
+      border-radius:0;
+      border:0px solid #c8cccf;
+      color: #2E2E30;
+      outline:0;
+      padding: 0 5px;
+    }
+    textarea::-webkit-input-placeholder{
+      color: #BDBDBD;
+      font-size: 14px;
+    }
+
+
+
+
+
+    .mbui-input{
+    position: relative;
+    width: 100%;
+    -web-kit-appearance:none;
+    -moz-appearance: none;
+    font-size: 14px;
+    height:38px;
+    border-radius:0;
+    border:0px solid #c8cccf;
+    color: #2E2E30;
+    outline:0;
+    padding: 0 5px;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #BDBDBD;
+    font-size: 14px;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #BDBDBD;
+    font-size: 14px;
+  }
+  input::-webkit-input-placeholder{
+    color: #BDBDBD;
+    font-size: 14px;
+  }
+
+
+  .pii-mb-imgUp{
+    position: relative;
+    width: 100%;
+    margin: 10px 0 20px 0;
+  }
+  .imgUp-mb{
+    margin-left: 82px;
+  }
+  .imgUp{
+    position: relative;
+    width: 110px;
+    height: 110px;
+    background: #EFEFEF;
+    text-align: center;
+    line-height: 110px;
+    color: #BDBDBD;
+    font-size: 28px;
+  }
+  .imagesUp{
+    position: absolute;
+    width: 100%;
+    height: 110px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 0;
+  }
+  .imgUp-p{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #9B9B9B;
+    letter-spacing: 0;
+    line-height: 30px;
+  }
+
+
+  .checkbox-mb{
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin: 8px 0;
+  }
+ 
+  input[type=checkbox]{
+    position: relative;
+    width: 16px;
+    height: 16px;
+     background:url("http://localhost:8081/src/login/img/checkBoxEd.jpg")；
+     background-size:100% 100%;
+  }
+  input[type=checkbox]:checked{
+    position: relative;
+    width: 16px;
+    height: 16px;
+     background:url("../../src/login/img/checkBoxEd.jpg")；
+     background-size:100% 100%;
+  }
+
+  .pii-mb-checkBox{
+    position: relative;
+    width: 100%;
+  }
+  .default-p{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #2E2E30;
+    letter-spacing: 0;
+    line-height: 32px;
+    margin-left: 10px;
+  }
+  .verCodeBtn{
+    position: absolute;
+    width: 84px;
+    height: 24px;
+    margin: 6px 10px;
+    border: 1px solid #FAB100;
+    border-radius: 2px;
+    border-radius: 2px;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #FAB100;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 24px;
+    background: #FFFFFF;
+    right: 0;
+  }
+  .pii-remarks{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #9B9B9B;
+    letter-spacing: 0;
+    line-height: 30px;
+  }
+
+
+  .pii-mb-putInDetile{
+    position: relative;
+    width: 100%;
+  }
+  .showPutDetile{
+    position: relative;
+    font-family: PingFangSC-Semibold;
+    font-size: 14px;
+    color: #FAB100;
+    line-height: 20px;
+    margin: 10px 82px;
+  }
+  .showPutDetile>img{
+    position: absolute;
+    width: 8px;
+    height: 5px;
+    left: 88px;
+    top: 8px;
+  }
+  .input-group{
+    width: 100% !important;
+  }
+  .pii-btn{
+    position: relative;
+    width: 190px;
+    height: 38px;
+    margin: 30px 100px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 38px;
+    background: #FAB100;
+    border-radius: 4px;
+    border-radius: 4px;
+  }
+  </style>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../../css/reset.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        .Releaserecomm-title {
+            width: 100%;
+            height: 70px;
+            margin-top: 34px;
+            background: #2E2E30;
+            font-size: 24px;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 70px;
+        }
+        .Releasethree-box{
+            width: 635px;
+            min-height: 200px;
+            margin: 60px auto auto auto;
+        }
+        .Releasethree-name{
+            width: 100%;
+            min-height: 38px;
+        }
+        .Releasethree-name>div:nth-of-type(1){
+            width: 85px;
+            height: 38px;
+            font-size: 14px;
+            color: #2E2E30;
+            line-height: 38px;
+            float: left;
+        }
+        .Releasethree-name>div:nth-of-type(1)>img{
+            width: 12px;
+            height: 12px;
+            padding-right: 1px;
+        }
+        .Releasethree-name>div:nth-of-type(2){
+            width: 538px;
+            height: 38px;
+            float: left;
+            margin-left: 10px;
+            border: 1px solid #EFEFEF;
+            border-radius: 4px;
+            padding-left: 12px;
+        }
+        .Releasethree-name>div:nth-of-type(2)>input{
+            width: 100%;
+            height: 100%;
+            font-size: 14px;
+        }
+        .Releasethree-name>div:nth-of-type(2)>input::-webkit-input-placeholder {
+            font-size: 14px;
+            color: #BDBDBD;
+        }
+        .Releasethree-name>div:nth-of-type(3){
+            width: 50%;
+            height: 28px;
+            margin-left: 95px;
+            clear: both;
+            line-height: 31px;
+            font-size: 12px;
+            color: #02C2A2;
+        }
+        .Releasethree-name>div:nth-of-type(3)>img{
+            width: 14px;
+            height: 12px;
+            display: block;
+            float: left;
+            margin-top: 9px;
+            padding-right: 5px;
+        }
+        .Releasethree-name>div:nth-of-type(3)>span{
+            display: flex;
+            float: left;
+        }
+        .Releasethree-brief{
+            width: 100%;
+            min-height: 102px;
+            clear: both;
+            margin-top: 20px;
+        }
+        .Releasethree-brief>div:nth-of-type(1){
+            width: 85px;
+            height: 38px;
+            font-size: 14px;
+            color: #2E2E30;
+            line-height: 38px;
+            float: left;
+        }
+        .Releasethree-brief>div:nth-of-type(1)>img{
+            width: 12px;
+            height: 12px;
+            padding-right: 1px;
+        }
+        .Releasethree-brief>div:nth-of-type(2){
+            width: 422px;
+            height: 102px;
+            border: 1px solid #EFEFEF;
+            border-radius: 4px;
+            float: left;
+            margin-left: 10px;
+            padding: 8px 12px;
+        }
+        .Releasethree-brief>div:nth-of-type(2)>textarea{
+            width: 100%;
+            height: 100%;
+        }
+        .Releasethree-brief>div:nth-of-type(2)>textarea::-webkit-input-placeholder {
+            font-size: 14px;
+            color: #BDBDBD;
+        }
+        .Releasethree-brief>div:nth-of-type(3){
+            width: 102px;
+            height: 102px;
+            float: left;
+            margin-left: 12px;
+            border-radius:4px; 
+        }
+        .Releasethree-brief>div:nth-of-type(4){
+            width: 50%;
+            height: 28px;
+            margin-left: 95px;
+            clear: both;
+            line-height: 31px;
+            font-size: 12px;
+            color: #02C2A2;
+        }
+        .Releasethree-brief>div:nth-of-type(4)>img{
+            width: 14px;
+            height: 12px;
+            display: block;
+            float: left;
+            margin-top: 9px;
+            padding-right: 5px;
+        }
+        .Releasethree-brief>div:nth-of-type(4)>span{
+            display: flex;
+            float: left;
+        }
+        .Releasethree-brief-look{
+            width: 422px;
+            height: 71px;
+            background: #F5F5F5;
+            font-size: 12px;
+            color: #2E2E30;
+            line-height: 18px;
+            margin-left: 95px;
+            clear: both;
+            padding: 10px 10px 5px 10px;
+        }
+        .Releasethree-supply{
+            width: 100%;
+            height: 38px;
+            clear: both;
+            margin-top: 20px;
+        }
+        .Releasethree-supply>div:nth-of-type(1){
+            width: 85px;
+            height: 38px;
+            font-size: 14px;
+            color: #2E2E30;
+            line-height: 38px;
+            float: left;
+            padding-left: 11px;
+        }
+        .Releasethree-supply-yes{
+            width: 60px;
+            height: 38px;
+            background: #02C2A2;
+            border-radius: 4px 0px 0px 4px;
+            float: left;
+            margin-left: 10px;
+            text-align: center;
+            line-height: 38px;
+            font-size: 14px;
+            color: #FFFFFF;
+        }
+        .Releasethree-supply-no{
+            width: 60px;
+            height: 38px;
+            border-radius: 0px 4px 4px 0px;
+            float: left;
+            text-align: center;
+            line-height: 38px;
+            font-size: 14px;
+            color: #2E2E30;
+            border: 1px solid #EFEFEF;
+        }
+        .Releasethree-category{
+            width: 100%;
+            height: 38px;
+            clear: both;
+            margin-top: 20px;
+            position: relative;
+        }
+        .Releasethree-category>div:nth-of-type(1){
+            width: 85px;
+            height: 38px;
+            font-size: 14px;
+            color: #2E2E30;
+            line-height: 38px;
+            float: left;
+            padding-left: 11px;
+        }
+        .Releasethree-category>div:nth-of-type(1)>img{
+            width: 12px;
+            height: 12px;
+            padding-right: 1px;
+        }
+        .Customer-select{
+            width: 538px;
+            height: 38px;
+            float: left;
+            border: 1px solid #EFEFEF;
+            border-radius: 4px;
+            float: left;
+            margin-left: 10px;
+            font-size: 14px;
+            color: #BDBDBD;
+            padding-left: 12px;
+        }
+        .thr-bottom2{
+            width: 15px;
+            height: 9px;
+            position: absolute;
+            right: 10px;
+            top: 15px;
+        }
+        .Releasethree-crux{
+            width: 101%;
+            min-height: 38px;
+            margin-top: 20px;
+            margin-left: -4px;
+        }
+        .Releasethree-crux>div:nth-of-type(1){
+            width: 85px;
+            height: 38px;
+            font-size: 14px;
+            color: #2E2E30;
+            line-height: 38px;
+            float: left;
+        }
+        .Releasethree-crux-box{
+            width: 538px;
+            min-height: 38px;
+            float: left;
+            margin-left: 15px;
+        }
+        .Releasethree-crux-list{
+            width: 538px;
+            height: 38px;
+            margin-bottom: 20px;
+        }
+        .Releasethree-crux-list>div:nth-of-type(1){
+            width: 506px;
+            height: 38px;
+            border: 1px solid #EFEFEF;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #BDBDBD;     
+            line-height: 38px;
+            padding-left: 12px;
+            float: left;
+        }
+        .Releasethree-crux-list>div:nth-of-type(1)>input{
+            width: 100%;
+            height: 100%;
+        }
+        .Releasethree-crux-list>div:nth-of-type(1)>input::-webkit-input-placeholder {
+            font-size: 14px;
+            color: #BDBDBD;
+        }
+        .Releasethree-crux-list>img{
+            display: block;
+            float: left;
+            width: 22px;
+            height: 22px;
+            margin-left: 10px;
+            margin-top: 9px;
+            
+        }
+        .Releasethree-crux-lists{
+            width: 506px;
+            height: 38px;
+            border: 1px solid #EFEFEF;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #BDBDBD;     
+            line-height: 38px;
+            padding-left: 12px;
+            clear: both;
+            margin-bottom: 20px;
+        }
+        .Releasethree-crux-lists>input{
+            width: 100%;
+            height: 100%;
+        }
+        .Releasethree-crux-lists>input::-webkit-input-placeholder {
+            font-size: 14px;
+            color: #BDBDBD;
+        }
+        .Releasethree-crux-add{
+            clear: both;
+            width: 506px;
+            height: 38px;
+            background: #CDF3ED;
+            border-radius: 4px;
+            text-align: center;
+            line-height: 38px;
+            font-size: 14px;
+            color: #02C2A2;
+        }
+    </style>
+</head>
+<body>
+    <div class="header" id="header"></div>
+    <div class="Releaserecomm-title">完善说明书基本信息(3/4)</div>
+    <div class="Releasethree-box">
+        <div class="Releasethree-name">
+            <div><img src="../../images/img/xing.png" alt="">说明书名称</div>
+            <div><input type="text" placeholder="为您的说明书起个名字吧"></div>
+            <div><img src="../../images/img/look-green.png"><span>查看示例</span></div>
+        </div>
+        <div class="Releasethree-brief">
+            <div><img src="../../images/img/xing.png" alt="">说明书简介</div>
+            <div><textarea class="dome" placeholder="用一句话介绍一下您的说明书..." placeholder-style="font-size: 14px;"></textarea></div>
+            <div><img src="../../images/img/wei33.png" style="width:100%;height:100%;border-radius:4px;"></div>
+            <div><img src="../../images/img/look-green.png"><span>查看示例</span></div>
+            <div class="Releasethree-brief-look">
+                美峪黑尚莓莓果酒，以黑莓果为原料，经冷冻储存，榨汁、低温发酵、蒸馏、陈酿等工艺生产的自然水果蒸馏酒。酒体呈现琥珀光泽，香气宜人。欢迎您品鉴。
+            </div>
+        </div>
+        <div class="Releasethree-supply">
+            <div>发布至供应</div>
+            <div class="Releasethree-supply-yes">是</div>
+            <div class="Releasethree-supply-no">否</div>
+        </div>
+        <div class="Releasethree-category">
+            <div><img src="../../images/img/xing.png" alt="">所属品类</div>
+            <select class="Customer-select">
+                <option>请选择说明书所属品类</option>
+                <option value="">1121</option>
+                <option value="">2222222222222222222222222222222222</option>
+                <option value="">3546</option>
+                <option value="">1231</option>
+            </select>
+            <img src="../../../images/img/Image1.png" class="thr-bottom2">
+        </div>
+        <div class="Releasethree-crux">
+            <div>说明书关键词</div>
+            <div class="Releasethree-crux-box">
+                <!-- <div class="Releasethree-crux-list">
+                    <div>关键词</div>
+                    <img src="../../images/img/delete.png">
+                </div> -->
+                <div class="Releasethree-crux-lists" style="display:none;">
+                    <input type="text" placeholder="请输入关键词" class="inputa">
+                </div>
+                <div class="Releasethree-crux-add">+ 添加关键词</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<script src="../../js/Biography.js"></script>
+<script>
+    $(function () {
+        /*公共部分
+         * header 头部
+         * header 底部
+         */
+        $("#header").load("./../../src/common/pages/header/header.html");
+    });
+    $(".Releasethree-crux-add").click(function(){
+        $(".Releasethree-crux-lists").css('display','block');
+        $(".inputa").focus();
+    })
+    
+    // <div class="Releasethree-crux-list">
+    //     <div>关键词</div>
+    //     <img src="../../images/img/delete.png">
+    // </div>
+    var arr=[];
+    $(".inputa").blur(function(){
+        console.log($(this).val())
+        $(".Releasethree-crux-lists").css("display","none");
+        
+        var obj='<div class="Releasethree-crux-list"><div>'+ $(this).val() +'</div><img class="delect" src="../../images/img/delete.png"></div>'
+        $(".Releasethree-crux-box").prepend(obj);
+        
+        
+        arr.unshift($(this).val());
+        $(this).val('');
+        console.log(arr);
+    });
+    // $(".delect").click(function(){
+    //     // $(this).remove();
+    //     console.log('123')
+    // })
+    
+    $(".Releasethree-crux-box").on("click","img", function(){
+        $(this).parent().remove();
+    });
+ 
+</script>

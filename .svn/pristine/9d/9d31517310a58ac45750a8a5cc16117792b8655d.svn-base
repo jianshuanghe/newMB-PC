@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>陌拜</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="./../../../../css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="./../../../../js/jquery-1.11.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- <script src="./../../js/drag.js"></script> -->
+</head>
+<body>
+    <div class="header" id="header"></div>
+    <div class="search" id="search"></div>
+    <div class="content">
+        <div class="putInPurchase-mb">
+          <div class="pip-mb-cont left">
+            <div class="route-mb"></div>
+            <div class="putInP-mb" id="putInP-mb"></div>
+          </div>
+          <div class="pip-mb-qrCode left">
+            <div class="qrCodePutIn" id="qrCodePutIn"></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+    </div>
+    <div class="footer" id='footer'></div>
+</body>
+<script>
+    (function($) {
+      $.fn.exist = function(){
+          if($(this).length>=1){
+              return true;
+          }
+          return false;
+      };
+    })(jQuery);
+    $(function(){
+         /*公共部分
+         * header 头部
+         * header 底部
+         */
+        $("#header").load("./../../../../src/common/pages/header/header.html");
+        $("#search").load("./../../../../src/common/pages/search/search.html", function () {
+          if ($('.search-mb').exist()) {
+            $('.content').css('margin', '103px 0 0 0');
+          };
+        });
+        $("#footer").load("./../../../../src/common/pages/footer/footer.html");
+        /*发布采购模块
+         * qrCodePutIn 二维码发布
+         * putInSimple 简单发布模式（里面会切换详细发布）
+         */
+        $("#qrCodePutIn").load("../../../projectC/edit/components/qrCodePutIn.html");
+        $("#putInP-mb").load("../../../projectC/edit/components/putInSimple.html");
+    });
+</script>
+<style type="text/css">
+  .putInPurchase-mb{
+    position: relative;
+    width: 1200px;
+    margin: auto;
+    padding: 10px 60px 50px 10px;
+  }
+  .pip-mb-cont{
+    padding: 0 40px 0 60px;
+  }
+</style>
+</html>

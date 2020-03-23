@@ -1,0 +1,155 @@
+
+  <div class="register-content">
+    <div class="register-mb right">
+      <div class="top-mb"></div>
+      <div class="register">
+        <div class="qrCode-mb">
+          <div class="qrCode-putIn">扫码移动端发采购</div>
+          <!-- 二维码 -->
+          <div class="qrCode-border" id='qrCodePutIn'>
+            <img src="../../edit/img/qrCode.jpg" alt="" class="">
+          </div>
+          <!-- 成功 -->
+          <div class="qrCodeSuccess" id="qrCodePutInSuccess" style="display: none;">
+            <div class="qrCodeSuccess-p">3s后跳转</div>
+            <div class="qrCodeSuccess-p">若无跳转可  <span class="tapScanSign">点击此处</span></div>
+          </div>
+          <!-- 失效 -->
+          <div class="qrCodeInvalid" id="qrCodePutInInvalid" style="display: none;">
+            <div class="qrCodeInvalid-p">二维码已失效</div>
+            <div class="qrCodeRefresh">点击刷新</div>
+          </div>
+          <!-- 扫码工具提示 -->
+          <div class="qrCode-tips">
+            <p class="tips-p">支持手机浏览器、微信小程序、百度小程序、支
+付宝小程序、头条小程序访问</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+
+</script>
+
+<style scoped>
+  .register-content{
+    position: relative;
+    width: 100%;
+    padding: 0 2px;
+  }
+  .register-mb{
+    position: relative;
+    width: 340px;
+    height: 350px;
+    background: #F9F9F9;
+    padding: 20px 0 0 0;
+  }
+  .top-mb{
+    position: relative;
+    width: 100%;
+  }
+  .register{
+    position: relative;
+    width: 100%;
+  }
+  .qrCode-putIn{
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #2E2E30;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 13px;
+  }
+  .qrCode-mb{
+    position: relative;
+    width: 300px;
+    height: 310px;
+    background: #FFFFFF;
+    padding: 23px 0 0 0;
+    margin: auto;
+  }
+  .qrCode-border{
+    background: #02C2A2;
+    position: relative;
+    width: 162px;
+    height: 162px;
+    margin: auto;
+  }
+  .qrCode-border>img{
+    position: relative;
+    width: 100%;
+  }
+  .qrCodeInvalid{
+    position: relative;
+    width: 162px;
+    height: 162px;
+    z-index: 999;
+    margin: auto;
+    margin-top: -162px;
+    background: #ffffffcf;
+    padding-top: 30px;
+  }
+  .qrCodeInvalid-p{
+    position: relative;
+    width: 100%;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #2E2E30;
+    text-align: center;
+    line-height: 50px;
+  }
+  .qrCodeSuccess{
+    position: relative;
+    width: 162px;
+    height: 162px;
+    z-index: 999;
+    margin: auto;
+    margin-top: -162px;
+    background: #ffffffcf;
+    padding-top: 60px;
+  }
+  .qrCodeSuccess-p{
+    position: relative;
+    width: 100%;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #2E2E30;
+    text-align: center;
+    line-height: 20px;
+  }
+  .tapScanSign{
+    color: #02C2A2;
+  }
+  .qrCodeRefresh{
+    background: #02C2A2;
+    border-radius: 4px;
+    border-radius: 4px;
+    position: relative;
+    width: 96px;
+    height: 34px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 34px;
+    margin: auto;
+  }
+  .qrCode-tips{
+    position: relative;
+    width: 89%;
+    margin-top: 14px;
+    margin: auto;
+  }
+  .tips-p{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #9B9B9B;
+    text-align: center;
+    line-height: 20px;
+    word-wrap: break-word;
+  }
+
+</style>

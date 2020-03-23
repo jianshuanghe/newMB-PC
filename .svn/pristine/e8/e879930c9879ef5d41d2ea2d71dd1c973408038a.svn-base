@@ -1,0 +1,90 @@
+
+  <div class="register-content">
+    <div class="register-mb">
+      <div class="top-mb">
+        <p class="top-forget-p">重置密码</p>
+      </div>
+      <div class="register">
+        <div class="items-border">
+          <div class="phone">
+          	<input class="mbui-input" type="text" placeholder="请输入已注册的手机号"  value=""/>
+          </div>
+        </div>
+        <p class="mb-login-errorTips" id="phone-error">请输入正确格式的手机号</p>
+        <div class="items-border">
+          <div class="verification">
+          	<input class="mbui-input verCode left" type="text" placeholder="请输入验证码"  value=""/>
+            <button type="button" name="button" class="verCodeBtn right">获取验证码</button>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <p class="mb-login-errorTips" id="verificat-error">验证码错误</p>
+        <div class="items-border">
+          <div class="passWord">
+          	<input class="mbui-input" type="text" placeholder="请设置密码"  value=""/>
+          </div>
+        </div>
+        <div class="loginBtn">立即重置</div>
+        <div class="signIn-forget">
+          <div class="signIn-forget-p"><span class="backSignIn"  id="signTap">返回登录</span>  | <span class="backRegister" id='registerTap'>立即注册</span></div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  $("button[name='button']").click(function(event) {
+      //这里写发送验证码的代码
+      var time = 60;
+      settime($(this));
+      function settime(obj){
+          if (time==0) {
+              $(obj).attr('disabled', false);
+              $(obj).html("获取验证码");
+              time = 60;
+              return;
+          } else{
+              $(obj).attr('disabled', true);
+              $(obj).html(time+"S重新获取");
+              time--;
+          }
+          setTimeout(function() {
+              settime(obj)
+          },1000)
+      }
+  });
+</script>
+
+<style scoped>
+  .top-forget-p{
+    position: relative;
+    width: 100%;
+    font-family: PingFangSC-Semibold;
+    font-size: 24px;
+    color: #2E2E30;
+    line-height: 50px;
+  }
+  .signIn-forget{
+    position: relative;
+    width: 100%;
+    margin-top: 50%; 
+  }
+  .signIn-forget-p{
+    position: relative;
+    width: 100%;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #9B9B9B;
+    line-height: 14px;
+    text-align: center;
+    border-right: 1px solid #E2E2E2;
+    border-left: 1px solid #E2E2E2;
+  }
+  .backSignIn{
+    margin-right: 10px;
+  }
+  .backRegister{
+    margin-left: 10px;
+  }
+</style>

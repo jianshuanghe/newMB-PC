@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../../css/reset.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        .Companytop{
+            margin-top: 34px;
+            width: 100%;
+            height: 160px;
+            background-image: url('../../images/img/1717.png');
+            background-repeat: no-repeat;
+		    background-size: cover;
+            padding: 1px;
+        }
+        .Companytop-box{
+            width:1040px;
+            height: 120px;
+            margin: 40px auto auto auto;
+        }
+        .Companytop-box-left{
+            width: 70%;
+            height: 100%;
+            float: left;
+            /* background: red; */
+        }
+        .box-left-img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            float: left;
+        }
+        .box-left-img>img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .box-left-zi{
+            width: 88%;
+            height: 100%;
+            float: right;
+        }
+        .box-left-zi>div:nth-of-type(1){
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            font-size: 20px;
+            color: #FFFFFF;
+            margin-top: 15px;
+        }
+        .box-left-zi>div:nth-of-type(1)>span{
+            display: block;
+            float: left;
+        }
+        .box-left-zi>div:nth-of-type(1)>img{
+            width: 18px;
+            height: 18px;
+            display: block;
+            float: left;
+            margin-left: 20px;
+            margin-top: 2px;
+        }
+        .box-left-zi>div:nth-of-type(2){
+            width: 100%;
+            height: 18px;
+            margin-top: 20px;
+        }
+        .vip-3{
+            width: 80px;
+            height: 16px;
+            display: block;
+            float:left; 
+        }
+        .Bar{
+            width: 1px;
+            height: 12px;
+           background:  rgba(255,255,255,0.10);
+            float: left;
+            margin-left:20px;
+            margin-right: 20px; 
+            margin-top: 3px;
+        }
+        .qiye-ren{
+            width: 64px;
+            height: 16px;
+            display: block;
+            float: left;
+            margin-left: 10px;
+        }
+        .phone{
+            width: 10px;
+            height: 13px;
+            display: block;
+            float: left;
+            margin-top: 2px;
+        }
+        .shops{
+            font-size: 12px;
+            color: #FFFFFF;
+            display: block;
+            float: left;
+            margin-left: 5px;
+        }
+        .Companytop-box-right{
+            width: 30%;
+            height: 100%;
+            float: right;
+        }
+        .Companytop-box-right>div:nth-of-type(1){
+            width: 96px;
+            height: 35px;
+            background: #02C2A2;
+            border-radius: 4px;
+            text-align: center;
+            line-height: 35px;
+            font-size: 16px;
+            color: #FFFFFF;
+            margin-top: 10px;
+            margin-left: 70%;
+        }
+        .Companytop-box-right>div:nth-of-type(2){
+            min-width: 72px;
+            height: 14px;
+            border-left: 1px solid #EFEFEF;
+            font-size: 14px;
+            color: #FFFFFF;
+            line-height: 14px;
+            float: right;
+            margin-top: 20px;
+            text-align: right;
+            padding-left: 14px;
+        }
+        .Companytop-box-right>div:nth-of-type(2)>span{
+            font-size: 16px;
+            color: #FFFFFF;
+            margin-left: 5px;
+        }
+        .Companytop-box-right>div:nth-of-type(3){
+            min-width: 72px;
+            height: 14px;
+            border-left: 1px solid #EFEFEF;
+            font-size: 14px;
+            color: #FFFFFF;
+            line-height: 14px;
+            float: right;
+            margin-top: 20px;
+            margin-right: 14px;
+            text-align: right;
+            padding-left: 14px;
+        }
+        .Companytop-box-right>div:nth-of-type(3)>span{
+            font-size: 16px;
+            color: #FFFFFF;
+            margin-left: 5px;
+        }
+        .Companytop-box-right>div:nth-of-type(4){
+            min-width: 72px;
+            height: 14px;
+            font-size: 14px;
+            color: #FFFFFF;
+            line-height: 14px;
+            float: right;
+            margin-top: 20px;
+            margin-right: 14px;
+            text-align: right;
+            padding-left: 14px;
+        }
+        .Companytop-box-right>div:nth-of-type(4)>span{
+            font-size: 16px;
+            color: #FFFFFF;
+            margin-left: 5px;
+        }
+        .Companytop-conter{
+            width: 1040px;
+            min-height: 100%;
+            /* background: red; */
+            margin: 0 auto;
+        }
+        .Companytop-Details{
+            width: 660px;
+            min-height: 1000px;
+            background: red;
+        }
+        .Companytop-Navigation{
+            width: 660px;
+            height: 59px;
+            border-bottom: 1px solid #EFEFEF;
+        }
+        .Navigation-but{
+            width: 88px;
+            height: 38px;
+            float: left;
+            margin-left: 20px;
+            font-size: 16px;
+            color: #2E2E30;
+            text-align: center;
+            line-height: 38px;
+            margin-top: 10px;
+        }
+        .weight{
+            background: #02C2A2;
+            border-radius: 4px;
+            color: #FFFFFF;
+        }
+        /* 商机详情 */
+        .Details-Business{
+            width: 100%;
+            min-height: 900px;
+            padding:1px; 
+        }
+        .Details-Business-Route{
+            width: 100%;
+            height: 15px;
+            font-size: 14px;
+            margin-top: 20px;
+            line-height: 15px;
+        }
+        .Business-within{
+            width: 100%;
+            height: 262px;
+            margin-top: 20px;
+            position: relative;
+            padding: 1px;
+        }
+        .Business-within-er{
+            width: 22px;
+            height: 22px;
+            top: 0;
+            right: 0;
+            position: absolute;
+        }
+        .Business-within-er>img{
+            width: 100%;
+            height: 100%;
+        }
+        .Business-within-first{
+            width: 95%;
+            height: 93%;
+            margin: 20px auto auto auto;
+        }
+        .within-first-tuwen{
+            width: 100%;
+            height: 140px;
+        }
+        .within-first-tu{
+            width: 276px;
+            height: 140px;
+            float: left;
+        }
+        .within-first-tu>img{
+            width: 100%;
+            height: 100%;
+        }
+        .within-first-wen{
+            width: 54%;
+            height: 100%;
+            float: right;
+            position:relative;
+        }
+        .within-first-wen>div:nth-of-type(1){
+            font-size: 18px;
+            color: #2E2E30;
+            text-align: justify;
+            line-height: 26px;
+        }
+        .within-first-wenyi{
+            width: 100%;
+            height: 13px;
+            line-height: 13px;
+            font-size: 12px;
+            color: #9B9B9B;
+            padding-top: 8px;
+        }
+        .within-first-wenyi>span{
+            padding-left: 5px;
+            color: #2E2E30;
+        }
+        .within-first-but{
+            width: 100%;
+            height: 35px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            line-height: 35px;
+        }
+        .within-first-but>div:nth-of-type(1){
+            font-size: 20px;
+            color: #FAB100;
+            float: left;
+        }
+        .within-first-but>div:nth-of-type(2){
+            width: 96px;
+            height: 34px;
+            border-radius: 4px;
+            background: #02C2A2;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 36px;
+            float: right;
+        }
+        .within-first-Smallgraph{
+            width: 276px;
+            height: 40px;
+            margin-top: 10px; 
+            position: relative;
+        }
+        .within-first-Smallgraph-left{
+            width: 10px;
+            height: 40px;
+            float: left;
+        }
+        .within-first-Smallgraph-left>img{
+            width: 100%;
+            height: 45px;
+        }
+        .within-first-Smallgraph-right{
+            width: 10px;
+            height: 40px;
+            float: right;
+        }
+        .within-first-Smallgraph-right>img{
+            width: 100%;
+            height: 45px;
+        }
+        .within-first-Smallgraph-img{
+            width: 240px;
+            height: 40px;
+            float: left;
+            margin-left: 10px;
+        }
+        .within-first-Smallgraph-img>img{
+            width: 40px;
+            height: 40px;
+            display: block;
+            float: left;
+            margin-left: 10px;
+        }
+        .within-first-Smallgraph-img>img:nth-of-type(1){
+            margin-left: 0;
+        }
+        .within-first-function{
+            width: 276px;
+            height: 52px;
+            position: relative;
+            /* background: black; */
+        }
+        .within-first-function>div{
+            width: 72px;
+            height: 100%;
+            line-height: 57px;
+            font-size: 12px;
+            color: #2E2E30;
+            float: left;
+        }
+        .within-first-function>div>img{
+            width: 10px;
+            height: 9px;
+        }
+        .Details-Navigationswitch{
+            width: 100%;
+            height: 50px;
+            margin-top: 20px;
+            background: #F5F5F5;
+        }
+        .Details-Navigationswitch-hea{
+            width: 109px;
+            height: 50px;
+            font-size: 16px;
+            color: #2E2E30;
+            text-align: center;
+            line-height: 52px;
+            float: left;
+        }
+        .newhea{
+            background: white;
+            color: #02C2A2;
+            border-top: 3px solid  #02C2A2;
+        }
+        .Details-Navigationswitch-many{
+            width: 109px;
+            height: 50px;
+            font-size: 16px;
+            color: #2E2E30;
+            line-height: 52px;
+            float: left;
+            position: relative;
+            z-index: 10;
+        }
+        .Details-Navigationswitch-many>span{
+            display: block;
+            float: left;
+            margin-left: 30%;
+        }
+        .Details-Navigationswitch-many>img{
+            width: 9px;
+            height: 7px;
+            display: block;
+            float: left;
+            margin-top: 21px;
+            margin-left: 5px;
+        }
+        .Details-Navigationswitch-surplus{
+            width: 143px;
+            min-height: 38px;
+            position: absolute;
+            top: 50px;
+            right: -4px;
+            background: white;
+            z-index: 10;
+            display: none;
+        }
+        .Navigationswitch-surplus-xuan{
+            width: 100%;
+            height: 38px;
+            font-size: 14px;
+            color: #2E2E30;
+            line-height: 38px;
+            padding-left: 12px;
+        }
+        .xiala{
+            background: #EFEFEF;
+        }
+        .Mask{
+            top: 0;
+            left: 0;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header" id="header"></div>
+    <div class="Companytop">
+        <div class="Companytop-box">
+            <div class="Companytop-box-left">
+                <diV class="box-left-img"><img src="../../images/img/e-mile.png" alt=""></diV> 
+                <div class="box-left-zi">
+                    <div>
+                        <span>北京慧聪云信大数据科技有限公司</span><img src="../../images/img/liu-tan.png">
+                    </div>
+                    <div>
+                        <img src="../../images/img/hui/vip3+.png"  class="vip-3">
+                        <img src="../../images/img/icon2/qiye-ren.png" class="qiye-ren">
+                        <div class="Bar"></div>
+                        <img src="../../images/img/phone.png" class="phone">
+                        <span class="shops">移动商铺</span>
+                    </div>
+                </div>
+            </div>
+            <div class="Companytop-box-right">
+                <div>+ 关注</div>
+                <div>已获赞<span>5800</span></div>
+                <div>关注<span>580</span></div>
+                <div>粉丝<span>5800</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="Companytop-conter">
+        <!-- 左侧 -->
+        <div class="Companytop-Details">
+            <div class="Companytop-Navigation">
+                <div class="Navigation-but weight">产品信息</div>
+                <div class="Navigation-but">公司资讯</div>
+                <div class="Navigation-but">产品售后</div>
+                <div class="Navigation-but">公司介绍</div>
+            </div>
+            <div class="Details-Business">
+                <div class="Details-Business-Route">
+                    <span>首页 ></span>
+                    <span>供应商机 ></span>
+                    <span style="color: #F5F5F5;;">商机详情</span>
+                </div>
+                <div class="Business-within">
+                    <div class="Business-within-er"><img src="../../images/img/jiao/erweima.png"></div>
+                    <div class="Business-within-first">
+                        <div class="within-first-tuwen">
+                            <div class="within-first-tu"><img src="../../images/img/Exhibition.png"></div>
+                            <div class="within-first-wen">
+                                <div>我是普通模版的主题，一二三四五六七八九十一二三四五六限制三十</div>
+                                <div class="within-first-wenyi">所属品类:<span>服装行业</span></div>
+                                <div class="within-first-but">
+                                    <div>面议</div>
+                                    <div>立即询价</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="within-first-Smallgraph">
+                            <div class="within-first-Smallgraph-left"><img src="../../images/img/left.png"></div>
+                            <div class="within-first-Smallgraph-right"><img src="../../images/img/right.png"></div>
+                            <div class="within-first-Smallgraph-img">
+                                <img src="../../images/img/Exhibition.png">
+                                <img src="../../images/img/Exhibition.png">
+                                <img src="../../images/img/Exhibition.png">
+                                <img src="../../images/img/Exhibition.png">
+                                <img src="../../images/img/Exhibition.png">
+                            </div>
+                        </div>
+                        <div class="within-first-function">
+                            <div><img src="../../images/img/zan-black.png"> 点赞</div>
+                            <div><img src="../../images/img/shou-black.png"> 收藏</div>
+                            <div><img src="../../images/img/fen-black.png"> 分享</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Details-Navigationswitch">
+                    <div class="Details-Navigationswitch-hea newhea">产品简介</div>
+                    <div class="Details-Navigationswitch-hea">产品简介</div>
+                    <div class="Details-Navigationswitch-hea">产品简介</div>
+                    <div class="Details-Navigationswitch-hea">产品简介</div>
+                    <div class="Details-Navigationswitch-hea">产品简介</div>
+                    <div class="Details-Navigationswitch-many">
+                        <span class="many-span">更多</span>
+                        <img class="class_img many-span" src="../../images/img/Triangle-black.png">
+                        <div class="Details-Navigationswitch-surplus">
+                            <div class="Navigationswitch-surplus-xuan">我是下拉选择1</div>
+                            <div class="Navigationswitch-surplus-xuan">我是下拉选择2</div>
+                            <div class="Navigationswitch-surplus-xuan">我是下拉选择3</div>
+                            <div class="Navigationswitch-surplus-xuan">我是下拉选择4</div>
+                            <div class="Navigationswitch-surplus-xuan">我是下拉选择5</div>
+                            <div class="Navigationswitch-surplus-xuan">我是下拉选择6</div>
+                        </div>
+                    </div>
+                    <div class="Mask"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 右侧 -->
+        <div></div>
+    </div>
+</body>
+</html>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script>
+    $(function () {
+        /*公共部分
+         * header 头部
+         * header 底部
+         */
+        $("#header").load("./../../src/common/pages/header/header.html");
+
+    });
+    // 产品信息 公司资讯 产品售后 公司介绍 切换
+    $(".Navigation-but").click(function(){
+        $(this).addClass('weight').siblings().removeClass('weight');
+        console.log($(this).index())
+    })
+    $(".Details-Navigationswitch-hea").click(function(){
+        $(this).addClass('newhea').siblings().removeClass('newhea');
+        console.log($(this).index())
+    })
+    var num='0';
+    $(".many-span").click(function(){
+        if(num=='0'){
+            $(".class_img").attr("src", "../../images/img/Triangle-green.png");
+            $(this).css('color','#02C2A2');
+            $(".Details-Navigationswitch-surplus").css('display','block');
+            $(".Mask").css('display','block');
+            num='1';
+        }else if(num=='1'){
+            $(".class_img").attr("src", "../../images/img/Triangle-black.png");
+            $(this).css('color','#2E2E30');
+            $(".Details-Navigationswitch-surplus").css('display','none');
+            $(".Mask").css('display','none');
+            num='0';
+        }
+    })
+    $(".Mask").click(function(){
+        $(".Mask").css('display','none');
+        $(".Details-Navigationswitch-surplus").css('display','none');
+        $(".class_img").attr("src", "../../images/img/Triangle-black.png");
+        $(".many-span").css('color','#2E2E30');
+    });
+    $(".Navigationswitch-surplus-xuan").mouseenter(function(){
+        
+        $(this).addClass('xiala')
+    })
+    $(".Navigationswitch-surplus-xuan").mouseleave(function () {
+        $(this).removeClass('xiala');
+    });
+</script>

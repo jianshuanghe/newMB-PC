@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./../../css/reset.css">
+    <link rel="stylesheet" href="./../../css/drag.css">
+    <link rel="stylesheet" href="./css/homepage-hea.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        .header {
+            /* position: fixed;
+            top: 0; */
+        }
+
+        .homepage-home {
+            width: 1200px;
+            min-height: 85%;
+            /* background: red; */
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 120px;
+            bottom: 0;
+            position: relative;
+        }
+
+        .homepage-home-left {
+            position: absolute;
+            /* top: 105px;
+            left: 124px; */
+            width: 120px;
+            height: 200px;
+            float: left;
+            /* background: black; */
+        }
+
+        .homepage-home-left>div {
+            width: 100%;
+            height: 50px;
+            font-size: 18px;
+            text-align: center;
+            line-height: 50px;
+            color: #2E2E30;
+        }
+        .homepage-home-left>div:nth-of-type(1) {
+            color: white;
+            background: #02C2A2;
+            border-radius: 2px;
+        }
+        .intro{
+            position: fixed;
+            top: 120px;
+            z-index: 30;
+        }
+        .homepage-home-con {
+            position: absolute;
+            width: 660px;
+            min-height: 100%;
+            /* background: black; */
+            background: red;
+            float: left;
+            left: 154px;
+        }
+        .homepage-home-con-banner{
+            width: 100%;
+            height: 460px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid #EFEFEF;
+        }
+        .banner-erwei{
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            top: -20;
+            right: 0;
+        }
+        .banner-erwei>img{
+            width: 100%;
+            height: 100%;
+        }
+        .banner-img{
+            width: 620px;
+            height: 313.7px;
+            margin: 20px auto auto auto;
+            position: relative;
+        }
+        .banner-img>img{
+            width: 100%;
+            height: 100%;
+        }
+        .banner-img-zi{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.60) 100%);
+        }
+        .banner-img-zi>div:nth-of-type(1){
+            font-size: 20px;
+            color: #FFFFFF;
+            position: absolute;
+            bottom: 38px;
+            left: 10px;
+        }
+        .banner-img-zi>div:nth-of-type(2){
+            font-size: 13px;
+            color: #FFFFFF;
+            position: absolute;
+            bottom: 15px;
+            left: 10px;
+        }
+        .banner-money{
+            width: 620px;
+            height: 35px;
+            line-height: 35px;
+            margin: 15px auto auto auto;
+        }
+        .banner-money>div:nth-of-type(1){
+            font-size: 24px;
+            color: #FAB100;
+            float: left;
+        }
+        .banner-money>div:nth-of-type(2){
+            width: 96px;
+            height: 34px;
+            border: 1px solid #02C2A2;
+            border-radius: 4px;
+            float: right;
+            text-align: center;
+            line-height: 34px;
+            font-size: 16px;
+            color: #02C2A2;
+        }
+        .banner-userdata{
+            width: 620px;
+            height: 35px;
+            margin: 15px auto auto auto;
+            
+        }
+        .banner-userdata-header{
+            width: 34px;
+            height: 34px;
+            float: left;
+        }
+        .banner-userdata-header>img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .banner-userdata-con{
+            width: 580px;
+            height: 35px;
+            float: right;
+        }
+        .banner-userdata-con>div:nth-of-type(1){
+            width: 100%;
+            height: 13px;
+            font-size: 12px;
+            color: #2E2E30;
+        }
+        .banner-userdata-con>div:nth-of-type(1)>span{
+            font-size: 12px;
+            color: #9B9B9B;
+            padding-left: 10px;
+        }
+        .banner-userdata-con>div:nth-of-type(2){
+            width: 100%;
+            height: 22px;
+        }
+        .userdata-con-nian{
+            width: 43px;
+            height: 18px;
+            padding-top: 5px;
+            display: block;
+            float: left;
+        }
+        .userdata-con-ren{
+            width: 64px;
+            height: 18px;
+            padding-top: 5px;
+            padding-left: 10px;
+            display: block;
+            float: left;
+        }
+        .userdata-con-ping{
+            width: 52px;
+            height: 18px;
+            padding-top: 5px;
+            display: block;
+            float: left;
+            padding-left: 10px;
+        }
+        .userdata-con-liu{
+            width: 50px;
+            height: 12px;
+            float: right;
+            font-size: 12px;
+            color: #9B9B9B;
+            padding-top: 8px;
+        }
+        .userdata-con-liu>img{
+            width: 12px;
+            height: 12px;
+            padding-right: 10px;
+        }
+        .right{
+            margin-right: 10px;
+        }
+        .homepage-home-con-FigureZ{
+            width: 100%;
+            height: 234px;
+            border-bottom: 1px solid #EFEFEF;
+            margin-top: 11px;
+            position: relative;
+            overflow: auto;
+        }
+        .FigureZ-relef{
+            width: 620px;
+            height: 140px;
+            margin: 20px auto auto auto;
+        }
+        .FigureZ-relef-img{
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header" id="header"></div>
+    <!-- 搜索 发布供应 发布采购 -->
+    <div class="homepage-header">
+        <div class="homepage-hea">
+            <div class="homepage-hea-img">
+                <img src="./img/logo.png" alt="">
+            </div>
+            <div class="homepage-hea-inp">
+                <input type="text" placeholder="请输入关键字">
+                <div class="homepage-hea-sech">
+                    <img src="./img/shou.png" alt="">
+                    <span>搜索</span>
+                </div>
+            </div>
+            <div class="homepage-hea-gong gongying">发布供应</div>
+            <div class="homepage-hea-gong caigou">发布采购</div>
+            <div class="homepage-hea-gong jia">+</div>
+        </div>
+    </div>
+    <!-- 推荐列表 -->
+    <div class="homepage-home">
+        <!-- 左侧导航 -->
+        <div class="homepage-home-left" id="homeleft">
+            <div>推荐</div>
+            <div>供应</div>
+            <div>采购</div>
+            <div>资讯</div>
+        </div>
+        <!-- 中间列表部分 -->
+        <div class="homepage-home-con">
+            <!-- banner样式 -->
+            <div class="homepage-home-con-banner">
+                <div class="banner-erwei"><img src="./img/erweima.png" alt=""></div>
+                <div class="banner-img">
+                    <img src="./img/cs.png" alt="">
+                    <div class="banner-img-zi">
+                        <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                        <div>所属品类: 服装</div>
+                    </div>
+                </div>
+                <div class="banner-money">
+                    <div>¥123.00-456.00</div>
+                    <div>立即询价</div>
+                </div>
+                <div class="banner-userdata">
+                    <div class="banner-userdata-header"><img src="./img/header.png" alt=""></div>
+                    <div class="banner-userdata-con">
+                        <div>北京慧聪云信大数据科技有限公司<span>刚刚发布</span></div>
+                        <div>
+                            <img src="./img/years.png" class="userdata-con-nian">
+                            <img src="./img/renzheng.png" class="userdata-con-ren">
+                            <img src="./img/pingpai.png" class="userdata-con-ping">
+                            <div class="userdata-con-liu"><img src="./img/liuyan.png" alt="">999+</div>
+                            <div class="userdata-con-liu right"><img src="./img/zan.png" alt="">999+</div>
+                            <div class="userdata-con-liu right"><img src="./img/Eye.png" alt="">999+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 图左 公司在下 -->
+            <div class="homepage-home-con-FigureZ">
+                <div class="banner-erwei"><img src="./img/erweima.png" alt=""></div>
+                <div class="FigureZ-relef">
+                    <div class="FigureZ-relef-img">
+
+                    </div>
+                </div>
+            </div>
+            <div class="xiaoxie" style="height:1000px"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script>
+    $(function () {
+        /*公共部分
+         * header 头部
+         * header 底部
+         */
+        $("#header").load("./../../src/common/pages/header/header.html");
+
+    });
+    $(window).scroll(function () { //开始监听滚动条
+        //获取当前滚动条高度
+        var topp = $(document).scrollTop();
+        if (topp > 1) {
+            $("#homeleft").addClass("intro")
+        }else if(topp == 0){
+            $("#homeleft").removeClass("intro")
+        }
+
+    })
+</script>

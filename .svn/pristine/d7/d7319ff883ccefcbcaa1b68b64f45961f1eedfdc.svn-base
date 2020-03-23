@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../../css/reset.css">
+    <link rel="stylesheet" href="../projectB/css/homepage-hea.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        .detailsInf-box{
+            max-width: 1200px;
+            min-height: 100%;
+            margin: 120px auto auto auto;
+        }
+        .detailsInf-left{
+            width: 120px;
+            height: 225px;
+            float: left;
+        }
+        .detailsInf-left-one{
+            width: 95%;
+            height: 50px;
+            border-bottom: 1px solid #EFEFEF;
+            margin: 0 auto; 
+            font-size: 16px;
+            color: #2E2E30;
+            text-align: center;
+            line-height: 50px;
+        }
+        .detailsInf-left-one>img{
+            width: 24px;
+            height: 24px;
+            display: block;
+            float: left;
+            margin-top: 12px;
+            padding-right: 5px;
+        }
+        .detailsInf-left-one>span{
+            display: block;
+            float: left;
+        }
+        .detailsInf-left-two{
+            width: 95%;
+            height: 24px;
+            margin: 10px auto auto auto; 
+            line-height: 24px;
+        }
+        .detailsInf-left-two>img{
+            width: 24px;
+            height: 24px;
+            display: block;
+            float: left;
+            padding-right: 5px;
+        }
+        .detailsInf-left-two>span{
+            display: block;
+            float: left;
+        }
+        .detailsInf-Middle{
+            width: 660px;
+            min-height: 100px;
+            margin-left: 30px;
+            float: left;
+            position: relative;
+        }
+        .Middle-lu{
+            width: 100%;
+            height: 15px;
+            font-size: 14px;
+            line-height: 15px;
+        }
+        .Middle-text{
+            width: 95%;
+            min-height: 100px;
+            margin: 20px auto auto auto; 
+            position: relative;
+        }
+        .banner-erwei{
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            top: 0;
+            right: -18px;
+        }
+        .banner-erwei>img{
+            width: 100%;
+            height: 100%;
+        }
+        .Middle-text-title{
+            width: 100%;
+            font-size: 34px;
+            color: #2E2E30;
+            line-height: 42px;
+        }
+        .Middle-text-time{
+            font-size: 14px;
+            color: #9B9B9B;
+            margin-top: 6px;
+        }
+        .Middle-text-mation{
+            width: 100%;
+            font-size: 16px;
+            color: #2E2E30;
+            letter-spacing: 0;
+            text-align: justify;
+            line-height: 28px;
+            margin-top: 35px;
+        }
+        .Middle-text-list{
+            width: 100%;
+            min-height: 100px;
+            margin-top: 40px;
+        }
+        .Middle-text-list>div:nth-of-type(1){
+            font-size: 18px;
+            color: #2E2E30;
+            font-weight: bold;
+        }
+        .Middle-text-type{
+            font-size: 18px;
+            color: #02C2A2;
+        }
+        .Middle-text-con{
+            width: 100%;
+            font-size: 16px;
+            color: #2E2E30;
+            letter-spacing: 0;
+            text-align: justify;
+            line-height: 28px;
+            margin-top: 20px;
+        }
+        .Middle-text-img{
+            width: 100%;
+            margin-top: 20px;
+        }
+        .Middle-text-img>img{
+            width: 100%;
+        }
+        .Middle-text-end{
+            width: 100%;
+            margin-top: 17px;
+            text-align: center;
+            font-size: 15px;
+            color: #2E2E30;
+            line-height: 20px;
+            font-weight: bold;
+        }
+        .Middle-text-but{
+            width: 180px;
+            height: 34px;
+            text-align: center;
+            line-height: 34px;
+            font-size: 14px;
+            color: #FFFFFF;
+            margin: 20px auto 20px auto;
+            background: #2E2E30;
+        }
+        .Details-right{
+            width: 340px;
+            min-height: 667px;
+            float: right;
+            margin-top: 20px;
+        }
+        .Details-right-top{
+            width: 100%;
+            min-height: 667px;
+            border: 1px solid #EFEFEF;
+        }
+        .company-header{
+            width: 100%;
+            height: 154px;
+            position: relative;
+        }
+        .company-header-url{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .company-header-url>img{
+            width: 100%;
+            height: 100%;
+        }
+        .company-header-name{
+            width: 310px;
+            height: 80px;
+            position: absolute;
+            left:20px;
+            bottom: 0;
+        }
+        .companyname{
+            width: 228px;
+            font-size: 16px;
+            color: #2E2E30;
+            line-height: 20px;
+            font-weight: bold;
+            float: left;
+        }
+        .companyguan{
+            background: #02C2A2;
+            border-radius: 4px;
+            width: 72px;
+            height: 34px;
+            text-align: center;
+            line-height: 34px;
+            font-size: 16px;
+            color: #FFFFFF;
+            float: left;
+            margin-left: 10px;
+        }
+        .companyedit{
+            width: 228px;
+            height: 20px;
+            margin-top: 10px;
+            float: left;
+        }
+        
+        .companyedit-son{
+            width: 70px;
+            height: 20px;
+            font-size: 12px;
+            color: #5D5D5D;
+            line-height: 20px;
+            float: left;
+            margin-left: 10px;
+        }
+        .companyedit>div:nth-of-type(1){
+            margin-left: 0;
+        }
+        .companyedit-son>img{
+            width: 17px;
+            height: 17px;
+            display: block;
+            float: left;
+        }
+        .companyedit-son>span{
+            display: block;
+            float: left;
+            padding-left: 5px;
+        }
+        .company-conter{
+            width: 90%;
+            min-height: 278px;
+            margin: 0 auto;
+            border-bottom: 1px solid #EFEFEF;
+        }
+        .company-conter-subordinate{
+            font-size: 14px;
+            color: #2E2E30;
+            padding-top: 18px;
+        }
+        .company-conter-subordinate>span{
+            padding: 2px 10px 2px 10px;
+            border: 1px solid #02C2A2;
+            border-radius: 9px;
+            margin-left: 10px;
+            font-size: 12px;
+            color: #02C2A2;
+        }
+        .company-conter-Consultation{
+            width: 96px;
+            height: 34px;
+            border: 1px solid #02C2A2;
+            border-radius: 4px;
+            margin: 20px auto 20px auto;
+            text-align: center;
+            line-height: 34px;
+            font-size: 14px;
+            color: #02C2A2;
+        }
+        .company-conter-Consultation>img{
+            width: 16px;
+            height: 16px;
+            display: block;
+            float: left;
+            margin-left: 10px;
+            margin-top: 9px;
+        }
+        .company-conter-Consultation>span{
+            display: block;
+            float: left;
+            margin-left: 5px;
+        }
+        .company-bottom{
+            width: 90%;
+            height: 215px;
+            margin: 0 auto;
+        }
+        .company-bottom-er{
+            width: 162px;
+            height: 162px;
+            margin: 20px auto auto auto;
+            background-image: url('../../images/img/erweimakuang.png');
+            background-size: 100% 100%;
+            padding: 1px;
+        }
+        .company-bottom-er>img{
+            width: 80%;
+            height: 80%;
+            margin: 15px auto auto auto;
+            display: block;
+        }
+        .company-bottom-edit{
+            font-size: 12px;
+            color: #9B9B9B;
+            margin: 20px auto auto auto;
+        }
+        .home-right-List{
+            width: 100%;
+            min-height: 658px;
+            margin-top: 20px;
+            background: #F9F9F9;
+            
+        }
+        .home-right-Lists{
+            width: 100%;
+            min-height: 658px;
+            margin-top: 20px;
+            background: #F9F9F9;
+        }
+        .List-headers{
+            width: 100%;
+            height: 56px;
+            border-bottom: 1px solid #02C2A2;
+        }
+        .List-headers>div:nth-of-type(1){
+            width: 110px;
+            height: 100%;
+            float: left;
+            font-size: 16px;
+            color: #02C2A2;
+            text-align: center;
+            line-height: 56px;
+            font-weight: bold;
+        }
+        .List-headers>div:nth-of-type(1)>span{
+            display: block;
+            width: 40px;
+            height: 3px;
+            margin: -4px auto auto auto;
+            background: #02C2A2;
+        }
+        .List-headers>div:nth-of-type(2)>span{
+            display: block;
+            width: 40px;
+            height: 3px;
+            margin: -4px auto auto auto;
+            background: #02C2A2;
+            display: none;
+        }
+        .List-headers>div:nth-of-type(2){
+            width: 110px;
+            height: 100%;
+            float: left;
+            font-size: 16px;
+            color: #2E2E30;
+            text-align: center;
+            line-height: 56px;
+        }
+        .List-header{
+            width: 100%;
+            height: 56px;
+            border-bottom: 1px solid #EFEFEF;
+        }
+        .List-header>div:nth-of-type(1){
+            width: 83px;
+            height: 17px;
+            font-size: 16px;
+            color: #2E2E30;
+            float: left;
+            text-align: center;
+            line-height: 17px;
+            font-weight: bold;
+            border-left: 3px solid #02C2A2;
+            margin-top: 21px;
+            margin-left: 12px;
+
+        }
+        .List-body{
+            width: 100%;
+            height: 725px;
+            overflow: auto;
+            /* overflow: hidden; */
+        }
+        .List-body-somil{
+            width: 100%;
+            height: 144px;
+            border-bottom: 1px solid #EFEFEF;
+            position: relative;
+            overflow: hidden;
+        }
+        .List-body-somil-er{
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+        .List-body-somil-er>img{
+            width: 100%;
+            height: 100%;
+        }
+        .body-somil{
+            width: 95%;
+            height: 90%;
+            margin: 10px auto auto auto;
+        }
+        .body-somil-tuwen{
+            width: 100%;
+            height: 100px;
+        }
+        .somil-tuwen-tu{
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .somil-tuwen-tu>img{
+            width: 100%;
+            height: 100%;
+        }
+        .somil-tuwen-wen{
+            width: 66%;
+            height: 100%;
+            float: right;
+            position: relative;
+        }
+        .somil-tuwen-wen>div:nth-of-type(1){
+            width: 190px;
+            height: 66px;
+            font-size: 14px;
+            color: #2E2E30;
+            line-height: 22px;
+        }
+        .somil-tuwen-wen>div:nth-of-type(2){
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 190px;
+            height: 17px;
+            font-size: 16px;
+            color: #FAB100;
+            line-height: 22px;
+        }
+        .body-somil-bot{
+            width: 100%;
+            height: 25px;
+        }
+        .body-somil-bot>div:nth-of-type(1){
+            width: 50px;
+            height: 25px;
+            font-size: 12px;
+            color: #9B9B9B;
+            float: left;
+        }
+        .body-somil-bot>div:nth-of-type(2),.body-somil-bot>div:nth-of-type(3){
+            width: 50px;
+            height: 25px;
+            font-size: 12px;
+            color: #9B9B9B;
+            float: left;
+            margin-left: 15px;
+        }
+        .body-somil-bot>div:nth-of-type(1)>img,.body-somil-bot>div:nth-of-type(2)>img,.body-somil-bot>div:nth-of-type(3)>img{
+            width:14px;
+            height: 12px;
+            padding-right: 5px;
+            padding-top: 10px;
+        }
+        .body-somil-bot-xun{
+            width: 68px;
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            font-size: 12px;
+            color: #02C2A2;
+            border: 1px solid #02C2A2;
+            border-radius: 2px;
+            float: right;
+        }
+        .List-bott{
+            width: 100%;
+            height: 54px;
+            text-align: center;
+            line-height: 54px;
+            font-size: 14px;
+            color: #2E2E30;
+        }
+        .List-bodytwo{
+            width: 100%;
+            height: 558px;
+            display: none;
+            overflow: auto;
+        }
+        .bodytwo-About{
+            width: 100%;
+            height: 120px;
+            border-bottom: 1px solid #EFEFEF;
+            position: relative;
+            overflow: hidden;
+        }
+        .bodytwo-About-tu{
+            width: 95%;
+            height: 100px;
+            margin: 10px auto auto auto;
+        }
+        .About-tu-img{
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .About-tu-img>img{
+            width: 100%;
+            height: 100%;
+        }
+        .About-tu-zi{
+            width: 66%;
+            height: 100%;
+            float: right;
+            position: relative;
+        }
+        .About-tu-zi>div:nth-of-type(1){
+            width: 190px;
+            height: 25px;
+            font-size: 14px;
+            color: #2E2E30;
+            line-height: 22px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+        .About-tu-zi-two{
+            width: 100%;
+            min-height: 15px;
+            font-size: 14px;
+            line-height: 18px;
+            color: #9B9B9B;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .About-tu-zi-bao{
+            width: 68px;
+            height: 24px;
+            border-radius: 2px;
+            border: 1px solid #FAB100;
+            font-size: 12px;
+            color: #FAB100;
+            text-align: center;
+            line-height: 24px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .bodytwo-wenzi{
+            width: 100%;
+            min-height: 68px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid #EFEFEF;
+            margin-top: 10px;
+        }
+        .bodytwo-wenzi-box{
+            width: 95%;
+            min-height: 50px;
+            margin: 10px auto 10px auto;
+        }
+        .bodytwo-wenzi-box>div:nth-of-type(1){
+            width: 310px;
+            height: 15px;
+            line-height: 15px;
+            font-size: 14px;
+            color: #2E2E30;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+        .wenzi-box-fu{
+            width: 100%;
+            min-height: 15px;
+            line-height: 18px;
+            font-size: 14px;
+            color: #9B9B9B;
+            margin-top: 10px;
+            display: -webkit-box;
+            -webkit-line-clamp:2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+        }
+        .wenzi-box-but{
+            width: 68px;
+            height: 24px;
+            border: 1px solid #FAB100;
+            border-radius: 2px;
+            text-align: center;
+            line-height: 24px;
+            font-size: 12px;
+            color: #FAB100;
+            margin-top: 10px;
+            margin-left: 78%;
+        }
+
+        .body-somil-bota{
+            width: 100%;
+            height: 25px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .body-somil-bota>div:nth-of-type(1){
+            width: 50px;
+            height: 25px;
+            font-size: 12px;
+            color: #9B9B9B;
+            float: left;
+        }
+        .body-somil-bota>div:nth-of-type(2),.body-somil-bota>div:nth-of-type(3){
+            width: 50px;
+            height: 25px;
+            font-size: 12px;
+            color: #9B9B9B;
+            float: left;
+            margin-left: 15px;
+        }
+        .body-somil-bota>div:nth-of-type(1)>img,.body-somil-bota>div:nth-of-type(2)>img,.body-somil-bota>div:nth-of-type(3)>img{
+            width:14px;
+            height: 12px;
+            padding-right: 5px;
+            padding-top: 10px;
+        }
+        .Product-Read{
+            width: 100%;
+            height: 40px;
+            margin: 40px auto 40px auto; 
+            background: #F9F9F9;
+        }
+        .Product-Read-on{
+            font-size: 12px;
+            color: #9B9B9B;
+            line-height: 47px;
+            margin-left: 20px;
+            float: left;
+        }
+        .Product-Read-zan{
+            width: 68px;
+            height: 100%;
+            float: right;
+            font-size: 12px;
+            color: #2E2E30;
+            line-height: 47px;
+        }
+        .Product-Read-zan>img{
+            width: 10.5px;
+            height: 10.5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header" id="header"></div>
+    <!-- 搜索 发布供应 发布采购 -->
+    <div class="homepage-header">
+        <div class="homepage-hea">
+            <div class="homepage-hea-img">
+                <img src="../../images/img/mobai.png" alt="">
+            </div>
+            <div class="homepage-hea-inp">
+                <input type="text" placeholder="请输入关键字">
+                <div class="homepage-hea-sech">
+                    <img src="../../images/img/search.png" alt="">
+                    <span>搜索</span>
+                </div>
+            </div>
+            <div class="homepage-hea-gong gongying">发布供应</div>
+            <div class="homepage-hea-gong caigou">发布采购</div>
+            <div class="homepage-hea-gong jia">+</div>
+        </div>
+    </div>
+    <div class="detailsInf-box">
+        <!-- 左侧 -->
+        <div class="detailsInf-left">
+            <div class="detailsInf-left-one">
+                <img src="../../images/img/news-black.png"><span>留言(180)</span>
+            </div>
+            <div class="detailsInf-left-one">
+                <img src="../../images/img/give-black.png"><span>分享(180)</span>
+            </div>
+            <div class="detailsInf-left-two">
+                <img src="../../images/img/wei.png"><span>微信</span>
+            </div>
+            <div class="detailsInf-left-two">
+                <img src="../../images/img/weibo.png"><span>微博</span>
+            </div>
+            <div class="detailsInf-left-two">
+                <img src="../../images/img/QQ.png"><span>Qzone</span>
+            </div>
+        </div>
+        <!-- 中间 -->
+        <div class="detailsInf-Middle">
+            <div class="Middle-lu">
+                <span>首页 ></span>
+                <span>供应商机 ></span>
+                <span style="color: #9b9b9b">商机详情</span>
+            </div>
+            <div class="Middle-text">
+                <div class="banner-erwei"><img src="../../images/img/jiao/erweima.png" alt=""></div>
+                <div class="Middle-text-title">
+                    我是资讯的主题名称，一二三四五六七八九十一二三四五六限制三十
+                </div>
+                <div class="Middle-text-time">刚刚发布</div>
+                <div class="Middle-text-mation">近些年，各大手机厂商纷纷在手机中加入各种“黑科技”，以求打造出与众不同的产品。从最终结果上看，我们的确能找到不少“黑科技满满”的手机，它们有些性能表现亮眼，有些在功能上多样，无论你喜欢哪种，都能找到一款用户体验十分出众的产品。当下国产手机厂商，都开始纷纷下足功夫，推出各种科技感十足的智能手机，来吸引消费者，弹出式摄像头、滑盖设计、广角拍照等等，让人触手可及的新科技，确实赢得了消费者的一致青睐。对于未来全球智能手机行业发展方向，将产生巨大影响的最新四大黑科技也正式出炉，下面跟随笔者一起来看看这些能够实现你梦想的黑科技功能吧。</div>
+                <div class="Middle-text-list">
+                    <div>一、5G</div>
+                    <div class="Middle-text-type">代表品牌: 华为</div>
+                    <div class="Middle-text-con">这可能是今年大家最期待的下半年智能手机技术没有之一。而这一次5G网络的普及，也意味着将会进入到全新的万物互联时代，更为智能、快捷的信息时代。</div>
+                    <div class="Middle-text-img"><img src="../../images/img/hua.png" alt=""></div>
+                    <div class="Middle-text-con">从现在的情况来看 华为、小米、OPPO、vivo都已经准备好。不过第一个取得5G入网许可证的是华为的Mate 20X这款机型，从现在来看华为已经准备了两款5G手机。一款为华为Mate 20X，另一款为华为Mate X（就是那款折叠屏机型），划重点：需要关注华为Mate 30系列的5G版本。</div>                    
+                    <div class="Middle-text-img"><img src="../../images/img/hua02.png" alt=""></div>                    
+                    <div class="Middle-text-img"><img src="../../images/img/lian02.png" alt=""></div>                    
+                    <div class="Middle-text-end">华为Mate 20(全网通)超广角三摄，40W超级快充，3D玻璃机身，PC数据同步</div>  
+                    <div class="Middle-text-but">查看链接</div>       
+                </div>
+                <div class="Middle-text-list">
+                    <div>一、5G</div>
+                    <div class="Middle-text-type">代表品牌: 华为</div>
+                    <div class="Middle-text-con">这可能是今年大家最期待的下半年智能手机技术没有之一。而这一次5G网络的普及，也意味着将会进入到全新的万物互联时代，更为智能、快捷的信息时代。</div>
+                    <div class="Middle-text-img"><img src="../../images/img/hua.png" alt=""></div>
+                    <div class="Middle-text-con">从现在的情况来看 华为、小米、OPPO、vivo都已经准备好。不过第一个取得5G入网许可证的是华为的Mate 20X这款机型，从现在来看华为已经准备了两款5G手机。一款为华为Mate 20X，另一款为华为Mate X（就是那款折叠屏机型），划重点：需要关注华为Mate 30系列的5G版本。</div>                    
+                    <div class="Middle-text-img"><img src="../../images/img/hua02.png" alt=""></div>                    
+                    <div class="Middle-text-img"><img src="../../images/img/lian02.png" alt=""></div>                    
+                    <div class="Middle-text-end">华为Mate 20(全网通)超广角三摄，40W超级快充，3D玻璃机身，PC数据同步</div>  
+                    <div class="Middle-text-but">查看链接</div>       
+                </div>
+            </div>
+            <div class="Product-Read">
+                <div class="Product-Read-on">阅读 1234</div>
+                <div class="Product-Read-zan"><img src="../../images/img/fen-black.png"> 999+</div>
+                <div class="Product-Read-zan"><img src="../../images/img/shou-black.png"> 999+</div>
+                <div class="Product-Read-zan"><img src="../../images/img/zan-black.png"> 999+</div>
+            </div>
+        </div>
+        <!-- 右侧 -->
+        <div class="Details-right">
+            <div class="Details-right-top">
+                <div class="company-header">
+                    <div class="company-header-url"><img src="../../images/img/Admission-vip.png"></div>
+                    <div class="company-header-name">
+                        <div class="companyname">北京慧聪云信大数据科技有限公司</div>
+                        <div class="companyguan">+ 关注</div>
+                        <div class="companyedit">
+                            <div class="companyedit-son"><img src="../../images/img/icon1/enterprise-green.png"><span>企业认证</span></div>
+                            <div class="companyedit-son"><img src="../../images/img/icon1/Branddealer.png"><span>企业认证</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="company-conter">
+                    <div class="company-conter-subordinate">联系姓名: 王产业</div>
+                    <div class="company-conter-subordinate">联系电话: 12345678901 <span>复制联系电话</span></div>
+                    <div class="company-conter-subordinate">联系邮箱: 1234567890@123.com</div>
+                    <div class="company-conter-subordinate">所属行业: 工程机械</div>
+                    <div class="company-conter-subordinate">品牌名称: 工程机械</div>
+                    <div class="company-conter-subordinate">所在地区: 北京市昌平区</div>
+                    <div class="company-conter-Consultation">
+                        <img src="../../images/img/liu-tan.png">
+                        <span>立即咨询</span>
+                    </div>
+                </div>
+                <div class="company-bottom">
+                    <div class="company-bottom-er"><img src="../../images/img/55.png"></div>
+                    <div class="company-bottom-edit">支持微信、百度、今日头条、手机浏览器扫码访问该商铺</div>
+                </div>
+            </div>
+            <div class="home-right-List">
+                <div class="List-header">
+                    <div class="supply">推荐供应</div>
+                </div>
+                <div class="List-body">
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="../../images/img/jiao/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="../../images/img/oppo01.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="../../images/img/eys.png">999+</div>
+                                <div><img src="../../images/img/zan.png">999+</div>
+                                <div><img src="../../images/img/liu.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="../../images/img/jiao/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="../../images/img/oppo01.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="../../images/img/eys.png">999+</div>
+                                <div><img src="../../images/img/zan.png">999+</div>
+                                <div><img src="../../images/img/liu.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="../../images/img/jiao/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="../../images/img/oppo01.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="../../images/img/eys.png">999+</div>
+                                <div><img src="../../images/img/zan.png">999+</div>
+                                <div><img src="../../images/img/liu.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="../../images/img/jiao/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="../../images/img/oppo01.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="../../images/img/eys.png">999+</div>
+                                <div><img src="../../images/img/zan.png">999+</div>
+                                <div><img src="../../images/img/liu.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="../../images/img/jiao/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="../../images/img/oppo01.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="../../images/img/eys.png">999+</div>
+                                <div><img src="../../images/img/zan.png">999+</div>
+                                <div><img src="../../images/img/liu.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="../../images/img/jiao/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="../../images/img/oppo01.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="../../images/img/eys.png">999+</div>
+                                <div><img src="../../images/img/zan.png">999+</div>
+                                <div><img src="../../images/img/liu.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="List-bott">加载更多...</div>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="footer" id='footer'></div>
+</body>
+</html>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script>
+    $(function () {
+        /*公共部分
+         * header 头部
+         * header 底部
+         */
+        $("#header").load("./../../src/common/pages/header/header.html");
+        $("#footer").load("../../src/common/pages/footer/footer.html");
+    });
+</script>

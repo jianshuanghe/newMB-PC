@@ -1,0 +1,171 @@
+  <div class="putIn-content">
+    <div class="putIn-cont">
+      <!-- 采购信息 -->
+      <div class="pi-mb-items">
+        <!-- <div class="pii-title"><div class="line-mb-pi"></div> <span class="pii-title-p">采购信息</span> </div> -->
+        <div class="pii-mb-input">
+          <div class="pii-input-text left">
+            <!-- <span class="must-mb-style">*</span> -->
+            <span class="pii-input-p">采购数量</span> 
+          </div>
+          <div class="pii-input-box2 left">
+            <input class="mbui-input" type="text" placeholder="请输入采购数量"  value=""/>
+          </div>
+          <div class="pii-input-box3 right">
+            <!-- <input class="mbui-input" type="text" placeholder="请选择/填写单位"  value=""/> -->
+            <select class="pii-select selectpicker" class="" data-style="btn-primary">
+              <option>请选择</option>
+              <option value="PA">件</option>
+              <option value="CT">个</option>
+              <option value="NY">条</option>
+              <option value="MD">只</option>
+              <option value="VA">辆</option>
+            </select>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="pii-mb-textarea">
+          <div class="pii-input-text left">
+            <input 
+            class="mbui-input pii-input-p mbui-input-noBorder" 
+            type="text" placeholder="请输入"  value="商品描述"
+            maxlength="4"
+            />
+          </div>
+          <div class="pii-input-box4 left">
+            <input class="mbui-input" type="text" placeholder="请输入您要采购的商品描述的说明，比如目标单价、产品"  value=""/>
+          </div>
+          <div class="pii-del-img right">
+            <img class="img" src="../../edit/img/del.png"></img>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="pii-mb-textarea">
+          <div class="pii-input-text left">
+            <input 
+            class="mbui-input pii-input-p mbui-input-noBorder" 
+            type="text" placeholder="请输入"  value="商品描述"
+            maxlength="4"
+            /> 
+          </div>
+          <div class="pii-input-box4 left">
+            <input class="mbui-input" type="text" placeholder="请输入您要采购的商品描述的说明，比如目标单价、产品"  value=""/>
+          </div>
+          <div class="pii-del-img right">
+            <img class="img" src="../../edit/img/del.png"></img>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="pii-add-detile">+ 增加商品描述</div>
+        <div class="mb-line-x"></div>
+        <div class="pii-mb-textarea">
+          <div class="pii-input-text left">
+            <span class="must-mb-style">*</span>
+            <span class="pii-input-p">报价截止</span> 
+          </div>
+          <div class="pii-input-box left">
+            <input class="mbui-input" type="text" placeholder="请输入您要采购的商品描述的说明，比如目标单价、产品"  value=""/>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="pii-mb-textarea">
+          <div class="pii-input-text left">
+            <!-- <span class="must-mb-style">*</span> -->
+            <span class="pii-input-p">报价含税</span> 
+          </div>
+          <div class="pii-input-box left">
+            <input class="mbui-input" type="text" placeholder="请输入您要采购的商品描述的说明，比如目标单价、产品"  value=""/>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="pii-mb-textarea">
+          <div class="pii-input-text left">
+            <!-- <span class="must-mb-style">*</span> -->
+            <span class="pii-input-p">收货地区</span> 
+          </div>
+          <div class="pii-input-box left">
+            <input class="mbui-input" type="text" placeholder="请输入您要采购的商品描述的说明，比如目标单价、产品"  value=""/>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script type="text/javascript">
+    $('.mbui-input-noBorder').focus(function(){
+      $(this).addClass('mbui-input-Border');
+    });
+    $('.mbui-input-noBorder').blur(function(){
+      $(this).removeClass('mbui-input-Border');
+    })
+  </script>
+
+
+
+  <style type="text/css">
+    .pii-add-detile{
+      background: #fab1002b;
+      border-radius: 4px;
+      border-radius: 4px;
+      position: relative;
+      width: 546px;
+      margin: 0 0 20px 82px;
+      height: 38px;
+      font-family: PingFangSC-Regular;
+      font-size: 14px;
+      color: #FAB100;
+      text-align: center;
+      line-height: 38px;
+    }
+    .pii-input-box2{
+      position: relative;
+      width: 360px;
+    }
+    .pii-input-box3{
+      position: relative;
+      width: 188px;
+    }
+    .pii-input-box4{
+      position: relative;
+      width: 546px;
+    }
+    .pii-del-img{
+      position: relative;
+      width: 22px;
+      height: 22px;
+      top: 6px;
+    }
+    .pii-del-img>img{
+      position: relative;
+      width: 22px;
+      height: 22px;
+    }
+    .pii-select{
+      width: 188px;
+      height: 38px;
+      border: 1px solid #EFEFEF !important;
+      border-radius: 4px;
+      border-radius: 4px;
+    }
+    select::-ms-expand {
+      display: none;
+    }
+    select {
+      padding-left: 12px;
+      line-height: 31px;
+      font-size: 14px;
+      color: #333;
+      appearance: none;
+      -webkit-appearance: none;
+      -ms-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none;
+      background: url(../../edit/img/down.jpg) right center no-repeat;
+      background-size: 29px 18px;
+      border: 2px solid #fe606e;
+      overflow: hidden;
+    }
+  </style>

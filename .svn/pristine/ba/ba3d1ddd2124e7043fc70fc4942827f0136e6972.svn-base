@@ -1,0 +1,29 @@
+// var md5 = require('md5');
+// let Base64 = require('js-base64').Base64;
+import {JSH_md5} from './md5.js';
+import {base64encode, base64decode} from './base64.js';
+function urlCrypto(params, type) {
+	if (type === 0) {
+		let paramStr = JSON.stringify(params);
+		let base64Str = base64encode(paramStr, "UTF-8");
+		let signStr = JSH_md5(base64Str + 'bjhcyxdsjyxgs0506');
+		let endData = {
+			"object": base64Str,
+			"sign": signStr
+		};
+		console.log(JSON.stringify(endData));
+		let endString =  base64encode(JSON.stringify(endData), "UTF-8");
+		console.log(endString, '再次加密的数据');
+		return endString; 
+	};
+	if (type === 1) {
+		let paramsData = base64decode(params, "UTF-8")
+		let paramStr = JSON.parse(paramsData);
+		let object = paramStr.object;
+		let endData = base64decode(object, "UTF-8");
+		return JSON.parse(endData);
+	}
+}
+export {
+	urlCrypto
+};

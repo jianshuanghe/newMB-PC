@@ -1,0 +1,222 @@
+
+  <div class="register-content">
+    <div class="register-mb-people right">
+      <div class="top-mb"></div>
+      <div class="register">
+        <div class="purchasePeople-mb">
+          <!-- 个人采购 -->
+          <div class="ppi-people">
+            <div class="ppi-p-top">
+              <img class="img" src="../../preview/img/touxiang.png"></img>
+              <span class="ppi-top-p">采购商姓名</span>
+            </div>
+            <div class="ppi-p-cont">
+              <div class="ppi-cont-items">
+                联系电话： <span class="items-ppi-text">12345678901</span>
+                <span class="copy-phone">复制联系电话</span>
+              </div>
+              <div class="ppi-cont-items">
+                联系邮箱： <span class="items-ppi-text">12345678901@123.com</span>
+              </div>
+            </div>
+            <div class="mb-line-x"></div>
+            <div class="ppi-seek">
+              <img class="ppi-seek-img" src="../../preview/img/zixun.jpg"></img>
+              <span class="ppi-seek-p">立即咨询</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+
+</script>
+
+<style scoped>
+  .register-content{
+    position: relative;
+    width: 100%;
+    padding: 0 2px;
+  }
+  .register-mb-people{
+    position: relative;
+    width: 340px;
+    height: 236px;
+    background: #F9F9F9;
+  }
+  .top-mb{
+    position: relative;
+    width: 100%;
+  }
+  .register{
+    position: relative;
+    width: 100%;
+  }
+  .qrCode-putIn{
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #2E2E30;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 13px;
+  }
+  .purchasePeople-mb{
+    position: relative;
+    width: 300px;
+    height: 310px;
+    padding: 23px 0 0 0;
+    margin: auto;
+  }
+  .ppi-people{
+    position: relative;
+    width: 100%;
+  }
+  .ppi-p-top{
+    position: relative;
+    width: 100%;
+  }
+  .ppi-p-top>img{
+    position: relative;
+    width: 50px;
+    height: 53px;
+  }
+  .ppi-top-p{
+    position: relative;
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #2E2E30;
+    letter-spacing: 0;
+    line-height: 53px;
+    margin-left: 3px;
+    font-weight: bold;
+  }
+  .ppi-p-cont{
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+  }
+  .ppi-cont-items{
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #2E2E30;
+    letter-spacing: 0;
+    line-height: 14px;
+    margin: 0 0 20px;
+  }
+  .items-ppi-text{
+    position: relative;
+    margin-left: 10px;
+  }
+  .copy-phone{
+    position: relative;
+    width: 76px;
+    height: 16px;
+    border: 1px solid #FAB100;
+    border-radius: 9px;
+    border-radius: 9px;
+    font-family: PingFangSC-Regular;
+    font-size: 10px;
+    color: #FAB100;
+    letter-spacing: 0;
+    line-height: 16px;
+    padding: 0 6px;
+  }
+  .ppi-seek{
+    position: relative;
+    width: 96px;
+    height: 34px;
+    margin: 20px auto;
+    border: 1px solid #FAB100;
+    border-radius: 4px;
+    border-radius: 4px;
+  }
+  .ppi-seek-img{
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin: 5px 0 8px 11px;
+  }
+  .ppi-seek-p{
+    position: relative;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #FAB100;
+    letter-spacing: 0;
+    line-height: 34px;
+  }
+
+
+
+  .ppi-b-topL{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .ppi-b-HR{
+    position: relative;
+    font-size: 12px;
+    color: #5D5D5D;
+    letter-spacing: 0;
+    line-height: 20px;
+  }
+  .ppi-b-top-p{
+    position: relative;
+    font-family: PingFangSC-Medium;
+    font-size: 16px;
+    color: #2E2E30;
+    letter-spacing: 0;
+    line-height: 20px;
+    margin-left: 3px;
+    font-weight: bold;
+  }
+  .ppi-b-img{
+    position: relative;
+    width: 20px;
+    height: 20px;
+  }
+  .ppi-b-img>img{
+    position: relative;
+    width: 20px;
+    height: 20px;
+  }
+  .ppi-b-year{
+    font-family: PingFangSC-Regular;
+  }
+  .year-p{
+    position: relative;
+    color: #04CABF;
+  }
+  .ppi-b-detitle{
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+  }
+  .ppi-b-line{
+    background: #02C2A2;
+    position: relative;
+    width: 3px;
+    height: 16px;
+  }
+  .ppi-b-p{
+    font-family: PingFangSC-Semibold;
+    font-size: 16px;
+    color: #2E2E30;
+    line-height: 16px;
+    position: absolute;
+    top: 0;
+    left: 14px;
+    font-weight: bold
+  }
+  .teshu-ppi-top{
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .teshu-ppi-line{
+    position: absolute;
+    width: 340px;
+    left: -20px;
+    top: 70px;
+  }
+</style>

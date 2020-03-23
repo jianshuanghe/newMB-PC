@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./../../css/reset.css">
+    <link rel="stylesheet" href="./../../css/drag.css">
+    <link rel="stylesheet" href="./css/homepage-hea.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        .header {
+            /* position: fixed;
+            top: 0; */
+        }
+
+        .homepage-home {
+            width: 1200px;
+            min-height: 85%;
+            /* background: red; */
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 120px;
+            bottom: 0;
+            position: relative;
+        }
+
+        .homepage-home-left {
+            position: absolute;
+            /* top: 105px;
+            left: 124px; */
+            width: 120px;
+            height: 200px;
+            float: left;
+            /* background: black; */
+        }
+
+        .homepage-home-left>div {
+            width: 100%;
+            height: 50px;
+            font-size: 18px;
+            text-align: center;
+            line-height: 50px;
+            color: #2E2E30;
+        }
+        .homepage-home-left>div:nth-of-type(3) {
+            color: white;
+            background: #02C2A2;
+            border-radius: 2px;
+        }
+        .intro{
+            position: fixed;
+            top: 120px;
+            z-index: 30;
+        }
+        .homepage-home-con {
+            position: absolute;
+            width: 660px;
+            min-height: 100%;
+            /* background: black; */
+            /* background: red; */
+            float: left;
+            left: 154px;
+        }
+        .homepage-home-con-banner{
+            width: 100%;
+            height: 460px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid #EFEFEF;
+        }
+        .banner-erwei{
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            top: 14px;
+            right: 0;
+        }
+        .banner-erwei>img{
+            width: 100%;
+            height: 100%;
+        }
+        .banner-img{
+            width: 620px;
+            height: 313.7px;
+            margin: 20px auto auto auto;
+            position: relative;
+        }
+        .banner-img>img{
+            width: 100%;
+            height: 100%;
+        }
+        .banner-img-zi{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.60) 100%);
+        }
+        .banner-img-zi>div:nth-of-type(1){
+            font-size: 20px;
+            color: #FFFFFF;
+            position: absolute;
+            bottom: 38px;
+            left: 10px;
+        }
+        .banner-img-zi>div:nth-of-type(2){
+            font-size: 13px;
+            color: #FFFFFF;
+            position: absolute;
+            bottom: 15px;
+            left: 10px;
+        }
+        .banner-money{
+            width: 620px;
+            height: 35px;
+            line-height: 35px;
+            margin: 15px auto auto auto;
+        }
+        .banner-money>div:nth-of-type(1){
+            font-size: 24px;
+            color: #FAB100;
+            float: left;
+        }
+        .banner-money>div:nth-of-type(2){
+            width: 96px;
+            height: 34px;
+            border: 1px solid #02C2A2;
+            border-radius: 4px;
+            float: right;
+            text-align: center;
+            line-height: 34px;
+            font-size: 16px;
+            color: #02C2A2;
+        }
+        .banner-userdata{
+            width: 620px;
+            height: 35px;
+            margin: 15px auto auto auto;
+            
+        }
+        .top{
+            margin: 20px auto auto auto;
+        }
+        .banner-userdata-header{
+            width: 34px;
+            height: 34px;
+            float: left;
+        }
+        .banner-userdata-header>img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .banner-userdata-con{
+            width: 580px;
+            height: 35px;
+            float: right;
+        }
+        .banner-userdata-con>div:nth-of-type(1){
+            width: 100%;
+            height: 13px;
+            font-size: 12px;
+            color: #2E2E30;
+        }
+        .banner-userdata-con>div:nth-of-type(1)>span{
+            font-size: 12px;
+            color: #9B9B9B;
+            padding-left: 10px;
+        }
+        .banner-userdata-con>div:nth-of-type(2){
+            width: 100%;
+            height: 22px;
+        }
+        .banner-userdata-fabu{
+            font-size: 12px;
+            color: #9B9B9B;
+            float: left;
+            padding-top: 5px;
+        }
+        .userdata-con-zheng{
+            width: 10.4px;
+            height: 12px;
+            padding-left: 5px;
+        }
+        .userdata-con-nian{
+            width: 43px;
+            height: 18px;
+            padding-top: 5px;
+            display: block;
+            float: left;
+        }
+        .userdata-con-ren{
+            width: 64px;
+            height: 18px;
+            padding-top: 5px;
+            padding-left: 10px;
+            display: block;
+            float: left;
+        }
+        .userdata-con-ping{
+            width: 52px;
+            height: 18px;
+            padding-top: 5px;
+            display: block;
+            float: left;
+            padding-left: 10px;
+        }
+        .userdata-con-liu{
+            width: 50px;
+            height: 12px;
+            float: right;
+            font-size: 12px;
+            color: #9B9B9B;
+            padding-top: 8px;
+        }
+        .userdata-con-liu>img{
+            width: 12px;
+            height: 12px;
+            padding-right: 10px;
+        }
+        .right{
+            margin-right: 10px;
+        }
+        .homepage-home-con-FigureZ{
+            width: 100%;
+            height: 234px;
+            border-bottom: 1px solid #EFEFEF;
+            margin-top: 11px;
+            position: relative;
+            overflow: auto;
+        }
+        .FigureZ-relef{
+            width: 620px;
+            height: 140px;
+            margin: 20px auto auto auto;
+        }
+        .FigureZ-relef-img{
+            width: 140px;
+            height: 140px;
+            float: left;
+        }
+        .FigureZ-relef-img>img{
+            width: 100%;
+            height: 100%;
+        }
+        .FigureZ-relef-right{
+            width: 460px;
+            height: 140px;
+            float: right;
+            position: relative;
+        }
+        .FigureZ-relef-right>div:nth-of-type(1){
+            font-size: 18px;
+            color: #2E2E30;
+        }
+        .FigureZ-relef-right>div:nth-of-type(2){
+            font-size: 12px;
+            color: #2E2E30;
+            margin-top: 6px;
+        }
+        .FigureZ-relef-right>div:nth-of-type(3),.FigureZ-relef-right>div:nth-of-type(4){
+            font-size: 12px;
+            color: #2E2E30;
+            margin-top: 10px;
+        }
+        .FigureZ-relef-right>div:nth-of-type(2)>span,.FigureZ-relef-right>div:nth-of-type(3)>span,.FigureZ-relef-right>div:nth-of-type(4)>span{
+            font-size: 12px;
+            color: #9B9B9B;
+            padding-right: 20px;
+        }
+        .relef-right-zi{
+            width: 100%;
+            height: 35px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .relef-right-zi>div:nth-of-type(1){
+            font-size: 20px;
+            color: #FAB100; 
+            padding-top: 10px;
+            float: left;
+        }
+        .relef-right-zi>div:nth-of-type(2){
+            font-size: 16px;
+            color: #02C2A2;
+            float: right;
+            width: 96px;
+            height: 34px;
+            border: 1px solid #02C2A2;
+            border-radius: 4px;
+            text-align: center;
+            line-height: 34px;
+        }
+        .homepage-home-con-Nograph{
+            width: 660px;
+            height: 130px;
+            background: #FFFFFF;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+            border-bottom:1px solid #EFEFEF;
+        }
+        .Nograph-zi{
+            width: 620px;
+            height: 20px;
+            margin: 20px auto auto auto;
+            font-size: 18px;
+            color: #02C2A2;
+        }
+        .Nograph-con{
+            width: 620px;
+            height: 15px;
+            margin: 10px auto auto auto;
+            font-size: 12px;
+            color: #9B9B9B;
+        }
+        .homepage-home-con-About{
+            width: 100%;
+            height: 180px;
+            border-bottom: 1px solid #EFEFEF;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .About-box{
+            width: 620px;
+            height: 140px;
+            margin: 20px auto auto auto;
+        }
+        .About-box-img{
+            width: 140px;
+            height: 140px;
+            float: left;
+        }
+        .About-box-img>img{
+            width: 100%;
+            height: 100%;
+        }
+        .About-box-right{
+            width: 460px;
+            height: 140px;
+            float: right;
+            position: relative;
+        }
+        .About-box-right-one{
+            width: 100%;
+            height: 52px;
+            font-size: 18px;
+            color: #2E2E30;
+            text-align: justify;
+            line-height: 26px;
+        }
+        .About-box-right-two{
+            width: 100%;
+            height: 15px;
+            font-size: 12px;
+            color: #9B9B9B;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            margin-top: 5px;
+        }
+        .About-box-right-thr{
+            width: 460px;
+            height: 35px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .thr-header{
+            width: 35px;
+            height: 35px;
+            float: left;
+        }
+        .thr-header>img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .thr-con{
+            width: 420px;
+            height: 35px;
+            float: right;
+        }
+        .thr-con-biao{
+            width: 100%;
+            height: 14px;
+            font-size: 12px;
+            color: #2E2E30;
+        }
+        .thr-con-biao>span{
+            display: block;
+            float: left;
+        }
+        .thr-con-biao>img{
+            width: 11.4px;
+            height: 12px;
+            display: block;
+            float: left;
+            margin-top: 2px;
+            margin-left: 5px;
+        }
+        .thr-con-zi{
+            width: 100%;
+            height: 20px;
+            clear: both;
+        }
+        .thr-con-time{
+            font-size: 12px;
+            color: #9B9B9B;
+            padding-top: 4px;
+            float: left;
+        }
+        .FigureZ-ding{
+            width: 100%;
+            height: 17px;
+        }
+        .FigureZ-ding>div{
+            float: left;
+            padding: 0px 4px 0px 4px;
+            background: #FFF7E5;
+            border-radius: 2px;
+            font-size: 10px;
+            color: #FE9D08;
+            margin-left: 10px;
+        }
+        .FigureZ-ding>div:nth-of-type(1){
+            margin-left: 0;
+        }
+        .homepage-home-right{
+            width: 340px;
+            min-height: 256px;
+            float: right;
+            /* background: red; */
+        }
+        .home-right-Business{
+            width: 100%;
+            height: 256px;
+            background: #F9F9F9;
+            overflow: hidden;
+        }
+        .Business-sell-ti{
+            width: 95%;
+            height: 17px;
+            border-left: 3px solid #02C2A2;
+            line-height: 17px;
+            font-size: 16px;
+            color: #2E2E30;
+            font-weight: bold;
+            margin: 22px auto auto auto;
+            padding-left: 10px;
+        }
+        .Business-sell-tu{
+            width: 95%;
+            height: 50px;
+            margin-top: 23.5px;
+            margin: 23.5px auto auto auto;
+        }
+        .Business-sell-tu>div>img{
+            width: 27px;
+            height: 27px;
+        }
+        .Business-sell-tu>div{
+            width: 33%;
+            height: 100%;
+            text-align: center;
+            float: left;
+        }
+        .Business-sell-tu>div>p{
+            font-size: 14px;
+            color: #2E2E30;
+            
+        }
+        .home-right-List{
+            width: 100%;
+            min-height: 658px;
+            margin-top: 20px;
+            background: #F9F9F9;
+        }
+        .List-header{
+            width: 100%;
+            height: 56px;
+            border-bottom: 1px solid #02C2A2;
+        }
+        .List-header>div:nth-of-type(1){
+            width: 110px;
+            height: 100%;
+            float: left;
+            font-size: 16px;
+            
+            color: #2E2E30;
+            text-align: center;
+            line-height: 56px;
+            
+        }
+        .List-header>div:nth-of-type(1)>span{
+            display: block;
+            width: 40px;
+            height: 3px;
+            margin: -4px auto auto auto;
+            background: #02C2A2;
+            display: none;
+        }
+        .List-header>div:nth-of-type(2)>span{
+            display: block;
+            width: 40px;
+            height: 3px;
+            margin: -4px auto auto auto;
+            background: #02C2A2;
+        }
+        .List-header>div:nth-of-type(2){
+            width: 110px;
+            height: 100%;
+            float: left;
+            font-size: 16px;
+            color: #02C2A2;
+            text-align: center;
+            line-height: 56px;
+            font-weight: bold;
+        }
+        .List-body{
+            width: 100%;
+            height: 725px;
+            overflow: auto;
+            display: none;
+        }
+        .List-body-somil{
+            width: 100%;
+            height: 144px;
+            border-bottom: 1px solid #EFEFEF;
+            position: relative;
+            overflow: hidden;
+        }
+        .List-body-somil-er{
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+        .List-body-somil-er>img{
+            width: 100%;
+            height: 100%;
+        }
+        .body-somil{
+            width: 95%;
+            height: 90%;
+            margin: 10px auto auto auto;
+        }
+        .body-somil-tuwen{
+            width: 100%;
+            height: 100px;
+        }
+        .somil-tuwen-tu{
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .somil-tuwen-tu>img{
+            width: 100%;
+            height: 100%;
+        }
+        .somil-tuwen-wen{
+            width: 66%;
+            height: 100%;
+            float: right;
+            position: relative;
+        }
+        .somil-tuwen-wen>div:nth-of-type(1){
+            width: 190px;
+            height: 66px;
+            font-size: 14px;
+            color: #2E2E30;
+            line-height: 22px;
+        }
+        .somil-tuwen-wen>div:nth-of-type(2){
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 190px;
+            height: 17px;
+            font-size: 16px;
+            color: #FAB100;
+            line-height: 22px;
+        }
+        .body-somil-bot{
+            width: 100%;
+            height: 25px;
+        }
+        .body-somil-bot>div:nth-of-type(1),.body-somil-bot>div:nth-of-type(2),.body-somil-bot>div:nth-of-type(3){
+            width: 50px;
+            height: 25px;
+            font-size: 12px;
+            color: #9B9B9B;
+            float: left;
+        }
+        .body-somil-bot>div:nth-of-type(1)>img,.body-somil-bot>div:nth-of-type(2)>img,.body-somil-bot>div:nth-of-type(3)>img{
+            width:14px;
+            height: 12px;
+            padding-right: 5px;
+            padding-top: 10px;
+        }
+        .body-somil-bot-xun{
+            width: 68px;
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            font-size: 12px;
+            color: #02C2A2;
+            border: 1px solid #02C2A2;
+            border-radius: 2px;
+            float: right;
+        }
+        .List-bott{
+            width: 100%;
+            height: 54px;
+            text-align: center;
+            line-height: 54px;
+            font-size: 14px;
+            color: #2E2E30;
+        }
+        .List-bodytwo{
+            width: 100%;
+            height: 558px;
+            overflow: auto;
+        }
+        .bodytwo-About{
+            width: 100%;
+            height: 120px;
+            border-bottom: 1px solid #EFEFEF;
+            position: relative;
+            overflow: hidden;
+        }
+        .bodytwo-About-tu{
+            width: 95%;
+            height: 100px;
+            margin: 10px auto auto auto;
+        }
+        .About-tu-img{
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .About-tu-img>img{
+            width: 100%;
+            height: 100%;
+        }
+        .About-tu-zi{
+            width: 66%;
+            height: 100%;
+            float: right;
+            position: relative;
+        }
+        .About-tu-zi>div:nth-of-type(1){
+            width: 190px;
+            height: 44px;
+            font-size: 14px;
+            color: #2E2E30;
+            line-height: 22px;
+        }
+        .About-tu-zi-two{
+            width: 100%;
+            height: 15px;
+            font-size: 14px;
+            line-height: 15px;
+            color: #9B9B9B;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            margin-top: 3px;
+        }
+        .About-tu-zi-bao{
+            width: 68px;
+            height: 24px;
+            border-radius: 2px;
+            border: 1px solid #FAB100;
+            font-size: 12px;
+            color: #FAB100;
+            text-align: center;
+            line-height: 24px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .bodytwo-wenzi{
+            width: 100%;
+            min-height: 68px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid #EFEFEF;
+            margin-top: 10px;
+        }
+        .bodytwo-wenzi-box{
+            width: 95%;
+            min-height: 50px;
+            margin: 10px auto 10px auto;
+        }
+        .bodytwo-wenzi-box>div:nth-of-type(1){
+            width: 310px;
+            height: 15px;
+            line-height: 15px;
+            font-size: 14px;
+            color: #2E2E30;
+        }
+        .wenzi-box-fu{
+            width: 100%;
+            height: 15px;
+            line-height: 15px;
+            font-size: 14px;
+            color: #9B9B9B;
+            margin-top: 10px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+        .wenzi-box-but{
+            width: 68px;
+            height: 24px;
+            border: 1px solid #FAB100;
+            border-radius: 2px;
+            text-align: center;
+            line-height: 24px;
+            font-size: 12px;
+            color: #FAB100;
+            margin-top: 10px;
+            margin-left: 78%;
+        }
+        .home-erweima{
+            width: 232px;
+            height: 236px;
+            background: white;
+            position: absolute;
+            right: 6px;
+            top: 20px;
+            box-shadow: 0 0 10px 0 rgba(46,46,48,0.10);
+            border-radius: 6px 0 6px 6px;
+            z-index: 100;
+            display: none;
+        }
+        .home-erwei{
+            font-size: 14px;
+            color: #2E2E30;
+            text-align: center;
+            width: 75px;
+            height: 15px;
+            line-height: 15px;
+            margin: 20px auto auto auto;
+            font-weight: bold;
+        }
+        .home-erweima-img{
+            width: 102px;
+            height: 102px;
+            margin: 20px auto auto auto;
+            position: relative;
+        }
+        .home-erweima-img>img:nth-of-type(1){
+            width: 100%;
+            height: 100%;
+        }
+        .home-erweima-img>div:nth-of-type(1){
+            width: 80%;
+            height: 80%;
+            position: absolute;
+            left: 0;
+	        right: 0;
+	        top: 0;
+	        bottom: 0;
+	        margin: auto;
+        }
+        .home-erweima-img>div:nth-of-type(1)>img{
+            width: 100%;
+            height: 100%;
+        }
+        .home-erweima-ti{
+            width: 241px;
+            height: 28px;
+            text-align: center;
+            font-size: 10px;
+            color: #9B9B9B;
+            margin: 10px auto auto auto;
+            line-height: 14px;
+            transform: scale(0.9);
+        }
+        .home-erweima-look{
+            width: 100px;
+            height: 12px;
+            line-height: 12px;
+            font-size: 12px;
+            color: #02C2A2;
+            margin: 10px auto auto auto;
+            text-align: center;
+            font-weight: bold;
+        }
+        .homePurchase-first{
+            width: 660px;
+            height: 190px;
+            border-bottom: 1px solid #EFEFEF;
+            position: relative;
+            padding: 1px;
+        }
+        .homePurchase-first-box{
+            width: 620px;
+            height: 140px;
+            margin: 19px auto auto auto;
+        }
+        .homePurchase-first-box-img{
+            width: 140px;
+            height: 140px;
+            float: left;
+        }
+        .homePurchase-first-box-img>img{
+            width: 100%;
+            height: 100%;
+        }
+        .homePurchase-first-box-right{
+            width: 76%;
+            height: 140px;
+            float: right;
+            overflow: hidden;
+            position: relative;
+        }
+        .homePurchase-first-box-right>div:nth-of-type(1){
+            width: 100%;
+            height: 18px;
+            line-height: 18px;
+            color: #2E2E30;
+            font-weight: bold;
+        }
+        .homePurchase-first-box-right>div:nth-of-type(1)>span{
+            display: block;
+            float: left;
+        }
+        .homePurchase-first-box-right>div:nth-of-type(1)>img{
+            width: 50px;
+            height: 18px;
+            padding-left: 10px;
+            display: block;
+            float: left;
+        }
+        .first-box-right{
+            font-size: 14px;
+            color: #9B9B9B;
+            margin-top: 5px;
+        }
+        .first-box-right>span{
+            color: #FAB100;
+        }
+        .first-box-ding{
+            width: 100%;
+            height: 35px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .first-box-ding>div:nth-of-type(1){
+            line-height: 35px;
+            font-size: 12px;
+            color: #9B9B9B;
+            float: left;
+        }
+        .first-box-ding>div:nth-of-type(2){
+            line-height: 34px;
+            font-size: 16px;
+            color: #FAB100;
+            text-align: center;
+            width: 96px;
+            height: 34px;
+            border: 1px solid #FAB100;
+            border-radius: 4px;
+            float: right;
+        }
+        .homePurchase-Second{
+            width: 100%;
+            min-height: 83px;
+            border-bottom: 1px solid #EFEFEF;
+            position: relative;
+            padding: 1px;
+        }
+        .homePurchase-Second-box{
+            width: 620px;
+            min-height: 60px;
+            margin: 20px auto 10px auto;
+            position: relative;
+        }
+        .homePurchase-Second-box>div:nth-of-type(1){
+            width: 100%;
+            height: 18px;
+            line-height: 18px;
+            color: #2E2E30;
+            font-weight: bold;
+        }
+        .homePurchase-Second-box>div:nth-of-type(1)>span{
+            display: block;
+            float: left;
+        }
+        .homePurchase-Second-box>div:nth-of-type(1)>img{
+            width: 50px;
+            height: 18px;
+            padding-left: 10px;
+            display: block;
+            float: left;
+        }
+        .Second-box-ding{
+            width: 100%;
+            height: 35px;
+            margin-top: 10px;
+        }
+        .Second-box-ding>div:nth-of-type(1){
+            line-height: 35px;
+            font-size: 12px;
+            color: #9B9B9B;
+            float: left;
+        }
+        .Second-box-ding>div:nth-of-type(2){
+            line-height: 34px;
+            font-size: 16px;
+            color: #FAB100;
+            text-align: center;
+            width: 96px;
+            height: 34px;
+            border: 1px solid #FAB100;
+            border-radius: 4px;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header" id="header"></div>
+    <!-- 搜索 发布供应 发布采购 -->
+    <div class="homepage-header">
+        <div class="homepage-hea">
+            <div class="homepage-hea-img">
+                <img src="./img/logo.png" alt="">
+            </div>
+            <div class="homepage-hea-inp">
+                <input type="text" placeholder="请输入关键字">
+                <div class="homepage-hea-sech">
+                    <img src="./img/shou.png" alt="">
+                    <span>搜索</span>
+                </div>
+            </div>
+            <div class="homepage-hea-gong gongying">发布供应</div>
+            <div class="homepage-hea-gong caigou">发布采购</div>
+            <div class="homepage-hea-gong jia">+</div>
+        </div>
+    </div>
+    <!-- 推荐列表 -->
+    <div class="homepage-home">
+        <!-- 左侧导航 -->
+        <div class="homepage-home-left" id="homeleft">
+            <div><a href="./homepage.html">推荐</a></div>
+            <div><a href="./homesupply.html">供应</a></div>
+            <div>采购</div>
+            <div><a href="./homeinfor.html">资讯</a></div>
+        </div>
+        <!-- 中间列表部分 -->
+        <div class="homepage-home-con">
+            <div class="homePurchase-first">
+                <div class="banner-erwei"><img src="./img/erweima.png" alt=""></div>
+                <div class="homePurchase-first-box">
+                    <div class="homePurchase-first-box-img"><img src="./img/cs.png" alt=""></div>
+                    <!-- 二维码 -->
+                    <div class="home-erweima">
+                        <div class="home-erwei">手机端预览</div>
+                        <div class="home-erweima-img">
+                            <img src="../../images/img/erweimakuang.png">
+                            <div><img src="./img/cs.png"></div>
+                        </div>
+                        <div class="home-erweima-ti">支持手机浏览器、微信小程序、百度小程序、支付宝小程序、头条小程序访问</div>
+                        <div class="home-erweima-look">查看海报二维码 ></div>
+                    </div>
+                    <div class="homePurchase-first-box-right">
+                        <div><span>采购办公室打印机一二一二三四五六限制二十</span><img src="../../images/img/3300.png" alt=""></div>
+                        <div class="first-box-right">采购数量: 123件</div>
+                        <div class="first-box-right">收货地区: 北京市昌平区</div>
+                        <div class="first-box-right">截止时间: <span>15天12小时 后结束</span></div>
+                        <div class="first-box-ding">
+                            <div>刚刚发布</div>
+                            <div>立即报价</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="homePurchase-first">
+                <div class="banner-erwei"><img src="./img/erweima.png" alt=""></div>
+                <div class="homePurchase-first-box">
+                    <div class="homePurchase-first-box-img"><img src="./img/cs.png" alt=""></div>
+                    <div class="homePurchase-first-box-right">
+                        <div><span>采购办公室打印机一二一二三四五六限制二十</span><img src="../../images/img/3300.png" alt=""></div>
+                        <div class="first-box-right">采购数量: 123件</div>
+                        <div class="first-box-right">截止时间: <span>15天12小时 后结束</span></div>
+                        <div class="first-box-ding">
+                            <div>刚刚发布</div>
+                            <div>立即报价</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="homePurchase-Second">
+                <div class="banner-erwei"><img src="./img/erweima.png" alt=""></div>
+                <div class="homePurchase-Second-box">
+                    <div><span>采购办公室打印机一二一二三四五六限制二十</span><img src="../../images/img/3300.png" alt=""></div>
+                    <div class="first-box-right">采购数量: 123件</div>
+                    <div class="first-box-right">截止时间: <span>15天12小时 后结束</span></div>
+                    <div class="Second-box-ding">
+                        <div>刚刚发布</div>
+                        <div>立即报价</div>
+                    </div>
+                </div>
+            </div>
+            <div class="homePurchase-Second">
+                <div class="banner-erwei"><img src="./img/erweima.png" alt=""></div>
+                <div class="homePurchase-Second-box">
+                    <div><span>采购办公室打印机一二一二三四五六限制二十</span><img src="../../images/img/3300.png" alt=""></div>
+                    <div class="Second-box-ding">
+                        <div>刚刚发布</div>
+                        <div>立即报价</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 右侧 -->
+        <div class="homepage-home-right">
+            <!-- 买在陌拜 买在陌拜 -->
+            <div class="home-right-Business">
+                <div class="Business-sell-ti">卖在陌拜</div>
+                <div class="Business-sell-tu">
+                    <div>
+                        <img src="./img/guan.png" alt="">
+                        <p>供应管理</p>
+                    </div>
+                    <div>
+                        <img src="./img/guan.png" alt="">
+                        <p>报价管理</p>
+                    </div>
+                    <div>
+                        <img src="./img/guan.png" alt="">
+                        <p>我要推广</p>
+                    </div>
+                </div>
+                <div class="Business-sell-ti" style="border-color: #FAB100;margin-top:30px;">买在陌拜</div>
+                <div class="Business-sell-tu">
+                    <div>
+                        <img src="./img/fa.png" alt="">
+                        <p>发布采购</p>
+                    </div>
+                    <div>
+                        <img src="./img/fa.png" alt="">
+                        <p>询价管理</p>
+                    </div>
+                </div>
+            </div>
+            <div class="home-right-List">
+                <div class="List-header">
+                    <div class="supply">供应热度榜<span class="supply-son"></span></div>
+                    <div class="Purchase">采购热度榜<span class="Purchase-son"></span></div>
+                </div>
+                <div class="List-body">
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="./img/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="./img/cs.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="./img/Eye.png">999+</div>
+                                <div><img src="./img/zan.png">999+</div>
+                                <div><img src="./img/liuyan.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="./img/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="./img/cs.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="./img/Eye.png">999+</div>
+                                <div><img src="./img/zan.png">999+</div>
+                                <div><img src="./img/liuyan.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="./img/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="./img/cs.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="./img/Eye.png">999+</div>
+                                <div><img src="./img/zan.png">999+</div>
+                                <div><img src="./img/liuyan.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="./img/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="./img/cs.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="./img/Eye.png">999+</div>
+                                <div><img src="./img/zan.png">999+</div>
+                                <div><img src="./img/liuyan.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="./img/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="./img/cs.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="./img/Eye.png">999+</div>
+                                <div><img src="./img/zan.png">999+</div>
+                                <div><img src="./img/liuyan.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="./img/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="./img/cs.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="./img/Eye.png">999+</div>
+                                <div><img src="./img/zan.png">999+</div>
+                                <div><img src="./img/liuyan.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="List-bodytwo">
+                    <div class="bodytwo-About">
+                        <div class="List-body-somil-er"><img src="./img/erweima.png"></div>
+                        <div class="bodytwo-About-tu">
+                            <div class="About-tu-img"><img src="./img/cs.png" alt=""></div>
+                            <div class="About-tu-zi">
+                                <div>我是采购的主题名称，一二三四五六限制二十</div>
+                                <div class="About-tu-zi-two">补充说明：我是采购商品的补充说明：我是采购商品的补充…</div>
+                                <div class="About-tu-zi-bao">立即报价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bodytwo-About">
+                        <div class="List-body-somil-er"><img src="./img/erweima.png"></div>
+                        <div class="bodytwo-About-tu">
+                            <div class="About-tu-img"><img src="./img/cs.png" alt=""></div>
+                            <div class="About-tu-zi">
+                                <div>我是采购的主题名称，一二三四五六限制二十</div>
+                               
+                                <div class="About-tu-zi-bao">立即报价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bodytwo-About">
+                        <div class="List-body-somil-er"><img src="./img/erweima.png"></div>
+                        <div class="bodytwo-About-tu">
+                            <div class="About-tu-img"><img src="./img/cs.png" alt=""></div>
+                            <div class="About-tu-zi">
+                                <div>我是采购的主题名称，一二三四五六限制二十</div>
+                                <div class="About-tu-zi-bao">立即报价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bodytwo-wenzi">
+                        <div class="List-body-somil-er"><img src="./img/erweima.png"></div>
+                        <div class="bodytwo-wenzi-box">
+                            <div>我是采购的主题名称，一二三四五六限制二十</div>
+                            <div class="wenzi-box-fu">补充说明：我是采购商品的补补充说明：我是采购商品的补充…</div>
+                            <div class="wenzi-box-but">立即报价</div>
+                        </div>
+                    </div>
+                    <div class="bodytwo-wenzi">
+                        <div class="List-body-somil-er"><img src="./img/erweima.png"></div>
+                        <div class="bodytwo-wenzi-box">
+                            <div>我是采购的主题名称，一二三四五六限制二十</div>                            
+                            <div class="wenzi-box-but">立即报价</div>
+                        </div>
+                    </div>
+                    <div class="bodytwo-wenzi">
+                        <div class="List-body-somil-er"><img src="./img/erweima.png"></div>
+                        <div class="bodytwo-wenzi-box">
+                            <div>我是采购的主题名称，一二三四五六限制二十</div>                            
+                            <div class="wenzi-box-but">立即报价</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="List-bott">加载更多...</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script>
+    $(function () {
+        /*公共部分
+         * header 头部
+         * header 底部
+         */
+        $("#header").load("./../../src/common/pages/header/header.html");
+
+    });
+    $(window).scroll(function () { //开始监听滚动条
+        //获取当前滚动条高度
+        var topp = $(document).scrollTop();
+        if (topp > 1) {
+            $("#homeleft").addClass("intro")
+        }else if(topp == 0){
+            $("#homeleft").removeClass("intro")
+        }
+    })
+    // 供应热度榜 采购热度榜 切换
+    $(".Purchase").click(function(){
+        $(".Purchase").css({"color":" #02C2A2",'font-weight': 'bold'});
+        $(".Purchase-son").css('display','block');
+        $(".supply-son").css('display','none');
+        $(".supply").css({"color":" #2E2E30",'font-weight': 'normal'});
+        $(".List-bodytwo").css('display','block');
+        $(".List-body").css('display','none');
+    })
+    $(".supply").click(function(){
+        $(".Purchase").css({"color":" #2E2E30",'font-weight': 'normal'});
+        $(".Purchase-son").css('display','none');
+        $(".supply-son").css('display','block');
+        $(".supply").css({"color":"#02C2A2 ",'font-weight': 'bold'});
+        $(".List-bodytwo").css('display','none');
+        $(".List-body").css('display','block');
+    })
+    //二维码移入移出展示
+    $(".banner-erwei").mouseenter(function () {
+        $(".home-erweima").css('display','block');
+    });
+    
+    $(".home-erweima").mouseleave(function () {
+        $(".home-erweima").css('display','none');
+    });
+    
+</script>

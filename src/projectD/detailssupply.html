@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../../css/reset.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        .Companytop{
+            margin-top: 34px;
+            width: 100%;
+            height: 160px;
+            background-image: url('../../images/img/1717.png');
+            background-repeat: no-repeat;
+		    background-size: cover;
+            padding: 1px;
+        }
+        .Companytop-box{
+            width:1040px;
+            height: 120px;
+            margin: 40px auto auto auto;
+        }
+        .Companytop-box-left{
+            width: 70%;
+            height: 100%;
+            float: left;
+            /* background: red; */
+        }
+        .box-left-img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            float: left;
+        }
+        .box-left-img>img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .box-left-zi{
+            width: 88%;
+            height: 100%;
+            float: right;
+        }
+        .box-left-zi>div:nth-of-type(1){
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            font-size: 20px;
+            color: #FFFFFF;
+            margin-top: 15px;
+        }
+        .box-left-zi>div:nth-of-type(1)>span{
+            display: block;
+            float: left;
+        }
+        .box-left-zi>div:nth-of-type(1)>img{
+            width: 18px;
+            height: 18px;
+            display: block;
+            float: left;
+            margin-left: 20px;
+            margin-top: 2px;
+        }
+        .box-left-zi>div:nth-of-type(2){
+            width: 100%;
+            height: 18px;
+            margin-top: 20px;
+        }
+        .vip-3{
+            width: 80px;
+            height: 16px;
+            display: block;
+            float:left; 
+        }
+        .Bar{
+            width: 1px;
+            height: 12px;
+           background:  rgba(255,255,255,0.10);
+            float: left;
+            margin-left:20px;
+            margin-right: 20px; 
+            margin-top: 3px;
+        }
+        .qiye-ren{
+            width: 64px;
+            height: 16px;
+            display: block;
+            float: left;
+            margin-left: 10px;
+        }
+        .phone{
+            width: 10px;
+            height: 13px;
+            display: block;
+            float: left;
+            margin-top: 2px;
+        }
+        .shops{
+            font-size: 12px;
+            color: #FFFFFF;
+            display: block;
+            float: left;
+            margin-left: 5px;
+        }
+        .Companytop-box-right{
+            width: 30%;
+            height: 100%;
+            float: right;
+        }
+        .Companytop-box-right>div:nth-of-type(1){
+            width: 96px;
+            height: 35px;
+            background: #02C2A2;
+            border-radius: 4px;
+            text-align: center;
+            line-height: 35px;
+            font-size: 16px;
+            color: #FFFFFF;
+            margin-top: 10px;
+            margin-left: 70%;
+        }
+        .Companytop-box-right>div:nth-of-type(2){
+            min-width: 72px;
+            height: 14px;
+            border-left: 1px solid #EFEFEF;
+            font-size: 14px;
+            color: #FFFFFF;
+            line-height: 14px;
+            float: right;
+            margin-top: 20px;
+            text-align: right;
+            padding-left: 14px;
+        }
+        .Companytop-box-right>div:nth-of-type(2)>span{
+            font-size: 16px;
+            color: #FFFFFF;
+            margin-left: 5px;
+        }
+        .Companytop-box-right>div:nth-of-type(3){
+            min-width: 72px;
+            height: 14px;
+            border-left: 1px solid #EFEFEF;
+            font-size: 14px;
+            color: #FFFFFF;
+            line-height: 14px;
+            float: right;
+            margin-top: 20px;
+            margin-right: 14px;
+            text-align: right;
+            padding-left: 14px;
+        }
+        .Companytop-box-right>div:nth-of-type(3)>span{
+            font-size: 16px;
+            color: #FFFFFF;
+            margin-left: 5px;
+        }
+        .Companytop-box-right>div:nth-of-type(4){
+            min-width: 72px;
+            height: 14px;
+            font-size: 14px;
+            color: #FFFFFF;
+            line-height: 14px;
+            float: right;
+            margin-top: 20px;
+            margin-right: 14px;
+            text-align: right;
+            padding-left: 14px;
+        }
+        .Companytop-box-right>div:nth-of-type(4)>span{
+            font-size: 16px;
+            color: #FFFFFF;
+            margin-left: 5px;
+        }
+        .Companytop-conter{
+            width: 1040px;
+            /* min-height: 500px; */
+            margin: 0 auto 40px auto;
+        }
+        .Companytop-Details{
+            width: 660px;
+            min-height: 1000px;
+            float: left;
+        }
+        .Companytop-Navigation{
+            width: 660px;
+            height: 59px;
+            border-bottom: 1px solid #EFEFEF;
+        }
+        .Navigation-but{
+            width: 88px;
+            height: 38px;
+            float: left;
+            margin-left: 20px;
+            font-size: 16px;
+            color: #2E2E30;
+            text-align: center;
+            line-height: 38px;
+            margin-top: 10px;
+        }
+        .weight{
+            background: #02C2A2;
+            border-radius: 4px;
+            color: #FFFFFF;
+        }
+        /* 商机详情 */
+        .Details-Business{
+            width: 100%;
+            min-height: 900px;
+            padding:1px;
+        }
+        .Details-Business-Route{
+            width: 100%;
+            height: 15px;
+            font-size: 14px;
+            margin-top: 20px;
+            line-height: 15px;
+        }
+        .Business-within{
+            width: 100%;
+            height: 262px;
+            margin-top: 20px;
+            position: relative;
+            padding: 1px;
+        }
+        .Business-within-er{
+            width: 22px;
+            height: 22px;
+            top: 0;
+            right: 0;
+            position: absolute;
+        }
+        .Business-within-er>img{
+            width: 100%;
+            height: 100%;
+        }
+        .Business-within-first{
+            width: 95%;
+            height: 93%;
+            margin: 20px auto auto auto;
+        }
+        .within-first-tuwen{
+            width: 100%;
+            height: 140px;
+        }
+        .within-first-tu{
+            width: 276px;
+            height: 140px;
+            float: left;
+        }
+        .within-first-tu>img{
+            width: 100%;
+            height: 100%;
+        }
+        .within-first-wen{
+            width: 54%;
+            height: 100%;
+            float: right;
+            position:relative;
+        }
+        .within-first-wen>div:nth-of-type(1){
+            font-size: 18px;
+            color: #2E2E30;
+            text-align: justify;
+            line-height: 26px;
+        }
+        .within-first-wenyi{
+            width: 100%;
+            height: 13px;
+            line-height: 13px;
+            font-size: 12px;
+            color: #9B9B9B;
+            padding-top: 8px;
+        }
+        .within-first-wenyi>span{
+            padding-left: 5px;
+            color: #2E2E30;
+        }
+        .within-first-but{
+            width: 100%;
+            height: 35px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            line-height: 35px;
+        }
+        .within-first-but>div:nth-of-type(1){
+            font-size: 20px;
+            color: #FAB100;
+            float: left;
+        }
+        .within-first-but>div:nth-of-type(2){
+            width: 96px;
+            height: 34px;
+            border-radius: 4px;
+            background: #02C2A2;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 36px;
+            float: right;
+        }
+        .within-first-Smallgraph{
+            width: 276px;
+            height: 40px;
+            margin-top: 10px; 
+            position: relative;
+        }
+        .within-first-Smallgraph-left{
+            width: 10px;
+            height: 40px;
+            float: left;
+        }
+        .within-first-Smallgraph-left>img{
+            width: 100%;
+            height: 45px;
+        }
+        .within-first-Smallgraph-right{
+            width: 10px;
+            height: 40px;
+            float: right;
+        }
+        .within-first-Smallgraph-right>img{
+            width: 100%;
+            height: 45px;
+        }
+        .within-first-Smallgraph-img{
+            width: 240px;
+            height: 40px;
+            float: left;
+            margin-left: 10px;
+        }
+        .within-first-Smallgraph-img>img{
+            width: 40px;
+            height: 40px;
+            display: block;
+            float: left;
+            margin-left: 10px;
+        }
+        .within-first-Smallgraph-img>img:nth-of-type(1){
+            margin-left: 0;
+        }
+        .within-first-function{
+            width: 276px;
+            height: 52px;
+            position: relative;
+            /* background: black; */
+        }
+        .within-first-function>div{
+            width: 72px;
+            height: 100%;
+            line-height: 57px;
+            font-size: 12px;
+            color: #2E2E30;
+            float: left;
+        }
+        .within-first-function>div>img{
+            width: 10px;
+            height: 9px;
+        }
+        .Details-Navigationswitch{
+            width: 100%;
+            height: 50px;
+            margin-top: 20px;
+            background: #F5F5F5;
+        }
+        .Details-Navigationswitch-hea{
+            width: 109px;
+            height: 50px;
+            font-size: 16px;
+            color: #2E2E30;
+            text-align: center;
+            line-height: 52px;
+            float: left;
+        }
+        .newhea{
+            background: white;
+            color: #02C2A2;
+            border-top: 3px solid  #02C2A2;
+        }
+        .Details-Navigationswitch-many{
+            width: 109px;
+            height: 50px;
+            font-size: 16px;
+            color: #2E2E30;
+            line-height: 52px;
+            float: left;
+            position: relative;
+            z-index: 10;
+        }
+        .Details-Navigationswitch-many>span{
+            display: block;
+            float: left;
+            margin-left: 30%;
+        }
+        .Details-Navigationswitch-many>img{
+            width: 9px;
+            height: 7px;
+            display: block;
+            float: left;
+            margin-top: 21px;
+            margin-left: 5px;
+        }
+        .Details-Navigationswitch-surplus{
+            width: 143px;
+            min-height: 38px;
+            position: absolute;
+            top: 50px;
+            right: -4px;
+            background: white;
+            z-index: 10;
+            display: none;
+        }
+        .Navigationswitch-surplus-xuan{
+            width: 100%;
+            height: 38px;
+            font-size: 14px;
+            color: #2E2E30;
+            line-height: 38px;
+            padding-left: 12px;
+        }
+        .xiala{
+            background: #EFEFEF;
+        }
+        .Mask{
+            top: 0;
+            left: 0;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+        .Product-overview{
+            width: 100%;
+            min-height: 500px;
+            margin-top: 20px;
+        }
+        .Product-Brief{
+            width: 100%;
+            min-height: 500px;
+            padding:1px; 
+        }
+        .Product-Brief-title{
+            width: 100%;
+            height: 20px;
+            margin:20px auto auto auto;
+            font-size: 20px;
+            color: #02C2A2;
+            text-align: center;
+            line-height: 20px;
+        }
+        .Product-Brief-Subheading{
+            width: 95%;
+            height: 16px;
+            border-left: 3px solid #02C2A2;
+            font-size: 16px;
+            color: #2E2E30;
+            line-height: 18px;
+            padding-left: 10px;
+            margin: 30px auto auto auto;
+        }
+        .Product-Brief-Subhea{
+            width: 91%;
+            height: 12px;
+            font-size: 12px;
+            color: #5D5D5D;
+            margin: 10px auto auto auto;
+        }
+        .Product-Brief-img{
+            width: 100%;
+            height: 519px;
+            margin-top: 20px;
+        }
+        .Product-Brief-img>img{
+            width: 100%;
+            height: 100%;
+        }
+        .Product-install{
+            width: 100%;
+            height:418px;
+            margin-top:30px; 
+        }
+        .Product-install-left{
+            width: 320px;
+            height: 100%;
+            float: left;
+        }
+        .Product-install-lefto{
+            width: 95%;
+            height: 16px;
+            line-height: 16px;
+            margin: 0 auto;
+        }
+        .Product-install-lefto>span:nth-of-type(1){
+            display: block;
+            float: left;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #02C2A2;
+            text-align: center;
+            line-height: 14px;
+            font-size: 12px;
+            color: white;
+        }
+        .Product-install-lefto>span:nth-of-type(2){
+            display: block;
+            float: left;
+            font-size: 16px;
+            padding-left: 10px;
+        }
+        .Product-install-leftt{
+            width: 95%;
+            height: 12px;
+            font-size: 12px;
+            color: #5D5D5D;
+            line-height: 12px;
+            margin: 10px auto auto auto;
+        }
+        .Product-install-leftimg{
+            width: 320px;
+            height: 370px;
+            margin-top: 10px;
+        }
+        .Product-install-leftimg>img{
+            width: 100%;
+            height: 100%;
+        }
+        .Product-Use{
+            width: 100%;
+            min-height: 500px;
+        }
+        .Product-parameter{
+            width: 100%;
+            min-height: 500px;
+        }
+        .Product-Becareful{
+            width: 100%;
+            min-height: 100px;
+        }
+        .Product-contact{
+            width: 100%;
+            min-height: 100px;
+        }
+        .Product-contact-About{
+            width: 95%;
+            height: 40px;
+            margin: 20px auto 20px auto;
+        }
+        .Product-contact-left{
+            width: 40px;
+            height: 40px;
+            float: left;
+        }
+        .Product-contact-left>img{
+            width: 100%;
+            height: 100%;
+        }
+        .Product-contact-right{
+            width: 60%;
+            height: 40px;
+            float: left;
+            margin-left: 10px;
+        }
+        .Product-contact-right>div:nth-of-type(1){
+            font-size: 13px;
+            color: #5D5D5D;
+            margin-top: 5px;
+        }
+        .Product-contact-right>div:nth-of-type(2){
+            font-size: 13px;
+            color: #5D5D5D;
+        }
+        .Product-message{
+            width: 95%;
+            height: 350px;
+            margin: 40px auto auto auto;
+        }
+        .Product-message-Title{
+            width: 100%;
+            height: 20px;
+            font-size: 20px;
+            color: #2E2E30;
+            line-height: 20px;
+        }
+        .Product-message-second{
+            width: 100%;
+            height: 13px;
+            font-size: 13px;
+            color: #9B9B9B;
+            line-height: 13px;
+            padding-top: 7px;
+        }
+        .Product-message-name{
+            font-size: 14px;
+            color: #2E2E30;
+        }
+        .Product-message-iup{
+            width: 100%;
+            height: 40px;
+            border-bottom: 1px solid #EEEEEE;
+            
+        }
+        .Product-message-iup>input{
+            width:100%;
+            height: 100%;
+        }
+        input::-webkit-input-placeholder{
+            font-size: 14px;
+            color: #BDBDBD;
+        }
+        .Product-message-but{
+            width: 140px;
+            height: 45px;
+            background: #2E2E30;
+            text-align: center;
+            line-height: 45px;
+            font-size: 14px;
+            color: #FFFFFF;
+            margin-top: 40px;
+        }
+        .Product-Read{
+            width: 100%;
+            height: 40px;
+            margin-top: 20px;
+            background: #F9F9F9;
+        }
+        .Product-Read-on{
+            font-size: 12px;
+            color: #9B9B9B;
+            line-height: 47px;
+            margin-left: 20px;
+            float: left;
+        }
+        .Product-Read-zan{
+            width: 68px;
+            height: 100%;
+            float: right;
+            font-size: 12px;
+            color: #2E2E30;
+            line-height: 47px;
+        }
+        .Product-Read-zan>img{
+            width: 10.5px;
+            height: 10.5px;
+        }
+        .Details-right{
+            width: 340px;
+            min-height: 667px;
+            float: right;
+            margin-top: 20px;
+        }
+        .Details-right-top{
+            width: 100%;
+            min-height: 667px;
+            border: 1px solid #EFEFEF;
+        }
+        .company-header{
+            width: 100%;
+            height: 154px;
+            position: relative;
+        }
+        .company-header-url{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .company-header-url>img{
+            width: 100%;
+            height: 100%;
+        }
+        .company-header-name{
+            width: 310px;
+            height: 80px;
+            position: absolute;
+            left:20px;
+            bottom: 0;
+        }
+        .companyname{
+            width: 228px;
+            font-size: 16px;
+            color: #2E2E30;
+            line-height: 20px;
+            font-weight: bold;
+            float: left;
+        }
+        .companyguan{
+            background: #02C2A2;
+            border-radius: 4px;
+            width: 72px;
+            height: 34px;
+            text-align: center;
+            line-height: 34px;
+            font-size: 16px;
+            color: #FFFFFF;
+            float: left;
+            margin-left: 10px;
+        }
+        .companyedit{
+            width: 228px;
+            height: 20px;
+            margin-top: 10px;
+            float: left;
+        }
+        
+        .companyedit-son{
+            width: 70px;
+            height: 20px;
+            font-size: 12px;
+            color: #5D5D5D;
+            line-height: 20px;
+            float: left;
+            margin-left: 10px;
+        }
+        .companyedit>div:nth-of-type(1){
+            margin-left: 0;
+        }
+        .companyedit-son>img{
+            width: 17px;
+            height: 17px;
+            display: block;
+            float: left;
+        }
+        .companyedit-son>span{
+            display: block;
+            float: left;
+            padding-left: 5px;
+        }
+        .company-conter{
+            width: 90%;
+            min-height: 278px;
+            margin: 0 auto;
+            border-bottom: 1px solid #EFEFEF;
+        }
+        .company-conter-subordinate{
+            font-size: 14px;
+            color: #2E2E30;
+            padding-top: 18px;
+        }
+        .company-conter-subordinate>span{
+            padding: 2px 10px 2px 10px;
+            border: 1px solid #02C2A2;
+            border-radius: 9px;
+            margin-left: 10px;
+            font-size: 12px;
+            color: #02C2A2;
+        }
+        .company-conter-Consultation{
+            width: 96px;
+            height: 34px;
+            border: 1px solid #02C2A2;
+            border-radius: 4px;
+            margin: 20px auto 20px auto;
+            text-align: center;
+            line-height: 34px;
+            font-size: 14px;
+            color: #02C2A2;
+        }
+        .company-conter-Consultation>img{
+            width: 16px;
+            height: 16px;
+            display: block;
+            float: left;
+            margin-left: 10px;
+            margin-top: 9px;
+        }
+        .company-conter-Consultation>span{
+            display: block;
+            float: left;
+            margin-left: 5px;
+        }
+        .company-bottom{
+            width: 90%;
+            height: 215px;
+            margin: 0 auto;
+        }
+        .company-bottom-er{
+            width: 162px;
+            height: 162px;
+            margin: 20px auto auto auto;
+            background-image: url('../../images/img/erweimakuang.png');
+            background-size: 100% 100%;
+            padding: 1px;
+        }
+        .company-bottom-er>img{
+            width: 80%;
+            height: 80%;
+            margin: 15px auto auto auto;
+            display: block;
+        }
+        .company-bottom-edit{
+            font-size: 12px;
+            color: #9B9B9B;
+            margin: 20px auto auto auto;
+        }
+        .home-right-List{
+            width: 100%;
+            min-height: 658px;
+            margin-top: 20px;
+            background: #F9F9F9;
+            
+        }
+        .home-right-Lists{
+            width: 100%;
+            min-height: 658px;
+            margin-top: 20px;
+            background: #F9F9F9;
+        }
+        .List-headers{
+            width: 100%;
+            height: 56px;
+            border-bottom: 1px solid #02C2A2;
+        }
+        .List-headers>div:nth-of-type(1){
+            width: 110px;
+            height: 100%;
+            float: left;
+            font-size: 16px;
+            color: #02C2A2;
+            text-align: center;
+            line-height: 56px;
+            font-weight: bold;
+        }
+        .List-headers>div:nth-of-type(1)>span{
+            display: block;
+            width: 40px;
+            height: 3px;
+            margin: -4px auto auto auto;
+            background: #02C2A2;
+        }
+        .List-headers>div:nth-of-type(2)>span{
+            display: block;
+            width: 40px;
+            height: 3px;
+            margin: -4px auto auto auto;
+            background: #02C2A2;
+            display: none;
+        }
+        .List-headers>div:nth-of-type(2){
+            width: 110px;
+            height: 100%;
+            float: left;
+            font-size: 16px;
+            color: #2E2E30;
+            text-align: center;
+            line-height: 56px;
+        }
+        .List-header{
+            width: 100%;
+            height: 56px;
+            border-bottom: 1px solid #EFEFEF;
+        }
+        .List-header>div:nth-of-type(1){
+            width: 83px;
+            height: 17px;
+            font-size: 16px;
+            color: #2E2E30;
+            float: left;
+            text-align: center;
+            line-height: 17px;
+            font-weight: bold;
+            border-left: 3px solid #02C2A2;
+            margin-top: 21px;
+            margin-left: 12px;
+
+        }
+        .List-body{
+            width: 100%;
+            height: 725px;
+            overflow: auto;
+            /* overflow: hidden; */
+        }
+        .List-body-somil{
+            width: 100%;
+            height: 144px;
+            border-bottom: 1px solid #EFEFEF;
+            position: relative;
+            overflow: hidden;
+        }
+        .List-body-somil-er{
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+        .List-body-somil-er>img{
+            width: 100%;
+            height: 100%;
+        }
+        .body-somil{
+            width: 95%;
+            height: 90%;
+            margin: 10px auto auto auto;
+        }
+        .body-somil-tuwen{
+            width: 100%;
+            height: 100px;
+        }
+        .somil-tuwen-tu{
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .somil-tuwen-tu>img{
+            width: 100%;
+            height: 100%;
+        }
+        .somil-tuwen-wen{
+            width: 66%;
+            height: 100%;
+            float: right;
+            position: relative;
+        }
+        .somil-tuwen-wen>div:nth-of-type(1){
+            width: 190px;
+            height: 66px;
+            font-size: 14px;
+            color: #2E2E30;
+            line-height: 22px;
+        }
+        .somil-tuwen-wen>div:nth-of-type(2){
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 190px;
+            height: 17px;
+            font-size: 16px;
+            color: #FAB100;
+            line-height: 22px;
+        }
+        .body-somil-bot{
+            width: 100%;
+            height: 25px;
+        }
+        .body-somil-bot>div:nth-of-type(1){
+            width: 50px;
+            height: 25px;
+            font-size: 12px;
+            color: #9B9B9B;
+            float: left;
+        }
+        .body-somil-bot>div:nth-of-type(2),.body-somil-bot>div:nth-of-type(3){
+            width: 50px;
+            height: 25px;
+            font-size: 12px;
+            color: #9B9B9B;
+            float: left;
+            margin-left: 15px;
+        }
+        .body-somil-bot>div:nth-of-type(1)>img,.body-somil-bot>div:nth-of-type(2)>img,.body-somil-bot>div:nth-of-type(3)>img{
+            width:14px;
+            height: 12px;
+            padding-right: 5px;
+            padding-top: 10px;
+        }
+        .body-somil-bot-xun{
+            width: 68px;
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            font-size: 12px;
+            color: #02C2A2;
+            border: 1px solid #02C2A2;
+            border-radius: 2px;
+            float: right;
+        }
+        .List-bott{
+            width: 100%;
+            height: 54px;
+            text-align: center;
+            line-height: 54px;
+            font-size: 14px;
+            color: #2E2E30;
+        }
+        .List-bodytwo{
+            width: 100%;
+            height: 558px;
+            display: none;
+            overflow: auto;
+        }
+        .bodytwo-About{
+            width: 100%;
+            height: 120px;
+            border-bottom: 1px solid #EFEFEF;
+            position: relative;
+            overflow: hidden;
+        }
+        .bodytwo-About-tu{
+            width: 95%;
+            height: 100px;
+            margin: 10px auto auto auto;
+        }
+        .About-tu-img{
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .About-tu-img>img{
+            width: 100%;
+            height: 100%;
+        }
+        .About-tu-zi{
+            width: 66%;
+            height: 100%;
+            float: right;
+            position: relative;
+        }
+        .About-tu-zi>div:nth-of-type(1){
+            width: 190px;
+            height: 25px;
+            font-size: 14px;
+            color: #2E2E30;
+            line-height: 22px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+        .About-tu-zi-two{
+            width: 100%;
+            min-height: 15px;
+            font-size: 14px;
+            line-height: 18px;
+            color: #9B9B9B;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .About-tu-zi-bao{
+            width: 68px;
+            height: 24px;
+            border-radius: 2px;
+            border: 1px solid #FAB100;
+            font-size: 12px;
+            color: #FAB100;
+            text-align: center;
+            line-height: 24px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .bodytwo-wenzi{
+            width: 100%;
+            min-height: 68px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid #EFEFEF;
+            margin-top: 10px;
+        }
+        .bodytwo-wenzi-box{
+            width: 95%;
+            min-height: 50px;
+            margin: 10px auto 10px auto;
+        }
+        .bodytwo-wenzi-box>div:nth-of-type(1){
+            width: 310px;
+            height: 15px;
+            line-height: 15px;
+            font-size: 14px;
+            color: #2E2E30;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+        .wenzi-box-fu{
+            width: 100%;
+            min-height: 15px;
+            line-height: 18px;
+            font-size: 14px;
+            color: #9B9B9B;
+            margin-top: 10px;
+            display: -webkit-box;
+            -webkit-line-clamp:2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+        }
+        .wenzi-box-but{
+            width: 68px;
+            height: 24px;
+            border: 1px solid #FAB100;
+            border-radius: 2px;
+            text-align: center;
+            line-height: 24px;
+            font-size: 12px;
+            color: #FAB100;
+            margin-top: 10px;
+            margin-left: 78%;
+        }
+
+        .body-somil-bota{
+            width: 100%;
+            height: 25px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .body-somil-bota>div:nth-of-type(1){
+            width: 50px;
+            height: 25px;
+            font-size: 12px;
+            color: #9B9B9B;
+            float: left;
+        }
+        .body-somil-bota>div:nth-of-type(2),.body-somil-bota>div:nth-of-type(3){
+            width: 50px;
+            height: 25px;
+            font-size: 12px;
+            color: #9B9B9B;
+            float: left;
+            margin-left: 15px;
+        }
+        .body-somil-bota>div:nth-of-type(1)>img,.body-somil-bota>div:nth-of-type(2)>img,.body-somil-bota>div:nth-of-type(3)>img{
+            width:14px;
+            height: 12px;
+            padding-right: 5px;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header" id="header"></div>
+    <div class="Companytop">
+        <div class="Companytop-box">
+            <div class="Companytop-box-left">
+                <diV class="box-left-img"><img src="../../images/img/e-mile.png" alt=""></diV> 
+                <div class="box-left-zi">
+                    <div>
+                        <span>北京慧聪云信大数据科技有限公司</span><img src="../../images/img/liu-tan.png">
+                    </div>
+                    <div>
+                        <img src="../../images/img/hui/vip3+.png"  class="vip-3">
+                        <img src="../../images/img/icon2/qiye-ren.png" class="qiye-ren">
+                        <div class="Bar"></div>
+                        <img src="../../images/img/phone.png" class="phone">
+                        <span class="shops">移动商铺</span>
+                    </div>
+                </div>
+            </div>
+            <div class="Companytop-box-right">
+                <div>+ 关注</div>
+                <div>已获赞<span>5800</span></div>
+                <div>关注<span>580</span></div>
+                <div>粉丝<span>5800</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="Companytop-conter">
+        <!-- 左侧 -->
+        <div class="Companytop-Details">
+            <div class="Companytop-Navigation">
+                <div class="Navigation-but weight">产品信息</div>
+                <div class="Navigation-but">公司资讯</div>
+                <div class="Navigation-but">产品售后</div>
+                <div class="Navigation-but">公司介绍</div>
+            </div>
+            <div class="Details-Business">
+                <div class="Details-Business-Route">
+                    <span>首页 ></span>
+                    <span>供应商机 ></span>
+                    <span style="color: #9b9b9b">商机详情</span>
+                </div>
+                <div class="Business-within">
+                    <div class="Business-within-er"><img src="../../images/img/jiao/erweima.png"></div>
+                    <div class="Business-within-first">
+                        <div class="within-first-tuwen">
+                            <div class="within-first-tu"><img src="../../images/img/Exhibition.png"></div>
+                            <div class="within-first-wen">
+                                <div>我是普通模版的主题，一二三四五六七八九十一二三四五六限制三十</div>
+                                <div class="within-first-wenyi">所属品类:<span>服装行业</span></div>
+                                <div class="within-first-but">
+                                    <div>面议</div>
+                                    <div>立即询价</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="within-first-Smallgraph">
+                            <div class="within-first-Smallgraph-left"><img src="../../images/img/left.png"></div>
+                            <div class="within-first-Smallgraph-right"><img src="../../images/img/right.png"></div>
+                            <div class="within-first-Smallgraph-img">
+                                <img src="../../images/img/Exhibition.png">
+                                <img src="../../images/img/Exhibition.png">
+                                <img src="../../images/img/Exhibition.png">
+                                <img src="../../images/img/Exhibition.png">
+                                <img src="../../images/img/Exhibition.png">
+                            </div>
+                        </div>
+                        <div class="within-first-function">
+                            <div><img src="../../images/img/zan-black.png"> 点赞</div>
+                            <div><img src="../../images/img/shou-black.png"> 收藏</div>
+                            <div><img src="../../images/img/fen-black.png"> 分享</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Details-Navigationswitch">
+                    <div class="Details-Navigationswitch-hea newhea">产品简介</div>
+                    <div class="Details-Navigationswitch-hea">如何安装</div>
+                    <div class="Details-Navigationswitch-hea">如何使用</div>
+                    <div class="Details-Navigationswitch-hea">基本参数</div>
+                    <div class="Details-Navigationswitch-hea">注意事项</div>
+                    <div class="Details-Navigationswitch-many">
+                        <span class="many-span">更多</span>
+                        <img class="class_img many-span" src="../../images/img/Triangle-black.png">
+                        <div class="Details-Navigationswitch-surplus">
+                            <div class="Navigationswitch-surplus-xuan">我是下拉选择1</div>
+                            <div class="Navigationswitch-surplus-xuan">我是下拉选择2</div>
+                            <div class="Navigationswitch-surplus-xuan">我是下拉选择3</div>
+                            <div class="Navigationswitch-surplus-xuan">我是下拉选择4</div>
+                            <div class="Navigationswitch-surplus-xuan">我是下拉选择5</div>
+                            <div class="Navigationswitch-surplus-xuan">我是下拉选择6</div>
+                        </div>
+                    </div>
+                    <div class="Mask"></div>
+                </div>
+                <!-- 产品详情 -->
+                <div class="Product-overview">
+                    <!-- 产品简介 -->
+                    <div class="Product-Brief" id="introduction">
+                        <div class="Product-Brief-title">产品简介</div>
+                        <div class="Product-Brief-Subheading">正面展示</div>
+                        <div class="Product-Brief-Subhea">机体正面屏幕显示内容说明.</div>
+                        <div class="Product-Brief-img"><img src="../../images/img/Positive.png"></div>
+                        <div class="Product-Brief-Subheading">正面展示</div>
+                        <div class="Product-Brief-Subhea">机体正面屏幕显示内容说明.</div>
+                        <div class="Product-Brief-img"><img src="../../images/img/Positive.png"></div>
+                    </div>
+                    <!-- 如何安装 -->
+                    <div class="Product-Brief" id="install">
+                        <div class="Product-Brief-title">如何安装</div>
+                        <div class="Product-install">
+                            <div class="Product-install-left">
+                                <div class="Product-install-lefto"><span>1</span><span>打开滤芯舱门</span></div>
+                                <div class="Product-install-leftt">下压舱门开关，打开滤芯仓门，确认滤芯已入位。</div>
+                                <div class="Product-install-leftimg"><img src="../../images/img/33.png" alt=""></div>
+                            </div>
+                            <div class="Product-install-left" style="margin-left:16px;">
+                                <div class="Product-install-lefto"><span>2</span><span>打开滤芯舱门</span></div>
+                                <div class="Product-install-leftt">下压舱门开关，打开滤芯仓门，确认滤芯已入位。</div>
+                                <div class="Product-install-leftimg"><img src="../../images/img/33.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="Product-install">
+                            <div class="Product-install-left">
+                                <div class="Product-install-lefto"><span>3</span><span>打开滤芯舱门</span></div>
+                                <div class="Product-install-leftt">下压舱门开关，打开滤芯仓门，确认滤芯已入位。</div>
+                                <div class="Product-install-leftimg"><img src="../../images/img/33.png" alt=""></div>
+                            </div>
+                            <div class="Product-install-left" style="margin-left:16px;">
+                                <div class="Product-install-lefto"><span>4</span><span>打开滤芯舱门</span></div>
+                                <div class="Product-install-leftt">下压舱门开关，打开滤芯仓门，确认滤芯已入位。</div>
+                                <div class="Product-install-leftimg"><img src="../../images/img/33.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 如何使用 -->
+                    <div class="Product-Use" id="use">
+                        <div class="Product-Brief-title">如何使用</div>
+                        <div class="Product-install-lefto" style="margin-top:30px;"><span>1</span><span>打开滤芯舱门</span></div>
+                        <div class="Product-install-leftt">下压舱门开关，打开滤芯仓门，确认滤芯已入位。</div>
+                        <div class="Product-Brief-img"><img src="../../images/img/Positive.png"></div>
+                        <div class="Product-install-lefto" style="margin-top:30px;"><span>2</span><span>打开滤芯舱门</span></div>
+                        <div class="Product-install-leftt">下压舱门开关，打开滤芯仓门，确认滤芯已入位。</div>
+                        <div class="Product-Brief-img"><img src="../../images/img/Positive.png"></div>
+                    </div>
+                    <!-- 基本参数 -->
+                    <div class="Product-parameter">
+                        <div class="Product-Brief-title">基本参数</div>
+                        <div class="Product-Brief-Subheading">基本参数</div>
+                        <div class="Product-Brief-img"><img src="../../images/img/Positive.png"></div>
+                    </div>
+                    <!-- 注意事项 -->
+                    <div class="Product-Becareful">
+                        <div class="Product-Brief-title">注意事项</div>
+                        <div class="Product-Brief-Subheading">搬运</div>
+                        <div class="Product-Brief-Subhea">机体正面屏幕显示内容说明.</div>
+                        <div class="Product-Brief-Subheading">电源</div>
+                        <div class="Product-Brief-Subhea">机体正面屏幕显示内容说明.</div>
+                        <div class="Product-Brief-Subheading">使用限制</div>
+                        <div class="Product-Brief-Subhea">机体正面屏幕显示内容说明.</div>
+                    </div>
+                    <!-- 联系我们 -->
+                    <div class="Product-contact">
+                        <div class="Product-Brief-title">联系我们</div>
+                        <div class="Product-Brief-Subheading">欢迎联系我们</div>
+                        <div class="Product-Brief-Subhea">您有什么问题请联系我们，我们尽最大努力帮您解决。</div>
+                        <div class="Product-contact-About">
+                            <div class="Product-contact-left"><img src="../../images/img/from.png" alt=""></div>
+                            <div class="Product-contact-right">
+                                <div>电话</div>
+                                <div>010-12345678</div>
+                            </div>
+                        </div>
+                        <div class="Product-contact-About">
+                            <div class="Product-contact-left"><img src="../../images/img/from.png" alt=""></div>
+                            <div class="Product-contact-right">
+                                <div>电话</div>
+                                <div>010-12345678</div>
+                            </div>
+                        </div>
+                        <div class="Product-contact-About">
+                            <div class="Product-contact-left"><img src="../../images/img/from.png" alt=""></div>
+                            <div class="Product-contact-right">
+                                <div>电话</div>
+                                <div>010-12345678</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 直接留言 -->
+                    <div class="Product-message">
+                        <div class="Product-message-Title">直接留言</div>
+                        <div class="Product-message-second">如您有任何疑问或者想咨询业务相关，请在下方留言，我们会尽快给您反馈哦～</div>
+                        <div class="Product-message-name" style="padding-top:30px;">姓名</div>
+                        <div class="Product-message-iup">
+                            <input type="text" placeholder="如何称呼您？" placeholder-style="color: red;">
+                        </div>
+                        <div class="Product-message-name" style="padding-top:10px;">电话</div>
+                        <div class="Product-message-iup">
+                            <input type="text" placeholder="请留下您的联系方式..." placeholder-style="color: red;">
+                        </div>
+                        <div class="Product-message-name" style="padding-top:10px;">留言</div>
+                        <div class="Product-message-iup">
+                            <input type="text" placeholder="请留下您想对我们说的话..." placeholder-style="color: red;">
+                        </div>
+                        <div class="Product-message-but">提交留言</div>
+                    </div>
+                </div>
+                <div class="Product-Read">
+                    <div class="Product-Read-on">阅读 1234</div>
+                    <div class="Product-Read-zan"><img src="../../images/img/fen-black.png"> 999+</div>
+                    <div class="Product-Read-zan"><img src="../../images/img/shou-black.png"> 999+</div>
+                    <div class="Product-Read-zan"><img src="../../images/img/zan-black.png"> 999+</div>
+                </div>
+            </div>
+            <!-- 产品信息 -->
+            <div class="Productinformation" id="Productinformation"></div>
+            <!-- 公司资讯 -->
+            <div class="information" id="information"></div>
+            <!-- 产品售后 -->
+            <div class="Customer" id="Customer"></div>
+            <!-- 公司介绍 -->
+            <div class="introduce" id="introduce"></div>
+        </div>
+        <!-- 右侧 -->
+        <div class="Details-right">
+            <div class="Details-right-top">
+                <div class="company-header">
+                    <div class="company-header-url"><img src="../../images/img/Admission-vip.png"></div>
+                    <div class="company-header-name">
+                        <div class="companyname">北京慧聪云信大数据科技有限公司</div>
+                        <div class="companyguan">+ 关注</div>
+                        <div class="companyedit">
+                            <div class="companyedit-son"><img src="../../images/img/icon1/enterprise-green.png"><span>企业认证</span></div>
+                            <div class="companyedit-son"><img src="../../images/img/icon1/Branddealer.png"><span>企业认证</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="company-conter">
+                    <div class="company-conter-subordinate">联系姓名: 王产业</div>
+                    <div class="company-conter-subordinate">联系电话: 12345678901 <span>复制联系电话</span></div>
+                    <div class="company-conter-subordinate">联系邮箱: 1234567890@123.com</div>
+                    <div class="company-conter-subordinate">所属行业: 工程机械</div>
+                    <div class="company-conter-subordinate">品牌名称: 工程机械</div>
+                    <div class="company-conter-subordinate">所在地区: 北京市昌平区</div>
+                    <div class="company-conter-Consultation">
+                        <img src="../../images/img/liu-tan.png">
+                        <span>立即咨询</span>
+                    </div>
+                </div>
+                <div class="company-bottom">
+                    <div class="company-bottom-er"><img src="../../images/img/55.png"></div>
+                    <div class="company-bottom-edit">支持微信、百度、今日头条、手机浏览器扫码访问该商铺</div>
+                </div>
+            </div>
+            <div class="home-right-List">
+                <div class="List-header">
+                    <div class="supply">推荐供应</div>
+                </div>
+                <div class="List-body">
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="../../images/img/jiao/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="../../images/img/oppo01.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="../../images/img/eys.png">999+</div>
+                                <div><img src="../../images/img/zan.png">999+</div>
+                                <div><img src="../../images/img/liu.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="../../images/img/jiao/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="../../images/img/oppo01.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="../../images/img/eys.png">999+</div>
+                                <div><img src="../../images/img/zan.png">999+</div>
+                                <div><img src="../../images/img/liu.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="../../images/img/jiao/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="../../images/img/oppo01.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="../../images/img/eys.png">999+</div>
+                                <div><img src="../../images/img/zan.png">999+</div>
+                                <div><img src="../../images/img/liu.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="../../images/img/jiao/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="../../images/img/oppo01.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="../../images/img/eys.png">999+</div>
+                                <div><img src="../../images/img/zan.png">999+</div>
+                                <div><img src="../../images/img/liu.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="../../images/img/jiao/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="../../images/img/oppo01.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="../../images/img/eys.png">999+</div>
+                                <div><img src="../../images/img/zan.png">999+</div>
+                                <div><img src="../../images/img/liu.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="../../images/img/jiao/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="../../images/img/oppo01.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="../../images/img/eys.png">999+</div>
+                                <div><img src="../../images/img/zan.png">999+</div>
+                                <div><img src="../../images/img/liu.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="List-bott">加载更多...</div>
+            </div>
+            <div class="home-right-Lists" style="display:none;">
+                <div class="List-headers">
+                    <div class="supply-shang">商家热门供应<span class="supply-son"></span></div>
+                    <div class="Purchase-shang">商家热门资讯<span class="Purchase-son"></span></div>
+                </div>
+                <div class="List-body">
+                    <div class="List-body-somil">
+                        <div class="List-body-somil-er"><img src="./img/erweima.png"></div>
+                        <div class="body-somil">
+                            <div class="body-somil-tuwen">
+                                <div class="somil-tuwen-tu"><img src="../../images/img/oppo01.png"></div>
+                                <div class="somil-tuwen-wen">
+                                    <div>我是商机的主题名称，一二三四五六七八九十一二三四五六限制三十</div>
+                                    <div>¥123.00-456.00</div>
+                                </div>
+                            </div>
+                            <div class="body-somil-bot">
+                                <div><img src="../../images/img/eys.png">999+</div>
+                                <div><img src="../../images/img/zan.png">999+</div>
+                                <div><img src="../../images/img/liu.png">999+</div>
+                                <div class="body-somil-bot-xun">立即询价</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="List-bodytwo">
+                    <div class="bodytwo-About">
+                        <div class="List-body-somil-er"><img src="./img/erweima.png"></div>
+                        <div class="bodytwo-About-tu">
+                            <div class="About-tu-img"><img src="../../images/img/oppo01.png" alt=""></div>
+                            <div class="About-tu-zi">
+                                <div>我是采购的主题名称，一二三四五六限制二十</div>
+                                <div class="About-tu-zi-two">补充说明：我是采购啊实打实大大商品的补充说明：我是采购商品的补充…</div>
+                                <div class="body-somil-bota">
+                                    <div><img src="../../images/img/eys.png">999+</div>
+                                    <div><img src="../../images/img/zan.png">999+</div>
+                                    <div><img src="../../images/img/liu.png">999+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bodytwo-wenzi">
+                        <div class="List-body-somil-er"><img src="./img/erweima.png"></div>
+                        <div class="bodytwo-wenzi-box">
+                            <div>我是采购的主题名称，一二三四五啊实打实大师大所多六限制二十</div>
+                            <div class="wenzi-box-fu">补充说明：我是采购as大萨达萨达萨达萨萨达萨达萨达萨达商品的补补充说明：我是采购商品的补充…</div>
+                            <div class="body-somil-bot">
+                                <div><img src="../../images/img/eys.png">999+</div>
+                                <div><img src="../../images/img/zan.png">999+</div>
+                                <div><img src="../../images/img/liu.png">999+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bodytwo-wenzi">
+                        <div class="List-body-somil-er"><img src="./img/erweima.png"></div>
+                        <div class="bodytwo-wenzi-box">
+                            <div>我是采购的主题名称，一二三四五六限制二十</div>                            
+                            <div class="body-somil-bot">
+                                <div><img src="../../images/img/eys.png">999+</div>
+                                <div><img src="../../images/img/zan.png">999+</div>
+                                <div><img src="../../images/img/liu.png">999+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bodytwo-wenzi">
+                        <div class="List-body-somil-er"><img src="./img/erweima.png"></div>
+                        <div class="bodytwo-wenzi-box">
+                            <div>我是采购的主题名称，一二三四五六限制二十</div>                            
+                            <div class="body-somil-bot">
+                                <div><img src="../../images/img/eys.png">999+</div>
+                                <div><img src="../../images/img/zan.png">999+</div>
+                                <div><img src="../../images/img/liu.png">999+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="List-bott">加载更多...</div>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="footer" id='footer'></div>
+</body>
+</html>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script>
+    $(function () {
+        /*公共部分
+         * header 头部
+         * footer 底部
+         */
+        $("#header").load("./../../src/common/pages/header/header.html");
+        $("#footer").load("./../../src/common/pages/footer/footer.html");
+    });
+    // 产品信息 公司资讯 产品售后 公司介绍 切换
+    $(".Navigation-but").click(function(){
+        $(this).addClass('weight').siblings().removeClass('weight');
+        console.log($(this).index())
+        if($(this).index()==0){
+            $(".Details-Business").css('display','none');
+            $("#information").hide();
+            $("#introduce").hide();
+            $("#Customer").hide();
+            $("#Productinformation").show();
+            $("#Productinformation").load('./components/Productinformation.html');
+            $(".home-right-List").css('display','none');
+            $(".home-right-Lists").css('display','block');
+            $(".supply-shang").click();
+        }else if($(this).index()==1){
+            $(".Details-Business").css('display','none');
+            $("#Productinformation").hide();
+            $("#introduce").hide();
+            $("#Customer").hide();
+            $("#information").show();
+            $("#information").load('./components/information.html');
+            $(".home-right-List").css('display','none');
+            $(".home-right-Lists").css('display','block');
+            $('.Purchase-shang').click();
+        }else if($(this).index()==2){
+            $(".Details-Business").css('display','none');
+            $("#Productinformation").hide();
+            $("#introduce").hide();
+            $("#information").hide();
+            $("#Customer").show();
+            $("#Customer").load('./components/Customer.html');
+            $('.Purchase-shang').click();
+        }else if($(this).index()==3){
+            $(".Details-Business").css('display','none');
+            $("#information").hide();
+            $("#Productinformation").hide();
+            $("#Customer").hide();
+            $("#introduce").show();
+            $("#introduce").load('./components/introduce.html');
+            $('.Purchase-shang').click();
+        }
+    })
+    $(".Details-Navigationswitch-hea").click(function(){
+        $(this).addClass('newhea').siblings().removeClass('newhea');
+        console.log($(this).index())
+        if($(this).index()==0){
+            $('html,body').animate({ scrollTop: $("#introduction").offset().top -20}, 200)
+        }else if($(this).index()==1){
+            $('html,body').animate({ scrollTop: $("#install").offset().top -20}, 200)
+        }else if($(this).index()==2){
+            $('html,body').animate({ scrollTop: $("#use").offset().top -50}, 200)
+        }
+    })
+    var num='0';
+    $(".many-span").click(function(){
+        if(num=='0'){
+            $(".class_img").attr("src", "../../images/img/Triangle-green.png");
+            $(this).css('color','#02C2A2');
+            $(".Details-Navigationswitch-surplus").css('display','block');
+            $(".Mask").css('display','block');
+            num='1';
+        }else if(num=='1'){
+            $(".class_img").attr("src", "../../images/img/Triangle-black.png");
+            $(this).css('color','#2E2E30');
+            $(".Details-Navigationswitch-surplus").css('display','none');
+            $(".Mask").css('display','none');
+            num='0';
+        }
+    })
+    $(".Mask").click(function(){
+        $(".Mask").css('display','none');
+        $(".Details-Navigationswitch-surplus").css('display','none');
+        $(".class_img").attr("src", "../../images/img/Triangle-black.png");
+        $(".many-span").css('color','#2E2E30');
+    });
+    $(".Navigationswitch-surplus-xuan").mouseenter(function(){
+        
+        $(this).addClass('xiala')
+    })
+    $(".Navigationswitch-surplus-xuan").mouseleave(function () {
+        $(this).removeClass('xiala');
+    });
+
+    $(".Purchase-shang").click(function(){
+        $(".Purchase-shang").css({"color":" #02C2A2",'font-weight': 'bold'});
+        $(".Purchase-son").css('display','block');
+        $(".supply-son").css('display','none');
+        $(".supply-shang").css({"color":" #2E2E30",'font-weight': 'normal'});
+        $(".List-bodytwo").css('display','block');
+        $(".List-body").css('display','none');
+    })
+    $(".supply-shang").click(function(){
+        $(".supply-shang").css({"color":" #02C2A2",'font-weight': 'bold'});
+        $(".Purchase-son").css('display','none');
+        $(".supply-son").css('display','block');
+        $(".Purchase-shang").css({"color":" #2E2E30",'font-weight': 'normal'});
+        $(".List-bodytwo").css('display','none');
+        $(".List-body").css('display','block');
+    })
+</script>

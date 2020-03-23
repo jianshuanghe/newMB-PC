@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../../css/reset.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        .Releaserecomm-title {
+            width: 100%;
+            height: 70px;
+            margin-top: 34px;
+            background: #2E2E30;
+            font-size: 24px;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 70px;
+        }
+        .Instructions{
+            width: 100%;
+            height: 100%;
+            background: #ECF0F2;
+        }
+        .Instructions-image{
+            width: 390px;
+            height: 750px;
+            margin: 0 auto auto auto;
+            position: relative;
+            padding: 1px;
+        }
+        .Instructions-image>img:nth-of-type(1){
+            width: 100%;
+            height: 100%;
+            top: 30px;
+            left: 0;
+            position: absolute;
+        }
+        .Instructions-box{
+            width: 350px;
+            height: 637px;
+            position: absolute;
+            top:68px;
+            left: 20px;
+        }
+        iframe{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header" id="header"></div>
+    <div class="Releaserecomm-title">请选择一个模板(2/4)</div>
+    <div class="Instructions">
+        <div class="Instructions-image">
+            <img src="../../images/img/phone-shell.png">
+            <div class="Instructions-box" id="Instructionsbox">
+                <iframe frameborder="0" id="iframes"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<script src="../../js/Biography.js"></script>
+<script>
+    $(function () {
+        /*公共部分
+         * header 头部
+         * header 底部
+         */
+        $("#header").load("./../../src/common/pages/header/header.html");
+        var str = GetQueryString("str");
+        // console.log(JSON.parse(str));
+        // var addstr=JSON.parse(str);
+        $("#iframes").attr("src","http://192.168.131.146:8081/#/modules/createBusiness/templatePro/templatePro?urlParams="+str);
+        
+    });
+    window.addEventListener('message',function(e){
+        window.location.href = "./Releasethree.html"
+    },false);
+</script>

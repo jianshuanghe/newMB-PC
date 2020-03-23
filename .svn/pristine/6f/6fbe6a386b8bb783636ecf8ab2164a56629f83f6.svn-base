@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../../css/reset.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        .Releaserecomm-title {
+            width: 100%;
+            height: 70px;
+            margin-top: 34px;
+            background: #2E2E30;
+            font-size: 24px;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 70px;
+        }
+
+        .Releaserecomm-Choice {
+            width: 300px;
+            height: 30px;
+            margin: 20px auto auto auto;
+        }
+
+        .Releaserecomm-Choice>div {
+            width: 75px;
+            height: 30px;
+            float: left;
+            font-size: 16px;
+            color: #2E2E30;
+            text-align: center;
+            position: relative;
+        }
+        .Releaserecomm-Choice>div>span {
+            display: block;
+            background: #02C2A2;
+            width: 20px;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 29px;
+            display: none;
+        }
+        .Releaserecomm-PUSH{
+            width: 1040px;
+            min-height: 306px;
+            margin: 0 auto;
+            padding: 1px;
+        }
+        .Releaserecomm-PUSH-list{
+            width: 100%;
+            height: 306px;
+            margin: 25px auto 10px auto;
+        }
+        .PUSH-list-box{
+            width: 320px;
+            height: 306px;
+            position: relative;
+            float: left;
+            background: #FFFFFF;
+            box-shadow: 0 0 10px 0 rgba(46,46,48,0.10);
+            border-radius: 4px;
+        }
+        .PUSH-list-box>img{
+            width: 100%;
+            height:190px;
+            display: block;
+        }
+        .PUSH-list-box-zi{
+            width: 95%;
+            font-size: 18px;
+            color: #2E2E30;
+            text-align: justify;
+            line-height: 26px;
+            margin: 10px auto auto auto;
+        }
+        .PUSH-list-box-bott{
+            width: 95%;
+            height: 12px;
+            font-size: 12px;
+            color: #9B9B9B;
+            line-height: 12px;
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+        }
+        .ru-img{
+            width: 11px;
+            height: 11px;
+            padding-right: 5px;
+        }
+        .Mask{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,0.60);
+            display: none;
+        }
+        .Mask-box{
+            width: 202px;
+            height: 216px;
+            background: #FFFFFF;
+            margin: 20px auto auto auto;
+            position: relative;
+        }
+        .Mask-box>img:nth-of-type(1){
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 162px;
+            height: 162px;
+        }
+        .Mask-box>img:nth-of-type(2){
+            width: 125px;
+            height: 125px;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+        .Mask-box>div{
+            font-size: 12px;
+            color: #9B9B9B;
+            position: absolute;
+            left: 41px;
+            bottom: 12px;
+        }
+        .Mask-but{
+            width: 96px;
+            height: 30px;
+            background: #02C2A2;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 30px;
+            margin: 10px auto auto auto;
+        }
+        a{
+            text-decoration:none;
+            color: #FFFFFF!important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header" id="header"></div>
+    <div class="Releaserecomm-title">请选择一个模板(1/4)</div>
+    <div class="Releaserecomm-Choice">
+        <div class="Releaserecomm-Choice-son1" style="color:#02C2A2;font-weight:bold;">推荐
+            <span class="span1" style="display:block;"></span>
+        </div>
+        <div class="Releaserecomm-Choice-son2">供应
+            <span class="span2"></span>
+        </div>
+        <div class="Releaserecomm-Choice-son3">资讯
+            <span class="span3"></span>
+        </div>
+        <div class="Releaserecomm-Choice-son4">售后
+            <span class="span4"></span>
+        </div>
+    </div>
+    <div class="Releaserecomm-PUSH">
+        <div class="Releaserecomm-PUSH-list">
+            <div class="PUSH-list-box">
+                <img src="../../images/img/wei22.png" alt="">
+                <div class="PUSH-list-box-zi">这里是产品说明书的名称，二三四五六七八九十最长限制三十字阐述</div>
+                <div class="PUSH-list-box-bott">
+                    <div style="float: left;">查看 1038 &nbsp;&nbsp; 使用 497</div>
+                    <div style="float: right;"><img src="../../images/img/ru-somil.png" class="ru-img">如何秀模板</div>
+                </div>
+                <div class="Mask">
+                    <div class="Mask-box">
+                        <img src="../../images/img/erweimakuang.png" alt="">
+                        <img src="../../images/img/wei33.png" alt="">
+                        <div>手机扫码预览模版详情</div>
+                    </div>
+                    <div class="Mask-but">立即使用</div>
+                </div>
+            </div>
+            <div class="PUSH-list-box" style="margin-left:39px;">
+                <img src="../../images/img/wei33.png" alt="">
+                <div class="PUSH-list-box-zi">这里是产品说明书的名称，二三四五六七八九十最长限制三十字阐述</div>
+                <div class="PUSH-list-box-bott">
+                    <div style="float: left;">查看 1038 &nbsp;&nbsp; 使用 497</div>
+                    <div style="float: right;"><img src="../../images/img/ru-somil.png" class="ru-img">如何秀模板</div>
+                </div>
+            </div>
+            <div class="PUSH-list-box" style="margin-left:39px;">
+                <img src="../../images/img/wei44.png" alt="">
+                <div class="PUSH-list-box-zi">这里是产品说明书的名称，二三四五六七八九十最长限制三十字阐述</div>
+                <div class="PUSH-list-box-bott">
+                    <div style="float: left;">查看 1038 &nbsp;&nbsp; 使用 497</div>
+                    <div style="float: right;"><img src="../../images/img/ru-somil.png" class="ru-img">如何秀模板</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<script src="https://cdn.bootcss.com/require.js/2.3.5/require.js"></script>
+<script  type="module" src="../../js/crypt.js"></script>
+<script  type="module" src="../../js/charenc.js"></script>
+<script  type="module" src="../../js/is-buffer.js"></script>
+<script  type="module" src="../../js/base64-arraybuffer.js"></script>
+<script  type="module" src="../../js/md5.js"></script>
+<script type="module">
+    import { urlCrypto } from '../../js/urlCrypto.js'
+    $(function () {
+        /*公共部分
+         * header 头部
+         * header 底部
+         */
+        $("#header").load("./../../src/common/pages/header/header.html");
+    });
+
+
+    $(".PUSH-list-box").mouseover(function(){
+        $(".Mask").css('display','block');
+    });
+    $(".PUSH-list-box").mouseout(function(){
+        $(".Mask").css('display','none');
+    });
+    var id={
+            name:'1',
+            con:'2'
+        };
+    console.log(urlCrypto(id), '-------------------------------');
+    var str = JSON.stringify(id);
+    $(".Mask-but").click(function(){
+        window.location.href = "./Releasebook.html?str=" + str;
+    });
+    
+
+
+
+
+
+    $(".Releaserecomm-Choice-son1").click(function(){
+        $(".Releaserecomm-Choice-son1").css({"color":" #02C2A2",'font-weight': 'bold'});
+        $(".span1").css('display','block')
+        $(".Releaserecomm-Choice-son2").css({"color":" #2E2E30",'font-weight': 'normal'});
+        $(".span2").css('display','none')
+        $(".Releaserecomm-Choice-son3").css({"color":" #2E2E30",'font-weight': 'normal'});
+        $(".span3").css('display','none')
+        $(".Releaserecomm-Choice-son4").css({"color":" #2E2E30",'font-weight': 'normal'});
+        $(".span4").css('display','none')
+    })
+    $(".Releaserecomm-Choice-son2").click(function(){
+        $(".Releaserecomm-Choice-son2").css({"color":" #02C2A2",'font-weight': 'bold'});
+        $(".span2").css('display','block')
+        $(".Releaserecomm-Choice-son1").css({"color":" #2E2E30",'font-weight': 'normal'});
+        $(".span1").css('display','none')
+        $(".Releaserecomm-Choice-son3").css({"color":" #2E2E30",'font-weight': 'normal'});
+        $(".span3").css('display','none')
+        $(".Releaserecomm-Choice-son4").css({"color":" #2E2E30",'font-weight': 'normal'});
+        $(".span4").css('display','none')
+    })
+    $(".Releaserecomm-Choice-son3").click(function(){
+        $(".Releaserecomm-Choice-son3").css({"color":" #02C2A2",'font-weight': 'bold'});
+        $(".span3").css('display','block')
+        $(".Releaserecomm-Choice-son2").css({"color":" #2E2E30",'font-weight': 'normal'});
+        $(".span2").css('display','none')
+        $(".Releaserecomm-Choice-son1").css({"color":" #2E2E30",'font-weight': 'normal'});
+        $(".span1").css('display','none')
+        $(".Releaserecomm-Choice-son4").css({"color":" #2E2E30",'font-weight': 'normal'});
+        $(".span4").css('display','none')
+    })
+    $(".Releaserecomm-Choice-son4").click(function(){
+        $(".Releaserecomm-Choice-son4").css({"color":" #02C2A2",'font-weight': 'bold'});
+        $(".span4").css('display','block')
+        $(".Releaserecomm-Choice-son2").css({"color":" #2E2E30",'font-weight': 'normal'});
+        $(".span2").css('display','none')
+        $(".Releaserecomm-Choice-son3").css({"color":" #2E2E30",'font-weight': 'normal'});
+        $(".span3").css('display','none')
+        $(".Releaserecomm-Choice-son1").css({"color":" #2E2E30",'font-weight': 'normal'});
+        $(".span1").css('display','none')
+    })
+</script>

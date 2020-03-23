@@ -1,0 +1,290 @@
+<div class="putInResult-content">
+	<div class="putInResult-box">
+		<div class="putInResult">
+			<div class="userClause-top">
+	          <div class="uc-title">
+	            采购发布成功
+	          </div>
+	          <div class="uc-close uc-login-close">
+	            <img class="img" src="./../../edit/img/close.jpg"></img>
+	          </div>
+        	</div>
+        	<div class="putInResult-cont">
+        		<div class="ppi-swiper-cont">
+        			<div id="mb-swiper">
+						<div class="img_list">
+							<ul>
+								<li>
+									<a href="" target="_blank">
+										<img src="./../../edit/img/qrCodeImg.jpg">
+									</a>
+								</li>
+								<li>
+									<a href="" target="_blank">
+										<img src="./../../edit/img/qrCodeImg2.jpg" >
+									</a>
+								</li>
+							</ul>
+						</div>
+						<a href="#" id="toLeft" class="link toLeft"></a>
+						<a href="#" id="toRight" class="link toRight"></a>
+					</div>
+        		</div>	
+        		<div class="error-tips">注：您可以登录陌拜平台（cn.iambuyer.com）后在“我的工作台—我的采购“中管理您发布
+的采购需求；也可以登录陌拜移动端，在“我的—我的采购“查看管理您的采购需求；</div>
+        		<div class="putInResule-btn">继续发布按钮</div>
+        	</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	var index = 0;
+	var timer = 0;
+	var ulist = $('.img_list ul');
+	var blist = $('.btn_list ul');
+	var list = ulist.find('li');
+	var llength = list.length;//li的个数，用来做边缘判断
+	var lwidth = $(list[0]).width();//每个li的长度，ul每次移动的距离
+	var uwidth = llength * lwidth;//ul的总宽度
+
+	function init(){
+		//生成按钮(可以隐藏)
+		addBtn(list);
+		//显示隐藏左右点击开关
+		$('.link').css('display', 'block');
+		$('.link').bind('click', function(event) {
+			var elm = $(event.target);
+			doMove(elm.attr('id'));
+			return false;
+		});
+
+		//初始化描述
+		var text = ulist.find('li').eq(0).find('img').attr('alt');
+		var link = ulist.find('li').eq(0).find('a').attr('href');
+		$('.img_intro .text a').text(text);
+		$('.img_intro .text a').attr('href',link);
+		auto();
+	}
+
+	function auto(){
+		//定时器
+		timer = setInterval("doMove('toRight')",3000);
+
+		$('.img_list li, .btn_list li').hover(function() {
+			clearInterval(timer);
+		}, function() {
+			timer = setInterval("doMove('toRight')",3000);
+		});
+	}
+
+	function changeBtn(i){
+		blist.find('li').eq(i).addClass('on').siblings().removeClass('on');
+		var text = ulist.find('li').eq(i).find('img').attr('alt');
+		var link = ulist.find('li').eq(i).find('a').attr('href');
+		$('.img_intro .text a').text(text);
+		$('.img_intro .text a').attr('href',link);
+	}
+
+	function addBtn (list){
+		for (var i = 0; i < list.length; i++) {
+			var imgsrc = $(list[i]).find('img').attr('src');            
+			var listCon = '<li><img src="'+imgsrc+'""></li>';         
+			$(listCon).appendTo(blist);
+			//隐藏button中的数字
+			//list.css('text-indent', '10000px');
+		};
+		blist.find('li').first().addClass('on');
+		blist.find('li').click(function(event) {
+			var _index = $(this).index();            
+			doMove(_index);
+		});
+	}
+
+	function doMove(direction){
+		//向右按钮
+		if (direction =="toRight") {
+			index++;
+			if ( index< llength) {
+				uwidth = lwidth *index;
+				ulist.css('left',-uwidth);
+				//ulist.animate({left: -uwidth}, 1000);
+
+			}else{
+				ulist.css('left','0px');
+				index = 0;
+			}; 
+		//向左按钮           
+		}else if(direction =="toLeft"){
+			index--;
+			if ( index < 0) {
+				index = llength - 1;                
+			}
+			uwidth = lwidth *index;
+			ulist.css('left',-uwidth);
+			//ulist.animate({left: -uwidth}, "slow");    
+		//点击数字跳转  
+		}else{
+			index = direction;
+			uwidth = lwidth *index;
+			ulist.css('left',-uwidth);
+		};
+		changeBtn(index);
+	}
+	init();
+</script>
+<style type="text/css">
+	.putInResult-content{
+		position: fixed;
+	    width: 100%;
+	    top: 0;
+	    height: 100%;
+	    background: rgba(0, 0, 0, 0.71);
+	    z-index: 999;
+	}
+	.putInResult-box{
+		position: relative;
+	    width: 580px;
+	    margin: auto;
+	    top: 50%; /*偏移*/
+	    transform: translateY(-50%);
+	}
+	.putInResult{
+		position: relative;
+	    width: 580px;
+	    height: 774px;
+	    margin: auto;
+	    background: #FFFFFF;
+	    padding-top: 30px;
+	}
+	.userClause-top{
+	    position: relative;
+	    width: 100%;
+	  }
+	  .uc-title{
+	    font-family: PingFangSC-Semibold;
+	    font-size: 20px;
+	    color: #2E2E30;
+	    text-align: center;
+	    line-height: 20px;
+	    margin: 0 0 20px 0;
+	    font-weight: bold;
+	  }
+	.uc-close{
+	    position: absolute;
+	    width: 20px;
+	    height: 20px;
+	    right: 18px;
+	    top: -7px;
+	}
+	.uc-close>img{
+	    position: relative;
+	    width: 20px;
+	    height: 20px;
+	}
+	.putInResult-cont{
+		position: relative;
+		width: 100%;
+	}
+	.error-tips{
+		position: relative;
+		width: 480px;
+		font-family: PingFangSC-Regular;
+		font-size: 12px;
+		color: #9B9B9B;
+		text-align: center;
+		line-height: 20px;
+	    margin: 25px auto;
+	}
+	.putInResule-btn{
+		position: relative;
+		width: 190px;
+		height: 38px;
+		margin: auto;
+		background: #02C2A2;
+		border-radius: 4px;
+		border-radius: 4px;
+		font-family: PingFangSC-Regular;
+		font-size: 16px;
+		color: #FFFFFF;
+		text-align: center;
+		line-height: 38px;
+	}
+
+	#mb-swiper{ 
+    position: relative;    
+    margin: 50px auto;
+    width: 340px;  
+}
+#mb-swiper .img_list{
+	overflow: hidden; 
+	position: relative; 
+	height: 481px;
+}
+/* 根据图片的张数来设定ul的宽度 */
+.img_list ul{ 
+	width: 3500px; 
+	position: absolute; 
+	height: 260px; 
+	left: 0px;
+}
+.img_list li{ 
+	float: left; 
+	width: 700px;
+}
+.img_list img{     
+	margin: 1px;
+    width: 340px;
+    height: 481px;
+}
+
+
+/* 左右点击的按钮样式 */
+#mb-swiper .toLeft{
+    display: none;
+    position: absolute;
+    width: 20px;
+    height: 30px;    
+    top: 210px;    
+    background: url(./../../edit/img/left.png) no-repeat 0 -30px;
+}
+#mb-swiper .toRight{
+    display: none;
+    position: absolute;
+    width: 20px;
+    height: 30px;    
+    top: 210px;    
+    background: url(./../../edit/img/right.png) no-repeat 0 -30px;
+}
+
+/* 图片对应的说明*/
+.img_intro{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+}
+.img_intro .img_intro_bg,.img_intro .text{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.img_intro .img_intro_bg{
+    background: #000;    
+    opacity: .3;
+    z-index: 999;
+}
+.img_intro .text{
+    padding: 5px 10px;
+    z-index: 1000;
+    color: #999;
+}
+#mb-swiper .toLeft{
+    left: -40px;
+}
+#mb-swiper .toRight{
+    right: -40px;
+}
+</style>

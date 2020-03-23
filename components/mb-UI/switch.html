@@ -1,0 +1,42 @@
+
+<div class="mb-switch" id="mb-switch">
+  <div class="mb-switch-items mb-switch-yes left">是</div>
+  <div class="mb-switch-items mb-switch-no left">否</div>
+  <div class="clear"></div>
+</div>
+
+<style type="text/css">
+	.mb-switch{
+      position: relative;
+      width: 122px;
+      background: #FFFFFF;
+      border: 1px solid #EFEFEF;
+      border-radius: 4px;
+      border-radius: 4px;
+      height: 40px;
+    }
+    .mb-switch-items{
+      position: relative;
+      width: 60px;
+      height: 38px;
+      text-align: center;
+      line-height: 38px;
+    }
+    .mb-switch-yes{
+      background: #FAB100;
+      color: #FFFFFF;
+    }
+    .mb-switch-no{
+      background: #FFFFFF;
+      color: #2E2E30;
+    }
+</style>
+<script type="text/javascript">
+	// 开关控件
+    $("#mb-switch>div").click(function(){
+      $(this).addClass("mb-switch-yes");
+      $(this).removeClass('mb-switch-no');
+      $(this).siblings().addClass('mb-switch-no');
+      $(this).siblings().removeClass('mb-switch-yes');
+    })
+</script>
