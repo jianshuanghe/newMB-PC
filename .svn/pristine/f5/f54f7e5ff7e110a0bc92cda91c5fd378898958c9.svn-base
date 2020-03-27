@@ -47,26 +47,6 @@
 
 </script>
 <script type="module" >
-<<<<<<< .mine
-  import {urlCrypto} from '../../../../js/JM/urlCrypto.js';
-        let urlParams = {
-          isFlow: 0, // 平台来源
-          orderType: 0, // 订单类型
-          sourceTemp: 0, // 说明书来源
-          aiListTemp: 0, // 是否展示ai
-          id: 'e.id', // 模板id
-          instrucCustType: 'e.instrucCustType', // 模板类型
-          isMenu: 'e.isMenu', // 横向导航
-          instrucId:  null, // 说明书id
-          lookUserId: null, // 浏览者
-          creatorId: 'landRegistLG.user.id', // 说明书创建者
-          instrucState: null ,// 说明书状态
-        };
-
-      console.log(urlCrypto(urlParams, 0))
-     window.addEventListener('message',function(e){
-        alert(e.data);
-     },false);
     (function($) {
       $.fn.exist = function(){
           if($(this).length>=1){

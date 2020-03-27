@@ -1,0 +1,107 @@
+<div class="immediately">
+    <div class="immediately-box">
+        <div class="immediately-img qux"><img src="../../../../../images/img/Close.png" alt=""></div>
+        <div class="immediately-title">立即报价</div>
+        <div class="immediately-gl">关联采购<span class="immediately-gl-con">采购笔记本电脑</span></div>
+        <div class="immediately-bj">
+            <span>*</span>
+            <span>报价主题</span>
+            <input class="input" type="text" placeholder="我对您的‘采购名称’很感兴趣">
+        </div>
+        <div class="inquiry-zy">
+            <span>*</span>
+            <span>主要内容</span>
+            <textarea class="input" placeholder="请输入您的留言内容"></textarea>
+        </div>
+    </div>
+</div>
+<style>
+    .immediately{
+        position: fixed;
+	    width: 100%;
+	    top: 0;
+	    height: 100%;
+	    background: rgba(0, 0, 0, 0.4);
+	    z-index: 999;
+    }
+    .immediately-box{
+        width: 580px;
+		height: 349px;
+		background: #FFFFFF;
+		margin: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+        border-radius: 4px;
+    }
+    .immediately-img{
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+	.immediately-img>img{
+		width: 100%;
+		height: 100%;
+    }
+    .immediately-title{
+		width: 100%;
+		height: 20px;
+		text-align: center;
+		line-height: 20px;
+		font-size: 20px;
+		color: #2E2E30;
+        margin-top: 30px;
+        font-weight: bold;
+    }
+    .immediately-gl{
+		width: 86.5%;
+		height: 14px;
+		margin: 20px auto auto auto;
+		line-height: 14px;
+		font-size: 14px;
+		color: #2E2E30;
+	}
+	.immediately-gl>span{
+		text-decoration:underline;
+		padding-left: 14px;
+		color: #02C2A2;
+    }
+    .immediately-bj{
+		width: 90%;
+		height: 38px;
+		margin: 20px auto auto auto;
+		line-height: 38px;
+		font-size: 14px;
+		color: #2E2E30;
+		
+	}
+	.immediately-bj>span:nth-of-type(1){
+		color: red;
+		font-size: 22px;
+		display: block;
+		float: left;
+		padding-right: 2px;
+		margin-top: 5px;
+	}
+	.immediately-bj>span:nth-of-type(2){
+		display: block;
+        float: left;
+	}
+	.immediately-bj>input{
+		width: 423px;
+		height: 38px;
+		border: 1px solid #EFEFEF;
+		border-radius: 4px;
+		float: left;
+		margin-left: 12px;
+		padding-left: 10px;
+	}
+	.immediately-bj>input::-webkit-input-placeholder {
+		font-size: 14px;
+		color: #BDBDBD;
+    }
+</style>

@@ -1,0 +1,219 @@
+<div class="message">
+    <div class="message-box">
+        <div class="message-img qux"><img src="../../../../../images/img/Close.png" alt=""></div>
+        <div class="message-title">留言</div>
+        <div class="message-zy">
+            <span>*</span>
+            <span>留言内容</span>
+            <textarea class="input" placeholder="请输入您的留言内容"></textarea>
+        </div>
+        <div class="message-bj">
+            <span>*</span>
+            <span>联系人</span>
+            <input class="input" type="text" placeholder="请输入联系人名称">
+        </div>
+        <div class="message-dh">
+            <span>*</span>
+            <span>联系电话</span>
+            <input class="input" type="text" placeholder="请输入联系人电话">
+        </div>
+        <div class="message-but">
+			<div class="message-qx qux">取消</div>
+			<div class="message-qd">确定</div>
+		</div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(".input").focus(function(){
+		$(this).css('borderColor','#02C2A2');
+	})
+	$(".input").blur(function(){
+		$(this).css('borderColor','#EFEFEF');
+	})
+    $(".message-qx").hover(function(){
+		$(this).css({'background':'#02C2A2','color':'#FFFFFF'});
+	},function(){
+		$(this).css({'background':'#FFFFFF','color':'#2E2E30'});
+	})
+	$(".message-qd").hover(function(){
+		$(this).css({'background':'#02C2A2','color':'#FFFFFF'});
+	},function(){
+		$(this).css({'background':'#FFFFFF','color':'#2E2E30'});
+	})
+</script>
+<style>
+    .message{
+        position: fixed;
+	    width: 100%;
+	    top: 0;
+	    height: 100%;
+	    background: rgba(0, 0, 0, 0.4);
+	    z-index: 999;
+    }
+    .message-box{
+		width: 580px;
+		height: 395px;
+		background: #FFFFFF;
+		margin: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		border-radius: 4px;
+    }
+    .message-img{
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+	.message-img>img{
+		width: 100%;
+		height: 100%;
+    }
+    .message-title{
+		width: 100%;
+		height: 20px;
+		text-align: center;
+		line-height: 20px;
+		font-size: 20px;
+		color: #2E2E30;
+        margin-top: 30px;
+        font-weight: bold;
+    }
+    .message-zy{
+		width: 90%;
+		height: 102px;
+		margin: 28px auto auto auto;
+		line-height: 38px;
+		font-size: 14px;
+		color: #2E2E30;
+	}
+	.message-zy>span:nth-of-type(1){
+		color: red;
+		font-size: 22px;
+		display: block;
+		float: left;
+		padding-right: 2px;
+		margin-top: 5px;
+	}
+	.message-zy>span:nth-of-type(2){
+		display: block;
+		float: left;
+	}
+	.message-zy>textarea{
+		width: 423px;
+		height: 102px;
+		border: 1px solid #EFEFEF;
+		border-radius: 4px;
+		float: left;
+		margin-left: 12px;
+        padding-left: 10px;
+        padding-top: 10px;
+	}
+	.message-zy>textarea::-webkit-input-placeholder {
+		font-size: 14px;
+		color: #BDBDBD;
+		line-height: 22px;
+    }
+    .message-bj{
+		width: 90%;
+		height: 38px;
+		margin: 10px auto auto auto;
+		line-height: 38px;
+		font-size: 14px;
+		color: #2E2E30;
+		
+	}
+	.message-bj>span:nth-of-type(1){
+		color: red;
+		font-size: 22px;
+		display: block;
+		float: left;
+		padding-right: 2px;
+		margin-top: 5px;
+	}
+	.message-bj>span:nth-of-type(2){
+		display: block;
+        float: left;
+        padding-right: 14px;
+	}
+	.message-bj>input{
+		width: 423px;
+		height: 38px;
+		border: 1px solid #EFEFEF;
+		border-radius: 4px;
+		float: left;
+		margin-left: 12px;
+		padding-left: 10px;
+	}
+	.message-bj>input::-webkit-input-placeholder {
+		font-size: 14px;
+		color: #BDBDBD;
+	}
+    .message-dh{
+		width: 90%;
+		height: 38px;
+		margin: 10px auto auto auto;
+		line-height: 38px;
+		font-size: 14px;
+		color: #2E2E30;
+		
+	}
+	.message-dh>span:nth-of-type(1){
+		color: red;
+		font-size: 22px;
+		display: block;
+		float: left;
+		padding-right: 2px;
+		margin-top: 5px;
+	}
+	.message-dh>span:nth-of-type(2){
+		display: block;
+        float: left;
+	}
+	.message-dh>input{
+		width: 423px;
+		height: 38px;
+		border: 1px solid #EFEFEF;
+		border-radius: 4px;
+		float: left;
+		margin-left: 12px;
+		padding-left: 10px;
+	}
+	.message-dh>input::-webkit-input-placeholder {
+		font-size: 14px;
+		color: #BDBDBD;
+    }
+    .message-but{
+		width: 70%;
+		height: 38px;
+		margin-left: 108px;
+		margin-top: 40px;
+	}
+	.message-qx{
+		border: 1px solid #EFEFEF;
+		border-radius: 4px;
+		width: 190px;
+		height: 38px;
+		text-align: center;
+		line-height: 38px;
+		font-size: 16px;
+		color: #2E2E30;
+		float: left;
+	}
+	.message-qd{
+		border: 1px solid #EFEFEF;
+		border-radius: 4px;
+		width: 190px;
+		height: 38px;
+		text-align: center;
+		line-height: 38px;
+		font-size: 16px;
+		color: #2E2E30;
+		float: left;
+		margin-left: 20px;
+	}
+</style>

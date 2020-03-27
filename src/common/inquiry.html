@@ -1,0 +1,497 @@
+<div class="inquiry">
+    <div class="inquiry-box">
+        <div class="inquiry-img qux"><img src="../../../../../images/img/Close.png" alt=""></div>
+        <div class="inquiry-title">询价单</div>
+        <div class="inquiry-xb">询盘内容</div>
+        <div class="inquiry-gl">关联商机<span class="inquiry-gl-con">采购笔记本电脑</span></div>
+        <div class="inquiry-bj">
+            <span>*</span>
+            <span>询价主题</span>
+            <input class="input" type="text" placeholder="请输入询价主题">
+        </div>
+        <div class="inquiry-want">
+            <span>我想了解</span>
+            <div class="Price"><img src="../../../../../images/img/in.png" alt="">价格</div>
+            <div class="Minimum"><img src="../../../../../images/img/not.png" alt="">最小订货量</div>
+            <div class="delivery"><img src="../../../../../images/img/not.png" alt="">交货期</div>
+        </div>
+        <div class="inquiry-num">
+            <span>*</span>
+            <span>采购数量</span>
+            <input class="input" type="text" placeholder="请输入采购数量">
+            <select class="inquiry-select">
+                <option>请选择/填写单位</option>
+                <option value="">千克</option>
+                <option value="">公吨</option>
+                <option value="">长吨</option>
+                <option value="">短吨</option>
+                <option value="">盎司</option>
+                <option value="">蒲式耳</option>
+                <option value="">公升</option>
+                <option value="">加仑</option>
+                <option value="">个</option>
+                <option value="">只</option>
+                <option value="">件</option>
+                <option value="">套</option>
+                <option value="">双</option>
+                <option value="">打</option>
+                <option value="">卷</option>
+                <option value="">罗</option>
+                <option value="">辆</option>
+            </select>
+            <img src="../../../../../images/img/Image1.png" class="inquiry-bottom">
+        </div>
+        <div class="inquiry-bj">
+            <span>*</span>
+            <span>目标单价</span>
+            <input class="input" type="text" placeholder="请输入您的目标单价">
+        </div>
+        <div class="inquiry-zy">
+            <span>*</span>
+            <span>详细描述</span>
+            <textarea class="input" placeholder="请输入您的留言内容"></textarea>
+        </div>
+		<div class="br"></div>
+		<div class="inquiry-xb">联系信息</div>
+		<div class="inquiry-bj">
+            <span>*</span>
+            <span>联系电话</span>
+            <input class="input" type="text" placeholder="请输入">
+		</div>
+		<div class="inquiry-phone">
+            <span>*</span>
+            <span>验证码</span>
+			<input class="input" type="text" placeholder="验证码">
+			<button type="button" name="button" class="inquiry-phone-yan">获取验证码</button>
+		</div>
+		<div class="inquiry-ren">
+            <span>*</span>
+            <span>联系人</span>
+            <input class="input" type="text" placeholder="请输入联系人名称">
+		</div>
+		<div class="inquiry-bj">
+            <span style="color:#FFFFFF;">*</span>
+            <span>联系电话</span>
+            <input class="input" type="text" placeholder="请输入">
+		</div>
+		<div class="inquiry-zhu">
+			注：未注册用户提交后默认注册成为陌拜采购商。
+		</div>
+		<div class="inquiry-but">
+			<div class="inquiry-qx qux">取消</div>
+			<div class="inquiry-qd">确定</div>
+		</div>
+    </div>
+</div>
+<script>
+
+	$(".inquiry-qx").hover(function(){
+		$(this).css({'background':'#02C2A2','color':'#FFFFFF'});
+	},function(){
+		$(this).css({'background':'#FFFFFF','color':'#2E2E30'});
+	})
+	$(".inquiry-qd").hover(function(){
+		$(this).css({'background':'#02C2A2','color':'#FFFFFF'});
+	},function(){
+		$(this).css({'background':'#FFFFFF','color':'#2E2E30'});
+	})
+	var Price='0';//1 未选中   0选中
+	$(".Price").click(function(){
+		if(Price==='0'){
+			$(".Price img").attr('src','../../../../../images/img/not.png');
+			Price='1';
+		}else{
+			$(".Price img").attr('src','../../../../../images/img/in.png');
+			Price='0';
+			console.log('选中',Price)
+		}
+	})
+	var Minimum='1'; //1 未选中   0选中
+	$(".Minimum").click(function(){
+		if(Minimum==='1'){
+			$(".Minimum img").attr('src','../../../../../images/img/in.png');
+			Minimum='0';
+			console.log('选中',Minimum)
+		}else{
+			$(".Minimum img").attr('src','../../../../../images/img/not.png');
+			Minimum='1';
+		}
+	})
+	var delivery='1';//1 未选中   0选中
+	$(".delivery").click(function(){
+		if(delivery==='1'){
+			$(".delivery img").attr('src','../../../../../images/img/in.png');
+			delivery='0';
+			console.log('选中',delivery)
+		}else{
+			$(".delivery img").attr('src','../../../../../images/img/not.png');
+			delivery='1';
+		}
+	});
+	$(".inquiry-phone-yan").click(function(event) {
+		//这里写发送验证码的代码
+		var time = 60;
+		settime($(this));
+		function settime(obj){
+			if (time==0) {
+				$(obj).attr('disabled', false);
+				$(obj).html("获取验证码");
+				time = 60;
+				return;
+			} else{
+				$(obj).attr('disabled', true);
+				$(obj).html(time+"S重新获取");
+				time--;
+			}
+			setTimeout(function() {
+				settime(obj)
+			},1000)
+		}
+  	});
+
+</script>
+<style>
+    .inquiry{
+        position: fixed;
+	    width: 100%;
+	    top: 0;
+	    height: 100%;
+	    background: rgba(0, 0, 0, 0.4);
+	    z-index: 999;
+    }
+    .inquiry-box{
+        width: 580px;
+		height: 800px;
+		background: #FFFFFF;
+		margin: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+        border-radius: 4px;
+        overflow: auto;
+    }
+    .inquiry-img{
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+	.inquiry-img>img{
+		width: 100%;
+		height: 100%;
+    }
+    .inquiry-title{
+		width: 100%;
+		height: 20px;
+		text-align: center;
+		line-height: 20px;
+		font-size: 20px;
+		color: #2E2E30;
+        margin-top: 30px;
+        font-weight: bold;
+    }
+    .inquiry-xb{
+        width: 90%;
+        height: 16px;
+        border-left: 3px solid #02C2A2;
+        padding-left: 5px;
+        font-size: 16px;
+        color: #2E2E30;
+        line-height: 17px;
+        font-weight: bold;
+        margin: 40px auto auto auto;
+    }
+    .inquiry-gl{
+		width: 86.5%;
+		height: 14px;
+		margin: 20px auto auto auto;
+		line-height: 14px;
+		font-size: 14px;
+		color: #2E2E30;
+	}
+	.inquiry-gl>span{
+		text-decoration:underline;
+		padding-left: 14px;
+		color: #02C2A2;
+    }
+    .inquiry-zy{
+		width: 90%;
+		height: 102px;
+		margin: 20px auto auto auto;
+		line-height: 38px;
+		font-size: 14px;
+		color: #2E2E30;
+	}
+	.inquiry-zy>span:nth-of-type(1){
+		color: red;
+		font-size: 22px;
+		display: block;
+		float: left;
+		padding-right: 2px;
+		margin-top: 5px;
+	}
+	.inquiry-zy>span:nth-of-type(2){
+		display: block;
+		float: left;
+	}
+	.inquiry-zy>textarea{
+		width: 423px;
+		height: 102px;
+		border: 1px solid #EFEFEF;
+		border-radius: 4px;
+		float: left;
+		margin-left: 12px;
+        padding-left: 10px;
+        padding-top: 10px;
+	}
+	.inquiry-zy>textarea::-webkit-input-placeholder {
+		font-size: 14px;
+		color: #BDBDBD;
+		line-height: 22px;
+    }
+    .inquiry-bj{
+		width: 90%;
+		height: 38px;
+		margin: 20px auto auto auto;
+		line-height: 38px;
+		font-size: 14px;
+		color: #2E2E30;
+		
+	}
+	.inquiry-bj>span:nth-of-type(1){
+		color: red;
+		font-size: 22px;
+		display: block;
+		float: left;
+		padding-right: 2px;
+		margin-top: 5px;
+	}
+	.inquiry-bj>span:nth-of-type(2){
+		display: block;
+        float: left;
+	}
+	.inquiry-bj>input{
+		width: 423px;
+		height: 38px;
+		border: 1px solid #EFEFEF;
+		border-radius: 4px;
+		float: left;
+		margin-left: 12px;
+		padding-left: 10px;
+	}
+	.inquiry-bj>input::-webkit-input-placeholder {
+		font-size: 14px;
+		color: #BDBDBD;
+    }
+    .inquiry-num{
+		width: 90%;
+		height: 38px;
+		margin: 20px auto auto auto;
+		line-height: 38px;
+		font-size: 14px;
+		color: #2E2E30;
+		position: relative;
+	}
+	.inquiry-num>span:nth-of-type(1){
+		color: red;
+		font-size: 22px;
+		display: block;
+		float: left;
+		padding-right: 2px;
+		margin-top: 5px;
+	}
+	.inquiry-num>span:nth-of-type(2){
+		display: block;
+        float: left;
+	}
+	.inquiry-num>input{
+		width: 268px;
+		height: 38px;
+		border: 1px solid #EFEFEF;
+		border-radius: 4px;
+		float: left;
+		margin-left: 12px;
+		padding-left: 10px;
+	}
+	.inquiry-num>input::-webkit-input-placeholder {
+		font-size: 14px;
+		color: #BDBDBD;
+    }
+    .inquiry-select{
+        width: 147px;
+        height: 38px;
+        padding-left: 10px;
+        line-height: 38px;
+        border: 1px solid #EFEFEF;
+        border-radius: 4px;
+        font-size: 14px;
+        color: #BDBDBD;
+        padding-right: 30px;
+        float: left;
+        margin-left: 10px;
+    }
+    .inquiry-bottom{
+        width: 15px;
+        height: 9px;
+        position: absolute;
+        right: 28px;
+        top: 16px;
+    }
+    .inquiry-want{
+        width: 90%;
+		height: 14px;
+		margin: 20px auto auto auto;
+		line-height: 14px;
+		font-size: 14px;
+		color: #2E2E30;
+    }
+    .inquiry-want>span:nth-of-type(1){
+        display: block;
+        float: left;
+        margin-left: 10px;
+    }
+    .inquiry-want>div>img{
+        width: 12px;
+        height: 12px;
+        padding-right: 5px;
+    }
+    .inquiry-want>div{
+        float: left;
+        margin-left: 30px;
+    }
+    .inquiry-want>div:nth-of-type(1){
+        margin-left: 14px;
+    }
+    .br{
+        width: 86.5%;
+        margin: 40px 30px 40px;
+        height: 1px;
+        background: #EFEFEF;
+    }
+	.inquiry-phone{
+		width: 90%;
+		height: 38px;
+		margin: 20px auto auto auto;
+		line-height: 38px;
+		font-size: 14px;
+		color: #2E2E30;
+		position: relative;
+	}
+	.inquiry-phone>span:nth-of-type(1){
+		color: red;
+		font-size: 22px;
+		display: block;
+		float: left;
+		padding-right: 2px;
+		margin-top: 5px;
+	}
+	.inquiry-phone>span:nth-of-type(2){
+		display: block;
+        float: left;
+		padding-right: 14px;
+	}
+	.inquiry-phone>input{
+		width: 423px;
+		height: 38px;
+		border: 1px solid #EFEFEF;
+		border-radius: 4px;
+		float: left;
+		margin-left: 12px;
+		padding-left: 10px;
+	}
+	.inquiry-phone>input::-webkit-input-placeholder {
+		font-size: 14px;
+		color: #BDBDBD;
+    }
+	.inquiry-phone-yan{
+		position: absolute;
+		border: 1px solid #02C2A2;
+		border-radius: 2px;
+		width: 82px;
+		height: 24px;
+		font-size: 12px;
+		color: #02C2A2;
+		text-align: center;
+		line-height: 24px;
+		right: 30px;
+		top: 7px;
+		background: #FFFFFF;
+	}
+	.inquiry-ren{
+		width: 90%;
+		height: 38px;
+		margin: 20px auto auto auto;
+		line-height: 38px;
+		font-size: 14px;
+		color: #2E2E30;
+		
+	}
+	.inquiry-ren>span:nth-of-type(1){
+		color: red;
+		font-size: 22px;
+		display: block;
+		float: left;
+		padding-right: 2px;
+		margin-top: 5px;
+	}
+	.inquiry-ren>span:nth-of-type(2){
+		display: block;
+        float: left;
+		padding-right: 14px;
+	}
+	.inquiry-ren>input{
+		width: 423px;
+		height: 38px;
+		border: 1px solid #EFEFEF;
+		border-radius: 4px;
+		float: left;
+		margin-left: 12px;
+		padding-left: 10px;
+	}
+	.inquiry-ren>input::-webkit-input-placeholder {
+		font-size: 14px;
+		color: #BDBDBD;
+    }
+	.inquiry-zhu{
+		width: 90%;
+		height: 12px;
+		line-height: 12px;
+		font-size: 12px;
+		color: #9B9B9B;
+		margin-top: 12px;
+		margin-left: 40px;
+	}
+	.inquiry-but{
+		width: 70%;
+		height: 38px;
+		margin-left: 108px;
+		margin-top: 30px;
+		margin-bottom: 40px;
+	}
+	.inquiry-qx{
+		border: 1px solid #EFEFEF;
+		border-radius: 4px;
+		width: 190px;
+		height: 38px;
+		text-align: center;
+		line-height: 38px;
+		font-size: 16px;
+		color: #2E2E30;
+		float: left;
+	}
+	.inquiry-qd{
+		border: 1px solid #EFEFEF;
+		border-radius: 4px;
+		width: 190px;
+		height: 38px;
+		text-align: center;
+		line-height: 38px;
+		font-size: 16px;
+		color: #2E2E30;
+		float: left;
+		margin-left: 20px;
+	}
+</style>

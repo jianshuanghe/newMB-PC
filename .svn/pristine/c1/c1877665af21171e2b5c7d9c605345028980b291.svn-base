@@ -1590,7 +1590,6 @@
 </html>
 <script src="./js/jquery-1.11.3.min.js"></script>
 <script>
-    let data = [];
     $(function () {
         /*公共部分
          * header 头部
@@ -1616,9 +1615,7 @@
             $("#introduce").hide();
             $("#Customer").hide();
             $("#Productinformation").show();
-            $("#Productinformation").load('./components/Productinformation.html', function(){
-                alert('999')
-            });
+            $("#Productinformation").load('./components/Productinformation.html');
             $(".home-right-List").css('display','none');
             $(".home-right-Lists").css('display','block');
             $(".supply-shang").click();

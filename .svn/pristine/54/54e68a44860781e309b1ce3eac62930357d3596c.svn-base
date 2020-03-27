@@ -1,0 +1,186 @@
+<div class="putInoffer">
+	<div class="putInoffer-box">
+		<div class="putInoffer-img cancel"><img src="../../../../images/img/Close.png" alt=""></div>
+		<div class="putInoffer-title">立即报价</div>
+		<div class="putInoffer-gl">关联采购<span class="putInoffer-gl-con">采购笔记本电脑</span></div>
+		<div class="putInoffer-bj"><span>*</span><span>报价主题</span><input class="input" type="text" placeholder="我对您的‘采购名称’很感兴趣"></div>
+		<div class="putInoffer-zy"><span>*</span><span>主要内容</span><textarea class="input" placeholder="请输入报价的补充内容，比如报价单有效期、供货期、交货地址、安装方式、包装方式等"></textarea></div>
+		<div class="putInoffer-but">
+			<div class="putInoffer-qx cancel">取消</div>
+			<div class="putInoffer-qd queok">确定</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(".input").focus(function(){
+		$(this).css('borderColor','#02C2A2');
+	})
+	$(".input").blur(function(){
+		$(this).css('borderColor','#EFEFEF');
+	})
+	$(".putInoffer-qx").hover(function(){
+		$(this).css({'background':'#02C2A2','color':'#FFFFFF'});
+	},function(){
+		$(this).css({'background':'#FFFFFF','color':'#2E2E30'});
+	})
+	$(".putInoffer-qd").hover(function(){
+		$(this).css({'background':'#02C2A2','color':'#FFFFFF'});
+	},function(){
+		$(this).css({'background':'#FFFFFF','color':'#2E2E30'});
+	})
+</script>
+<style>
+    .putInoffer{
+        position: fixed;
+	    width: 100%;
+	    top: 0;
+	    height: 100%;
+	    background: rgba(0, 0, 0, 0.4);
+	    z-index: 999;
+    }
+	.putInoffer-box{
+		width: 580px;
+		height: 395px;
+		background: #FFFFFF;
+		margin: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		border-radius: 4px;
+	}
+	.putInoffer-img{
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+	.putInoffer-img>img{
+		width: 100%;
+		height: 100%;
+	}
+	.putInoffer-title{
+		width: 100%;
+		height: 20px;
+		text-align: center;
+		line-height: 20px;
+		font-size: 20px;
+		color: #2E2E30;
+		margin-top: 30px;
+		font-weight: bold;
+	}
+	.putInoffer-gl{
+		width: 80%;
+		height: 14px;
+		margin: 40px auto auto auto;
+		line-height: 14px;
+		font-size: 14px;
+		color: #2E2E30;
+	}
+	.putInoffer-gl>span{
+		text-decoration:underline;
+		padding-left: 14px;
+		color: #02C2A2;
+	}
+	.putInoffer-bj{
+		width: 90%;
+		height: 38px;
+		margin: 22px auto auto auto;
+		line-height: 38px;
+		font-size: 14px;
+		color: #2E2E30;
+		
+	}
+	.putInoffer-bj>span:nth-of-type(1){
+		color: red;
+		font-size: 22px;
+		display: block;
+		float: left;
+		padding-right: 2px;
+		margin-top: 5px;
+		margin-left: 20px;
+	}
+	.putInoffer-bj>span:nth-of-type(2){
+		display: block;
+		float: left;
+	}
+	.putInoffer-bj>input{
+		width: 423px;
+		height: 38px;
+		border: 1px solid #EFEFEF;
+		border-radius: 4px;
+		float: left;
+		margin-left: 12px;
+		padding-left: 10px;
+	}
+	.putInoffer-bj>input::-webkit-input-placeholder {
+		font-size: 14px;
+		color: #BDBDBD;
+	}
+	.putInoffer-zy{
+		width: 90%;
+		height: 102px;
+		margin: 10px auto auto auto;
+		line-height: 38px;
+		font-size: 14px;
+		color: #2E2E30;
+	}
+	.putInoffer-zy>span:nth-of-type(1){
+		color: red;
+		font-size: 22px;
+		display: block;
+		float: left;
+		padding-right: 2px;
+		margin-top: 5px;
+		margin-left: 20px;
+	}
+	.putInoffer-zy>span:nth-of-type(2){
+		display: block;
+		float: left;
+	}
+	.putInoffer-zy>textarea{
+		width: 423px;
+		height: 102px;
+		border: 1px solid #EFEFEF;
+		border-radius: 4px;
+		float: left;
+		margin-left: 12px;
+		padding-left: 10px;
+	}
+	.putInoffer-zy>textarea::-webkit-input-placeholder {
+		font-size: 14px;
+		color: #BDBDBD;
+		line-height: 22px;
+	}
+	.putInoffer-but{
+		width: 70%;
+		height: 38px;
+		margin-left: 127px;
+		margin-top: 40px;
+	}
+	.putInoffer-qx{
+		border: 1px solid #EFEFEF;
+		border-radius: 4px;
+		width: 190px;
+		height: 38px;
+		text-align: center;
+		line-height: 38px;
+		font-size: 16px;
+		color: #2E2E30;
+		float: left;
+	}
+	.putInoffer-qd{
+		border: 1px solid #EFEFEF;
+		border-radius: 4px;
+		width: 190px;
+		height: 38px;
+		text-align: center;
+		line-height: 38px;
+		font-size: 16px;
+		color: #2E2E30;
+		float: left;
+		margin-left: 20px;
+	}
+</style>
